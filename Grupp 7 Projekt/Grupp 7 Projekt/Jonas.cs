@@ -24,7 +24,7 @@ namespace Grupp_7_Projekt
             }
             else
             {
-                label5.Text = "no match";
+                label5.Text = "Lösenorden stämmer inte överens. Vänligen försök igen.";
             }
         }
     }
