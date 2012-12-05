@@ -1,0 +1,91 @@
+Spaghetti & Köttfärssås;
+0,5:st:gul lök(ar)
+100:g:Köttfärs
+100:g:konserverade tomater
+0,25:dl:vatten
+0,25:st:buljontärningar
+0,5:msk:tomatpure
+0,5:st:vitlöksklyfta(or)
+0,25:st:lagerblad
+0,25:tsk:oregano
+75:g:spaghetti;
+Tillagning:
+
+1. Skala och finhacka löken. Fräs den i smör utan att den tar färg.
+
+2. Smula ner köttfärsen och låt den bryna med. Späd med tomat och vatten.
+
+3. Tillsätt buljongtärning, tomatpuré, vitlök och kryddor. Låt såsen småkoka under lock 30-40 min. Smaka av med salt.
+
+4. Koka spaghettin enligt anvisningen på paketet och servera med nyriven parmesanost och svartpeppar.;
+Energi:(kJ):2028
+Energi:(kcal):485
+Kolhydrater:(g):65
+Protein:(g):32
+Fett:(g):9;
+Spaghetti Carbonara;
+100:g:Spaghetti
+0,5:st:gul lök(ar)
+75:g:skinka
+0,5:msk:olja
+0,5:st:ägg
+0,5:nypa(or):salt
+0,5:nypa(or):svartpeppar grovmalen;
+Tillagning:
+
+1. Koka spaghettin, följ anvisning på förpackningen. Häll tillbaka spaghettin i kokgrytan.
+
+2. Hacka löken och tärna skinkan. Hetta upp olja och fräs lök och skinka.
+
+3. Blanda ner “fräset” i den nykokta spaghettin tillsammans med ett uppvispat ägg.
+
+4. Salta, peppra och servera - gärna med ett gott bröd.;
+Energi:(kJ):2778
+Energi:(kcal):664
+Kolhydrater:(g):79
+Protein:(g):36
+Fett:(g):21;
+Chili con Carne;
+125:gram:nötfärs
+0,5:st:gul lök(ar)
+0,5:msk:matfett
+0,38:st:grön paprika
+0,25:burk(ar):krossade tomater
+1:msk:tomatpuré
+0,25:st:köttbuljongtärning(ar)
+2:krm:chilipeppar
+0,38:st:vitlöksklyfta(or)
+0,25:tsk:mejram
+salt och peppar
+0,25:burk(ar):vita bönor kokta;
+Tillagning:
+
+1. Skala och hacka löken. Kärna ur paprikan och skär den i bitar. Bryn löken i lite matfett på svag värme. Rör ner färsen och paprikan. Bryn alltsammans några minuter.
+2. Lägg i resten av ingredienserna och kryddorna utom bönorna. Var försiktig med chilipeppar om grytan inte ska bli för stark. Koka grytan livligt utan lock ca 10 minuter. Rör om ofta. När det mesta av vätskan har kokat in, häll i bönorna och smaka av med salt och peppar.
+3. Låt alltsammans bli genomvarmt. Servera med tortillachips och lite gräddfil.;
+Energi:(kJ):2297
+Energi:(kcal):549
+Kolhydrater:(g):34
+Protein:(g):32
+Fett:(g):30;
+
+Laxsoppa;
+0,5:st:laxfilé skurna i kuber
+0,25:dl:gul lök hackad
+0,12:st:selleri, hackad
+0,25:st:buljongtärning hummer eller skaldjur
+0,25:st:morot
+0,25:msk:dill hackad
+0,25:tsk:salt
+0,25:dl:vatten
+0,5:dl:grädde;
+Tillagning:
+
+1. Häll vatten, salt, dill, buljongtärning, selleri, lök och grädde i en kastrull och låt det koka i fem minuter.
+2. Stek laxkuberna på medelvärme i 4 minuter.
+3. Lägg laxtärningarna i soppan och servera.
+Energi:(kJ):2356
+Energi:(kcal):563
+Kolhydrater:(g):12
+Protein:(g):26
+Fett:(g):45;
