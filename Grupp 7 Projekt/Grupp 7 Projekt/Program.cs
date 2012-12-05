@@ -19,6 +19,7 @@ namespace Grupp_7_Projekt
             //nilz waz alz0 here 2o12 
 			//detta är nästan magiskt /Linus
             //hejgay
+			//ändring från linus branch
 		}
 	}//patrick med
     //Ctrl-A ---> Ctrl-Z = FIX IT NOW BBBBBBBBITCH!
