@@ -23,3 +23,4 @@ namespace Grupp_7_Projekt
 	}//patrick med
     //Ctrl-A ---> Ctrl-Z = FIX IT NOW BBBBBBBBITCH!
 }
+//TIMPETEST
