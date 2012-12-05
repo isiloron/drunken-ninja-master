@@ -18,6 +18,7 @@ namespace Grupp_7_Projekt
 			Application.Run(new Form1());
             //nilz waz alz0 here 2o12 
 			//detta är nästan magiskt /Linus
+            //hejgay
 		}
 	}//patrick med
 }
