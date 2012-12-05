@@ -21,4 +21,5 @@ namespace Grupp_7_Projekt
             //hejgay
 		}
 	}//patrick med
+    //Ctrl-A ---> Ctrl-Z = FIX IT NOW BBBBBBBBITCH!
 }
