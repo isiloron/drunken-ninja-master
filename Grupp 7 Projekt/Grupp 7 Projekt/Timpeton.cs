@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Grupp_7_Projekt
 {
@@ -33,6 +34,9 @@ namespace Grupp_7_Projekt
 
         private void linkPotatis_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
+           
+                    
             label4.Text = "Potatis";
             label7.Text = "Näringsvärden";
             label5.Text = "Information";
@@ -46,7 +50,9 @@ namespace Grupp_7_Projekt
 
         private void linkBroccoli_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            label4.Text = "Broccoli";
+            StreamReader broc = new StreamReader("broccoli.txt");
+
+            label4.Text = broc.ReadLine();
             label7.Text = "Näringsvärden";
             label5.Text = "Information";
             textBox3.Text = "Broccolis näringsvärden ska stå här";
