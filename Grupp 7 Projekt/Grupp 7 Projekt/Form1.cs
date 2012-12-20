@@ -14,6 +14,7 @@ namespace Grupp_7_Projekt
 		public Form1()
 		{
 			InitializeComponent();
+
 		}
 	}
 }
