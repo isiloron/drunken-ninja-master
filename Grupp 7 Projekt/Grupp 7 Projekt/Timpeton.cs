@@ -53,7 +53,7 @@ namespace Grupp_7_Projekt
             StreamReader broc = new StreamReader("broccoli.txt");
 
             label4.Text = broc.ReadLine();
-            label7.Text = "Näringsvärden";
+            label7.Text = broc.ReadLine();
             label5.Text = "Information";
             textBox3.Text = "Broccolis näringsvärden ska stå här";
             textBox1.Text = "Här ska det stå information om broccoli";
