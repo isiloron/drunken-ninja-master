@@ -10,7 +10,8 @@ namespace Recept
         string Titel; //Name of the recepie
         string instructions; //Instructions on how to make it
         List <string> IngrList = new List<string>(); //List of ingr to use
-        List<string> Tags = new List<string>(); //Tags related to this recpie
+        List <int> IngrNumber = new List<int>(); //List to store number of each ingr
+        List <string> Tags = new List<string>(); //Tags related to this recpie
         
         public Recept(string Name, string instructions)
         {
@@ -33,12 +34,23 @@ namespace Recept
             return Titel;
         }
         
+        public void SetNumber(string IngrNameToChange, int NewNumber)
+        {//Change the number of units for an ingr
+            foreach (int z in IngrList)
+            {
+                if (IngrList<z> == IngrNameToChange)
+                {
+                    IngrNumber = NewNumber;
+                }
+            }        
+        }
+        
         public string GetInstructions()
         {//Retunrs instructions
             return instructions;
         }
         
-        public void AddIngr (string IngrName)
+        public void AddIngr (string IngrName, int Number)
         {//Add new ingr to recepie
             //Must somehow check if ingr exists
             if (!true)
@@ -46,13 +58,9 @@ namespace Recept
                 //Add ingr if it dont exist
             }
           IngrList.Add(IngrName);
+          IngrNumber.add(Number);
         }
-        
-        public string ReturnIngrNameByID(int ListID)
-        {//This one needs a better solution....
-            return IngrList[ListID]; 
-        }
-        
+                
         public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
         {
             IngrList.Remove(RemoveName) ;
@@ -64,7 +72,7 @@ namespace Recept
             int Totalcal = 0;
             for (int x = 0; x < IngrList.Count; x++)
             {
-                //How to do this?
+                //Make call to ingr list and ask for cal from an ingr.
             }
           return Totalcal;
         }
