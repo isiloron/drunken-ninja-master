@@ -54,6 +54,7 @@ namespace Grupp_7_Projekt
                 loggedIn = true;
                 //Logga in
                 Timpeton newform = new Timpeton();
+                Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
 
@@ -77,6 +78,7 @@ namespace Grupp_7_Projekt
                 loggedIn = true;
                 //Logga in
                 Timpeton newform = new Timpeton();
+                Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
             }
@@ -91,6 +93,7 @@ namespace Grupp_7_Projekt
                 loggedIn = false;
                 //Logga in som gäst
                 Timpeton newform = new Timpeton();
+                Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
             }
@@ -102,6 +105,7 @@ namespace Grupp_7_Projekt
             loggedIn = false;
             //Logga in som gäst
             Timpeton newform = new Timpeton();
+            Form1 newform = new Form1();
             newform.Show();
             this.Hide();
         }
@@ -133,6 +137,7 @@ namespace Grupp_7_Projekt
                     loggedIn = true;
                     //Logga in
                     Timpeton newform = new Timpeton();
+                    Form1 newform = new Form1();
                     newform.Show();
                     this.Hide();
                 }
