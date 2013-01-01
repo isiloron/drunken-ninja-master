@@ -55,9 +55,9 @@ namespace Grupp_7_Projekt
 		{
 			cal = 0;
 			energy = 0;
-			name = "";
-			unit = "";
-			description = "";
+			name = "MISSING NAME";
+			unit = "NONE";
+			description = "MISSING DESCRIPTION";
 		}
 
         public Ingredient(string NewName, string NewMessureUnit)
