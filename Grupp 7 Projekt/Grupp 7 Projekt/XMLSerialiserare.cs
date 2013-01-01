@@ -92,26 +92,29 @@ namespace Grupp_7_Projekt
 
 	}
 	
-	//Följande två klasser är egenskrivna.
-	public static class SparaOchLaddaXML
+	public static class SparaOchLaddaRecept
 	{
-		public static void Ladda(out List<Recept> receptlista)
+		public static void LaddaXML(out List<Recept> receptlista)
 		{
-			ReceptBok bok = XMLSerialiserare<ReceptBok>.Load("receptbok.xml");
-			receptlista = bok.receptlista;
+			receptlista = XMLSerialiserare<List<Recept>>.Load("receptbok.xml");
 		}
 
-		public static void Spara(ref List<Recept> receptlista)
+		public static void SparaXML(ref List<Recept> receptlista)
 		{
-			ReceptBok bok = new ReceptBok();
-			bok.receptlista = receptlista;
-			XMLSerialiserare<ReceptBok>.Save(bok, "receptbok.xml");
+			XMLSerialiserare<List<Recept>>.Save(receptlista, "receptbok.xml");
 		}
 	}
 
-	public class ReceptBok
+	public static class SparaOchLaddaIngredienser
 	{
-		public string ägare = "Grupp 7";
-		public List<Recept> receptlista = new List<Recept>();
+		public static void LaddaXML(out List<Ingredient> ingredienslista)
+		{
+			ingredienslista = XMLSerialiserare<List<Ingredient>>.Load("ingredienser.xml");
+		}
+
+		public static void SparaXML(ref List<Ingredient> ingredienslista)
+		{
+			XMLSerialiserare<List<Ingredient>>.Save(ingredienslista, "ingredienser.xml");
+		}
 	}
 }

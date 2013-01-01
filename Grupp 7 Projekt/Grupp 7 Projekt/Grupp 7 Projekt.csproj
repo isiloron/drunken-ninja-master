@@ -52,7 +52,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ingridiensKlass.cs" />
+    <Compile Include="ingrediensKlass.cs" />
     <Compile Include="Jonas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +104,7 @@
     <None Include="chopped-fingers.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ingredienser.xml" />
     <Content Include="receptbok.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

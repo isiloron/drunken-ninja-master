@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReceptBok xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ägare>Grupp 7</ägare>
-  <receptlista>
-    <Recept>
-      <Titel>Banan</Titel>
-      <Instructions>Ät banan.</Instructions>
-    </Recept>
-    <Recept>
-      <Titel>Morot</Titel>
-      <Instructions>Ät morot.</Instructions>
-    </Recept>
-    <Recept>
-      <Titel>Tomat</Titel>
-      <Instructions>Ät tomat.</Instructions>
-    </Recept>
-  </receptlista>
-</ReceptBok>
+<ArrayOfRecept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recept>
+    <Titel>Banan</Titel>
+    <Instructions>Ät banan.</Instructions>
+  </Recept>
+  <Recept>
+    <Titel>Morot</Titel>
+    <Instructions>Ät morot.</Instructions>
+  </Recept>
+  <Recept>
+    <Titel>Tomat</Titel>
+    <Instructions>Ät tomat.</Instructions>
+  </Recept>
+</ArrayOfRecept>
