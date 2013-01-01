@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Recept
+namespace Grupp_7_Projekt
 {
     public class Recept
     {
