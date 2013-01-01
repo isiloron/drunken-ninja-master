@@ -40,11 +40,11 @@ namespace Grupp_7_Projekt
         
         public void SetNumber(string IngrNameToChange, int NewNumber)
         {//Change the number of units for an ingr
-            foreach (int z in IngrList)
+            for (int z = 0; z <= IngrList.Count; z++)
             {
-                if (IngrList<z> == IngrNameToChange)
+                if (IngrList[z] == IngrNameToChange)
                 {
-                    IngrNumber = NewNumber;
+                    IngrNumber[z] = NewNumber;
                 }
             }        
         }
