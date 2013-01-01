@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Denna klass är ett verktyg hämtat från csharpskolan.se
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +10,9 @@ using System.IO.IsolatedStorage;
 
 namespace Grupp_7_Projekt
 {
+	//Denna klass är ett verktyg hämtat från csharpskolan.se
 	public static class XMLSerialiserare<T> where T : class
 	{
-		// Publika medlemmar
 		public static T Load(string path)
 		{
 			T serializableObject = LoadFromDocumentFormat(null, path, null);
@@ -23,7 +25,7 @@ namespace Grupp_7_Projekt
 		}
 
 
-		//Privata medlemmar
+	
 		private static T LoadFromDocumentFormat(System.Type[] extraTypes, string path,
 			IsolatedStorageFile isolatedStorageFolder)
 		{
@@ -87,6 +89,29 @@ namespace Grupp_7_Projekt
 
 			return xmlSerializer;
 		}
-		//endregion
+
+	}
+	
+	//Följande två klasser är egenskrivna.
+	public static class SparaOchLaddaXML
+	{
+		public static void Ladda(out List<Recept> receptlista)
+		{
+			ReceptBok bok = XMLSerialiserare<ReceptBok>.Load("receptbok.xml");
+			receptlista = bok.receptlista;
+		}
+
+		public static void Spara(ref List<Recept> receptlista)
+		{
+			ReceptBok bok = new ReceptBok();
+			bok.receptlista = receptlista;
+			XMLSerialiserare<ReceptBok>.Save(bok, "receptbok.xml");
+		}
+	}
+
+	public class ReceptBok
+	{
+		public string ägare = "Grupp 7";
+		public List<Recept> receptlista = new List<Recept>();
 	}
 }

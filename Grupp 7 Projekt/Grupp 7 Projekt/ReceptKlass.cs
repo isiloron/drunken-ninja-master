@@ -2,36 +2,40 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
+using System.ComponentModel;
 
 namespace Grupp_7_Projekt
 {
     public class Recept
     {
-        string Titel; //Name of the recepie
+        string titel; //Name of the recepie
         string instructions; //Instructions on how to make it
         List <string> IngrList = new List<string>(); //List of ingr to use
         List <int> IngrNumber = new List<int>(); //List to store number of each ingr
         List <string> Tags = new List<string>(); //Tags related to this recpie
-        
+		
+		[XmlElement]
+		public string Titel
+		{
+			get { return titel; }
+			set { titel = value; }
+		}
+
+		[XmlElement]
+		public string Instructions
+		{
+			get { return instructions; }
+			set { instructions = value; }
+		}
+		
+		public Recept()
+		{ }
+
         public Recept(string Name, string instructions)
         {
             this.Titel = Name;
             this.instructions = instructions;
-        }
-        
-        public void SetName(string NewName)
-        {//Used to Set a new name to recepie
-            Titel = NewName;        
-        }
-        
-        public void SetInstructions(string NewInstructions)
-        {//used to set new instructions
-            instructions = NewInstructions;
-        }
-        
-        public string GetName()
-        {//Returns the recepies name
-            return Titel;
         }
         
         public void SetNumber(string IngrNameToChange, int NewNumber)
@@ -44,23 +48,7 @@ namespace Grupp_7_Projekt
                 }
             }        
         }
-        
-        public string GetInstructions()
-        {//Retunrs instructions
-            return instructions;
-        }
-        
-        public void AddIngr (string IngrName, int Number)
-        {//Add new ingr to recepie
-            //Must somehow check if ingr exists
-            if (!true)
-            {
-                //Add ingr if it dont exist
-            }
-          IngrList.Add(IngrName);
-          IngrNumber.add(Number);
-        }
-                
+		
         public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
         {
             IngrList.Remove(RemoveName) ;
