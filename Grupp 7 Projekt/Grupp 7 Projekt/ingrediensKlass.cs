@@ -10,24 +10,32 @@ namespace Grupp_7_Projekt
 
     public class Ingredient
     {
-		int cal;
-		int energy;
+		int fett;
+        int protein;
+        int energy;
 		string name;
 		string unit;
 		string description;
-
-		[XmlElement]
-        public int Cal
-        {
-            get { return cal; }
-            set { cal = value; }
-        }
 
 		[XmlElement]
         public int Energy
         {
             get { return energy; }
             set { energy = value; }
+        }
+
+		[XmlElement]
+        public int Fett
+        {
+            get { return Fett; }
+            set { Fett = value; }
+        }
+
+        [XmlElement]
+        public string Protein
+        {
+            get { return Protein; }
+            set { Protein = value; }
         }
 
 		[XmlElement]
@@ -40,21 +48,22 @@ namespace Grupp_7_Projekt
 		[XmlElement]
         public string Unit
         {
-            get { return unit; }
-            set { unit = value; }
+            get { return Unit; }
+            set { Unit = value; }
         }
 
 		[XmlElement]
         public string Description
         {
-            get { return description; }
-            set { description = value; }
+            get { return Description; }
+            set { Description = value; }
         }
 		
 		public Ingredient()
 		{
-			cal = 0;
 			energy = 0;
+			protein = 0;
+            fett = 0;
 			name = "MISSING NAME";
 			unit = "NONE";
 			description = "MISSING DESCRIPTION";
@@ -65,13 +74,14 @@ namespace Grupp_7_Projekt
             name = NewName;
             unit = NewMessureUnit;
         }
-        public Ingredient(string NewName, string NewMessureUnit, string NewDescription, int NewCal, int NewEnergy)
+        public Ingredient(string NewName, string NewMessureUnit, string NewDescription, int NewCal, int NewProtein, int NewFett)
         {
             name = NewName;
             unit = NewMessureUnit;
             description = NewDescription;
-            cal = NewCal;
-            energy = NewEnergy;
+            energy = NewCal;
+            protein = NewProtein;
+            fett = NewFett;
         
         }
     }
