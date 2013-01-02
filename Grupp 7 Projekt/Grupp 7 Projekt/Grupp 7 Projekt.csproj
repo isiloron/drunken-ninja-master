@@ -63,6 +63,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceptKlass.cs" />
+    <Compile Include="ReceptSubStruct.cs" />
     <Compile Include="XMLSerialiserare.cs" />
     <Compile Include="Receptlista.cs" />
     <Compile Include="Receptsida.cs">

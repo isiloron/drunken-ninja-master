@@ -11,11 +11,12 @@ namespace Grupp_7_Projekt
     {
         string titel; //Name of the recepie
         string instructions; //Instructions on how to make it
-        List <string> IngrList = new List<string>(); //List of ingr to use
-        List <int> IngrNumber = new List<int>(); //List to store number of each ingr
-        List <string> Tags = new List<string>(); //Tags related to this recpie
+        [XmlElement]
+        List <ReceptSubStruct> IngrList = new List<ReceptSubStruct>(); //List of ingr to use
+        [XmlElement]
+        List <string> TagList = new List<string>(); //Tags related to this recpie
 		
-		[XmlElement]
+		
 		public string Titel
 		{
 			get { return titel; }
@@ -32,46 +33,76 @@ namespace Grupp_7_Projekt
 		public Recept()
 		{ }
 
-        public Recept(string Name, string instructions)
+        public Recept(string NewTitel, string NewInstructions)
         {
-            this.Titel = Name;
-            this.instructions = instructions;
-        }
-        
-        public void SetNumber(string IngrNameToChange, int NewNumber)
-        {//Change the number of units for an ingr
-            for (int z = 0; z <= IngrList.Count; z++)
-            {
-                if (IngrList[z] == IngrNameToChange)
-                {
-                    IngrNumber[z] = NewNumber;
-                }
-            }        
+            Titel = NewTitel;
+            instructions = NewInstructions;
         }
 		
         public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
         {
-            IngrList.Remove(RemoveName) ;
-            return true;
+            for (int z = 0; IngrList.Count > z; )
+            {
+                if (RemoveName == IngrList[z].IngrName)
+                {
+                    IngrList.RemoveAt(z);
+                    return true;
+                }
+            }
+            return false;
+     
         }
 
-        public int GetTotalCal() //Returns total calories for whole recepie
+        public int GetTotalProtein() //Returns total calories for whole recepie
         {
-            int Totalcal = 0;
-            for (int x = 0; x < IngrList.Count; x++)
+            int TotalProtein = 0;
+            for (int z = 0; z < IngrList.Count; z++)
             {
-                //Make call to ingr list and ask for cal from an ingr.
+                //Totalcal += GetCalValueFromIngrList(IngrList[<].IngrName) * IngrList[z].ingrNumber;
             }
-          return Totalcal;
+          return TotalProtein;
         }
-        public int GetTotalEnergyValue() //Returns energy value for whole recepie
+
+        
+        public int GetTotalFatt() //Returns energy value for whole recepie
         { 
-            int TotalEngergy =0;
-            for (int x = 0; x < IngrList.Count; x++)
-            { 
-                //how to do this?
+            int TotalFatt =0;
+            for (int z = 0; z < IngrList.Count; z++)
+            {
+               // TotalFatt += GetFatValueFromIngrList(IngrList[<].IngrName) * IngrList[z].ingrNumber;
             }
-            return TotalEngergy;
+            return TotalFatt;
+        }
+        public int GetTotalEnergy()
+        {
+            int TotalEnergy = 0;
+            for (int z = 0; z < IngrList.Count; z++)
+            { 
+            //TotalEnergy += GetEnergyValueFromIngrList(IngrList[z].IngrName * IngrList[z].ingrNumber;
+            }
+            return TotalEnergy;
+        }
+
+        public void AddTag(string TagName)
+        {
+            //Check and see if tag already exist
+            for (int z = 0; z < TagList.Count; z++)
+            {
+                TagList.Add(TagName);
+            }
+        }
+        
+        public bool RemoveTag(string RemoveName)
+        {
+            for (int z = 0; z < TagList.Count; z++)
+            {
+                if (TagList[z] == RemoveName)
+                {
+                    TagList.RemoveAt(z);
+                    return true;
+                }
+            }
+            return false;
         }
 
     }
