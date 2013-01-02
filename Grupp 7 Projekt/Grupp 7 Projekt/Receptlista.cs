@@ -12,9 +12,19 @@ namespace Grupp_7_Projekt
         //En metod som hämtar receptlista från XMLserialiseraren(Linus kommer skriva en metod som gör att jag kan hämta alla recept)
         //En metod som returnerar en stringlista med alla recepttitlar från receptlistan (Tim använder sig av den här)
 
-        void ladda_titlar()
+        void hämta_receptlista()
         {
 
+        }
+
+        void visa_titlar()
+        {
+ 
+        }
+
+        void sök_recept()
+        {
+ 
         }
     }
 
