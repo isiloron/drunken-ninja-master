@@ -43,13 +43,13 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panelChangePassword = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtOldPassword = new System.Windows.Forms.TextBox();
-            this.txtNewPassword = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtConfNewPassword = new System.Windows.Forms.TextBox();
             this.btnChangePassword = new System.Windows.Forms.Button();
+            this.txtConfNewPassword = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNewPassword = new System.Windows.Forms.TextBox();
+            this.txtOldPassword = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelSetPassword.SuspendLayout();
             this.panelLogin.SuspendLayout();
             this.panelChangePassword.SuspendLayout();
@@ -210,41 +210,23 @@
             this.panelChangePassword.Size = new System.Drawing.Size(960, 198);
             this.panelChangePassword.TabIndex = 9;
             // 
-            // label6
+            // btnChangePassword
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(311, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Nuvarande lösenord:";
+            this.btnChangePassword.Location = new System.Drawing.Point(390, 145);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(194, 38);
+            this.btnChangePassword.TabIndex = 10;
+            this.btnChangePassword.Text = "Byt lösenord och logga in";
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // txtOldPassword
+            // txtConfNewPassword
             // 
-            this.txtOldPassword.Location = new System.Drawing.Point(484, 32);
-            this.txtOldPassword.Name = "txtOldPassword";
-            this.txtOldPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtOldPassword.TabIndex = 5;
-            this.txtOldPassword.UseSystemPasswordChar = true;
-            // 
-            // txtNewPassword
-            // 
-            this.txtNewPassword.Location = new System.Drawing.Point(484, 70);
-            this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtNewPassword.TabIndex = 6;
-            this.txtNewPassword.UseSystemPasswordChar = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(360, 70);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Nytt lösenord:";
+            this.txtConfNewPassword.Location = new System.Drawing.Point(484, 105);
+            this.txtConfNewPassword.Name = "txtConfNewPassword";
+            this.txtConfNewPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtConfNewPassword.TabIndex = 9;
+            this.txtConfNewPassword.UseSystemPasswordChar = true;
             // 
             // label8
             // 
@@ -256,23 +238,41 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Bekräfta nytt lösenord:";
             // 
-            // txtConfNewPassword
+            // label7
             // 
-            this.txtConfNewPassword.Location = new System.Drawing.Point(484, 105);
-            this.txtConfNewPassword.Name = "txtConfNewPassword";
-            this.txtConfNewPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtConfNewPassword.TabIndex = 9;
-            this.txtConfNewPassword.UseSystemPasswordChar = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(360, 70);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 20);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Nytt lösenord:";
             // 
-            // btnChangePassword
+            // txtNewPassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(390, 145);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(194, 38);
-            this.btnChangePassword.TabIndex = 10;
-            this.btnChangePassword.Text = "Byt lösenord och logga in";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            this.txtNewPassword.Location = new System.Drawing.Point(484, 70);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtNewPassword.TabIndex = 6;
+            this.txtNewPassword.UseSystemPasswordChar = true;
+            // 
+            // txtOldPassword
+            // 
+            this.txtOldPassword.Location = new System.Drawing.Point(484, 32);
+            this.txtOldPassword.Name = "txtOldPassword";
+            this.txtOldPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtOldPassword.TabIndex = 5;
+            this.txtOldPassword.UseSystemPasswordChar = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(311, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Nuvarande lösenord:";
             // 
             // Jonas
             // 
