@@ -17,7 +17,7 @@ namespace Grupp_7_Projekt
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
             Application.Run(new Jonas());
-            Application.Run(new Timpeton());
+            Application.Run(new Receptsida());
             //nilz waz alz0 here 2o12 
 			//detta är nästan magiskt /Linus
             //hejgay

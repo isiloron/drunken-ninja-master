@@ -10,9 +10,9 @@ using System.IO;
 
 namespace Grupp_7_Projekt
 {
-    public partial class Timpeton : Form
+    public partial class Receptsida : Form
     {
-        public Timpeton()
+        public Receptsida()
         {
             InitializeComponent();
         }

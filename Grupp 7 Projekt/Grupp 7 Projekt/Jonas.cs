@@ -53,7 +53,7 @@ namespace Grupp_7_Projekt
                 MessageBox.Show("Lösenordet sparat, välkommen!");
                 loggedIn = true;
                 //Logga in
-                Timpeton newform = new Timpeton();
+                Receptsida newform = new Receptsida();
                 Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
@@ -77,7 +77,7 @@ namespace Grupp_7_Projekt
                 MessageBox.Show("Rätt lösen");
                 loggedIn = true;
                 //Logga in
-                Timpeton newform = new Timpeton();
+                Receptsida newform = new Receptsida();
                 Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
@@ -92,7 +92,7 @@ namespace Grupp_7_Projekt
                 MessageBox.Show("Du har gjort tre misslyckade inloggningsförsök.\nDu loggas nu in som gäst och kan inte redigera recept, men fortfarande läsa och skriva ut dem.");
                 loggedIn = false;
                 //Logga in som gäst
-                Timpeton newform = new Timpeton();
+                Receptsida newform = new Receptsida();
                 Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
@@ -104,7 +104,7 @@ namespace Grupp_7_Projekt
         {
             loggedIn = false;
             //Logga in som gäst
-            Timpeton newform = new Timpeton();
+            Receptsida newform = new Receptsida();
             Form1 newform = new Form1();
             newform.Show();
             this.Hide();
@@ -136,7 +136,7 @@ namespace Grupp_7_Projekt
                     MessageBox.Show("Nytt Lösenord sparat, välkommen!");
                     loggedIn = true;
                     //Logga in
-                    Timpeton newform = new Timpeton();
+                    Receptsida newform = new Receptsida();
                     Form1 newform = new Form1();
                     newform.Show();
                     this.Hide();
