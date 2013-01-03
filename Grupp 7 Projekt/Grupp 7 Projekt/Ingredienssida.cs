@@ -7,5 +7,10 @@ namespace Grupp_7_Projekt
 {
     class Ingredienssida
     {
+        public Ingredienssida() {
+
+            
+        
+        }
     }
 }
