@@ -1,6 +1,6 @@
 ﻿namespace Grupp_7_Projekt
 {
-    partial class Jonas
+    partial class Inlogg
     {
         /// <summary>
         /// Required designer variable.

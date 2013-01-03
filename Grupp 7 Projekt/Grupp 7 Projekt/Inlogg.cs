@@ -10,12 +10,12 @@ using System.IO;
 
 namespace Grupp_7_Projekt
 {
-    public partial class Jonas : Form
+    public partial class Inlogg : Form
     {
         int passwordcount = 1;
         public static bool loggedIn = false;
 
-        public Jonas()
+        public Inlogg()
         {
             InitializeComponent();
 
