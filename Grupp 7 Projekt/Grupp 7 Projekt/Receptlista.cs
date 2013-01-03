@@ -19,7 +19,7 @@ namespace Grupp_7_Projekt
 
         public visa_titlar()//En metod som returnerar en stringlista med alla recepttitlar från receptlistan (Tim använder sig av den här)
         {
-            String.Join(Environment.NewLine, Recept);
+            //String.Join(Environment.NewLine, Recept);
         }
 
         public void Lagg_till()
