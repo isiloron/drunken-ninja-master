@@ -11,12 +11,8 @@ namespace Grupp_7_Projekt
     {
         string titel; //Name of the recepie
         string instructions; //Instructions on how to make it
-        [XmlElement]
-        List <ReceptSubStruct> IngrList = new List<ReceptSubStruct>(); //List of ingr to use
-        [XmlElement]
-        List <string> TagList = new List<string>(); //Tags related to this recpie
-		
-		
+
+		[XmlElement]
 		public string Titel
 		{
 			get { return titel; }
@@ -29,7 +25,13 @@ namespace Grupp_7_Projekt
 			get { return instructions; }
 			set { instructions = value; }
 		}
+
+		[XmlElement]
+		public List<ReceptSubStruct> IngrList = new List<ReceptSubStruct>(); //List of ingr to use
 		
+		[XmlElement]
+		public List<string> TagList = new List<string>(); //Tags related to this recpie
+
 		public Recept()
 		{ }
 

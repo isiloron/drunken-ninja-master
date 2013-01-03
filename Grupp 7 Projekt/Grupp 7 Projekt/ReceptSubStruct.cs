@@ -5,9 +5,15 @@ using System.Text;
 
 namespace Grupp_7_Projekt
 {
-    struct ReceptSubStruct
-    {
-       public string IngrName;
-       public int ingrNumber;
-    }
+	public struct ReceptSubStruct
+	{
+		public string ingrName;
+		public int ingrNumber;
+
+		public ReceptSubStruct(string name, int number)
+		{
+			ingrName = name;
+			ingrNumber = number;
+		}
+	}
 }
