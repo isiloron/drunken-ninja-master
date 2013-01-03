@@ -54,7 +54,6 @@ namespace Grupp_7_Projekt
                 loggedIn = true;
                 //Logga in
                 Receptsida newform = new Receptsida();
-                Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
 
@@ -78,7 +77,6 @@ namespace Grupp_7_Projekt
                 loggedIn = true;
                 //Logga in
                 Receptsida newform = new Receptsida();
-                Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
             }
@@ -93,7 +91,6 @@ namespace Grupp_7_Projekt
                 loggedIn = false;
                 //Logga in som gäst
                 Receptsida newform = new Receptsida();
-                Form1 newform = new Form1();
                 newform.Show();
                 this.Hide();
             }
@@ -105,7 +102,6 @@ namespace Grupp_7_Projekt
             loggedIn = false;
             //Logga in som gäst
             Receptsida newform = new Receptsida();
-            Form1 newform = new Form1();
             newform.Show();
             this.Hide();
         }
@@ -137,7 +133,6 @@ namespace Grupp_7_Projekt
                     loggedIn = true;
                     //Logga in
                     Receptsida newform = new Receptsida();
-                    Form1 newform = new Form1();
                     newform.Show();
                     this.Hide();
                 }

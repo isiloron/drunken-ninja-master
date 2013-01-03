@@ -15,7 +15,6 @@ namespace Grupp_7_Projekt
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form1());
             Application.Run(new Inlogg());
             Application.Run(new Receptsida());
             //nilz waz alz0 here 2o12 
