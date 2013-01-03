@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="ingrediensKlass.cs" />
     <Compile Include="IngrediensLista.cs" />
+    <Compile Include="Ingredienssida.cs" />
     <Compile Include="Inlogg.cs">
       <SubType>Form</SubType>
     </Compile>
