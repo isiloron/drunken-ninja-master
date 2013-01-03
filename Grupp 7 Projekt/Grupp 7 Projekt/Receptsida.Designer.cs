@@ -32,8 +32,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtboxtitlar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.linkBroccoli = new System.Windows.Forms.LinkLabel();
+            this.linkPotatis = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,8 +49,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.linkPotatis = new System.Windows.Forms.LinkLabel();
-            this.linkBroccoli = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -79,6 +81,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.txtboxtitlar);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
@@ -88,6 +92,23 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Recept";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(26, 72);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(222, 350);
+            this.textBox4.TabIndex = 2;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // txtboxtitlar
+            // 
+            this.txtboxtitlar.Location = new System.Drawing.Point(26, 72);
+            this.txtboxtitlar.Multiline = true;
+            this.txtboxtitlar.Name = "txtboxtitlar";
+            this.txtboxtitlar.Size = new System.Drawing.Size(223, 453);
+            this.txtboxtitlar.TabIndex = 1;
             // 
             // label1
             // 
@@ -111,6 +132,32 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ingredienser";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // linkBroccoli
+            // 
+            this.linkBroccoli.AutoSize = true;
+            this.linkBroccoli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkBroccoli.LinkColor = System.Drawing.Color.Black;
+            this.linkBroccoli.Location = new System.Drawing.Point(36, 133);
+            this.linkBroccoli.Name = "linkBroccoli";
+            this.linkBroccoli.Size = new System.Drawing.Size(78, 24);
+            this.linkBroccoli.TabIndex = 3;
+            this.linkBroccoli.TabStop = true;
+            this.linkBroccoli.Text = "Broccoli";
+            this.linkBroccoli.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkBroccoli_LinkClicked);
+            // 
+            // linkPotatis
+            // 
+            this.linkPotatis.AutoSize = true;
+            this.linkPotatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkPotatis.LinkColor = System.Drawing.Color.Black;
+            this.linkPotatis.Location = new System.Drawing.Point(36, 108);
+            this.linkPotatis.Name = "linkPotatis";
+            this.linkPotatis.Size = new System.Drawing.Size(64, 24);
+            this.linkPotatis.TabIndex = 2;
+            this.linkPotatis.TabStop = true;
+            this.linkPotatis.Text = "Potatis";
+            this.linkPotatis.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPotatis_LinkClicked);
             // 
             // label2
             // 
@@ -231,33 +278,7 @@
                 "   Mycket Liter Jonas";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // linkPotatis
-            // 
-            this.linkPotatis.AutoSize = true;
-            this.linkPotatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkPotatis.LinkColor = System.Drawing.Color.Black;
-            this.linkPotatis.Location = new System.Drawing.Point(36, 108);
-            this.linkPotatis.Name = "linkPotatis";
-            this.linkPotatis.Size = new System.Drawing.Size(64, 24);
-            this.linkPotatis.TabIndex = 2;
-            this.linkPotatis.TabStop = true;
-            this.linkPotatis.Text = "Potatis";
-            this.linkPotatis.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPotatis_LinkClicked);
-            // 
-            // linkBroccoli
-            // 
-            this.linkBroccoli.AutoSize = true;
-            this.linkBroccoli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkBroccoli.LinkColor = System.Drawing.Color.Black;
-            this.linkBroccoli.Location = new System.Drawing.Point(36, 133);
-            this.linkBroccoli.Name = "linkBroccoli";
-            this.linkBroccoli.Size = new System.Drawing.Size(78, 24);
-            this.linkBroccoli.TabIndex = 3;
-            this.linkBroccoli.TabStop = true;
-            this.linkBroccoli.Text = "Broccoli";
-            this.linkBroccoli.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkBroccoli_LinkClicked);
-            // 
-            // Timpeton
+            // Receptsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,7 +294,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Timpeton";
+            this.Name = "Receptsida";
             this.Text = "Timpeton";
             this.Load += new System.EventHandler(this.Timpeton_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -310,5 +331,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.LinkLabel linkPotatis;
         private System.Windows.Forms.LinkLabel linkBroccoli;
+        private System.Windows.Forms.TextBox txtboxtitlar;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
