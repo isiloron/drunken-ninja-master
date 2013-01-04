@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfIngredient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Ingredient>
+    <Kolhydrater>0</Kolhydrater>
+    <Energy>0</Energy>
+    <Fett>0</Fett>
+    <Protein>0</Protein>
+    <Name>Peppar</Name>
+    <Unit>Nypor</Unit>
+    <Description>En Krydda</Description>
+  </Ingredient>
+  <Ingredient>
+    <Kolhydrater>100</Kolhydrater>
+    <Energy>9001</Energy>
+    <Fett>50</Fett>
+    <Protein>560</Protein>
+    <Name>Nötfärs</Name>
+    <Unit>gram</Unit>
+    <Description>Köttråvara från boskap.</Description>
+  </Ingredient>
+</ArrayOfIngredient>

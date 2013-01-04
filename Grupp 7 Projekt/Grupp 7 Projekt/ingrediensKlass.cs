@@ -36,15 +36,15 @@ namespace Grupp_7_Projekt
 		[XmlElement]
         public int Fett
         {
-            get { return Fett; }
-            set { Fett = value; }
+            get { return fett; }
+            set { fett = value; }
         }
 
         [XmlElement]
-        public string Protein
+        public int Protein
         {
-            get { return Protein; }
-            set { Protein = value; }
+            get { return protein; }
+            set { protein = value; }
         }
 
 		[XmlElement]
@@ -57,15 +57,15 @@ namespace Grupp_7_Projekt
 		[XmlElement]
         public string Unit
         {
-            get { return Unit; }
-            set { Unit = value; }
+            get { return unit; }
+            set { unit = value; }
         }
 
 		[XmlElement]
         public string Description
         {
-            get { return Description; }
-            set { Description = value; }
+            get { return description; }
+            set { description = value; }
         }
         public Ingredient(string NewName, string NewDescription, string NewMessureUnit, int NewEnergy, int NewProtein, int NewFett, int NewKolhydrater)
         {
