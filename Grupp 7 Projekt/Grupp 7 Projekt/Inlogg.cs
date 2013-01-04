@@ -19,14 +19,15 @@ namespace Grupp_7_Projekt
         {
             InitializeComponent();
 
-            StreamReader pass = new StreamReader("password.dat");
+            FileStream lösen = new FileStream("password.dat", FileMode.OpenOrCreate);
+            StreamReader pass = new StreamReader(lösen);
             string password = pass.ReadLine();
             if (password == null)
             {
                 panelSetPassword.Visible = true;
                 panelLogin.Visible = false;
                 panelChangePassword.Visible = false;
-                label2.Text = "Detta verkar vara första gången du kör programmet. Vänligen bestäm ett lösenord för att fortsätta!";
+                lösen.Close();
                 pass.Close();
             }
             else
@@ -34,7 +35,7 @@ namespace Grupp_7_Projekt
                 panelLogin.Visible = true;
                 panelSetPassword.Visible = true;
                 panelChangePassword.Visible = false;
-                label2.Text = "Vänligen logga in med ditt lösenord";
+                lösen.Close();
                 pass.Close();
             }
             
@@ -73,7 +74,6 @@ namespace Grupp_7_Projekt
 
             if (txtPassword.Text == confirm)            
             {
-                MessageBox.Show("Rätt lösen");
                 loggedIn = true;
                 //Logga in
                 Receptsida newform = new Receptsida();
@@ -108,7 +108,6 @@ namespace Grupp_7_Projekt
 
         private void linkChangePassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            label2.Text = "Byt lösenord här";
             panelLogin.Visible = false;
             panelSetPassword.Visible = false;
             panelChangePassword.Visible = true;
