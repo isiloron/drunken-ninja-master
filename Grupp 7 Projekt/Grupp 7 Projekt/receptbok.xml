@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRecept xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Recept>
+    <IngrList>
+      <ingrName>EMPTY</ingrName>
+      <ingrNumber>0</ingrNumber>
+    </IngrList>
+    <Titel>Banan</Titel>
+    <Instructions>Ät banan.</Instructions>
+  </Recept>
+  <Recept>
+    <IngrList>
+      <ingrName>EMPTY</ingrName>
+      <ingrNumber>0</ingrNumber>
+    </IngrList>
+    <Titel>Morot</Titel>
+    <Instructions>Ät morot.</Instructions>
+  </Recept>
+  <Recept>
+    <IngrList>
+      <ingrName>EMPTY</ingrName>
+      <ingrNumber>0</ingrNumber>
+    </IngrList>
+    <Titel>Tomat</Titel>
+    <Instructions>Ät tomat.</Instructions>
+  </Recept>
+</ArrayOfRecept>
