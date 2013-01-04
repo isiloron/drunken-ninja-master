@@ -17,12 +17,6 @@ namespace Grupp_7_Projekt
 			Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Inlogg());
             Application.Run(new Receptsida());
-            //nilz waz alz0 here 2o12 
-			//detta är nästan magiskt /Linus
-            //hejgay
-			//ändring från linus branch
 		}
-	}//patrick med
-    //Ctrl-A ---> Ctrl-Z = FIX IT NOW BBBBBBBBITCH!
+	}
 }
-//TIMPETEST
