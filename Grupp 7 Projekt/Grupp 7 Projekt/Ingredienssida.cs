@@ -10,7 +10,7 @@ namespace Grupp_7_Projekt
         public IngrediensLista ingredienslista = new IngrediensLista();
         public Ingredienssida() {
 
-            ingredienslista.LaddaIngrediens();
+            //ingredienslista.LaddaIngrediens();
             ingredienslista.HämtaIngTitlar();
             
             
