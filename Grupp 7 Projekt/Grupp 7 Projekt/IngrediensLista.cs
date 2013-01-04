@@ -35,9 +35,9 @@ namespace Grupp_7_Projekt
                                   
         }
 
-       public void LäggTillIng(int fett, int protein, int energy, int carbon, string name,	string unit, string description)
+       public void LäggTillIng(string name,string unit, string description,	int fett, int protein, int energy, int carbon)
         { 
-            ingredienslista.Add(new Ingredient(fett, protein, energy, carbon, name, unit, description));
+            ingredienslista.Add(new Ingredient(name, unit, description, fett, protein, energy, carbon));
         }
        
         public void TaBortIng(string name)
@@ -51,7 +51,7 @@ namespace Grupp_7_Projekt
             }
         }
 
-        public List<Recept> SökIngr(List<string> IngrNamn)
+      /* public List<Recept> SökIngr(List<string> IngrNamn)
          {
              List<Ingredient> ReturLista = new List<Ingredient>();
             
@@ -62,6 +62,6 @@ namespace Grupp_7_Projekt
                  }
              }
              return ReturLista;
-         }
+         }*/
     }
 }
