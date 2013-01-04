@@ -14,7 +14,6 @@ namespace Grupp_7_Projekt
     {
         Receptlista receptlista = new Receptlista();
         Ingredienssida ingredienssida = new Ingredienssida();
-
         
 
         public Receptsida()
@@ -66,7 +65,7 @@ namespace Grupp_7_Projekt
            lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
             foreach (ReceptSubStruct r in temp.IngrList)
             {
-                textBoxIngr.Text += r.ingrName + r.ingrNumber.ToString() + ingr;
+                textBoxIngr.Text += r.ingrName + r.ingrNumber.ToString() + ingredienssida.ingredienslista.HämtaEnhet().ToString();
            }
         }
 
