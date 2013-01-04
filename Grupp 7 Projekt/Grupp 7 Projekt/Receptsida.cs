@@ -40,37 +40,6 @@ namespace Grupp_7_Projekt
 
         }
 
-        private void linkPotatis_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-           
-                    
-            lblRubrik.Text = "Potatis";
-            lblIng.Text = "Näringsvärden";
-            lblNär.Text = "Information";
-            textBoxIngr.Text = "Potatisens näringsvärden ska stå här";
-            textBoxNär.Text = "Här ska det stå information om potatis";
-            lblTil.Hide();
-            textBoxTil.Hide();
-            pictureBox1.ImageLocation = "http://blogg.olandsbladet.se/vagentillvarvet/wp-content/uploads/2011/02/potatis.jpg";
-
-        }
-
-        private void linkBroccoli_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            StreamReader broc = new StreamReader("broccoli.txt");
-
-            lblRubrik.Text = broc.ReadLine();
-            lblIng.Text = broc.ReadLine();
-            lblNär.Text = "Information";
-            textBoxIngr.Text = "Broccolis näringsvärden ska stå här";
-            textBoxNär.Text = "Här ska det stå information om broccoli";
-            lblTil.Hide();
-            textBoxTil.Hide();
-            pictureBox1.ImageLocation = "http://www.worldcommunitycookbook.org/season/guide/photos/broccoli.jpg";
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
