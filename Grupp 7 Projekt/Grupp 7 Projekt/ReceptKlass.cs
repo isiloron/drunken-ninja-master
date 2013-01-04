@@ -40,7 +40,22 @@ namespace Grupp_7_Projekt
             Titel = NewTitel;
             instructions = NewInstructions;
         }
-		
+
+        public Recept(string NewTitel, string NewInstructions, ref List<ReceptSubStruct>NewIngrList, ref List<string>NewTagList)
+        {
+            titel = NewTitel;
+            instructions = NewInstructions;
+            for (int z = 0; z < NewIngrList.Count; z++)
+            {
+                IngrList.Add(NewIngrList[z]);
+            
+            }
+            for (int z=0; z<NewTagList.Count; z++)
+            {
+                TagList.Add(NewTagList[z]);
+            }
+        }
+
         public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
         {
             for (int z = 0; IngrList.Count > z; )
@@ -52,8 +67,13 @@ namespace Grupp_7_Projekt
                 }
             }
             return false;
-     
         }
+
+        public void AddIngr(string NewName, int NewNumber)
+        {
+            IngrList.Add(new ReceptSubStruct(NewName, NewNumber));
+        }
+
 
         public int GetTotalProtein() //Returns total calories for whole recepie
         {
