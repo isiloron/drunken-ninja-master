@@ -36,9 +36,9 @@ namespace Grupp_7_Projekt
             return titellista;
         }
 
-        public void LäggTill(string titel, string instructions, List<ReceptSubStruct> IngrList, List<string> TagList)//En metod som lägger till ett recept i receptlistan(MONSTER)
+        public void LäggTill(string titel, string instructions, List<ReceptSubStruct> IngrList, List<string> TagList)//En metod som lägger till ett recept i receptlistan
         {
-            receptlista.Add(new Recept(titel, instructions, List<ReceptSubStruct> IngrList, List<String> TagList));
+            receptlista.Add(new Recept(titel, instructions, IngrList, TagList));
         }
 
         public void TaBort(string titel)//En metod som tar bort ett recept ur receptlistan
