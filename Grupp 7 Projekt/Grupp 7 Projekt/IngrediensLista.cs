@@ -62,7 +62,7 @@ namespace Grupp_7_Projekt
                 }
             
             }
-            return "NOT FOUND ERROR";
+            return "#";
         }
 
       /* public List<Recept> SökIngr(List<string> IngrNamn)

@@ -69,7 +69,11 @@ namespace Grupp_7_Projekt
            lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
             foreach (ReceptSubStruct r in temp.IngrList)
             {
-                textBoxIngr.Text += r.ingrName + r.ingrNumber.ToString() + ingredienssida.ingredienslista.HämtaEnhet().ToString();
+                textBoxIngr.Text += r.ingrName + " ";
+                    textBoxIngr.Text += r.ingrNumber.ToString() +" ";
+                    textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
+                    textBoxIngr.Text += Environment.NewLine;
+
            }
         }
 
