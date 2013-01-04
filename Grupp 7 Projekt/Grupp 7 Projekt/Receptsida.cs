@@ -20,6 +20,7 @@ namespace Grupp_7_Projekt
         {
             receptlista.LaddaRecept();
             InitializeComponent();
+            listBox1.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar();
         }
 
         private void Timpeton_Load(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace Grupp_7_Projekt
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox1.Items.Add(ingr
+            
         }
 
 
