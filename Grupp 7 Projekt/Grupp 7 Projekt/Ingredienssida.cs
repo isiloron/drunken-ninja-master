@@ -12,8 +12,6 @@ namespace Grupp_7_Projekt
 
             //ingredienslista.LaddaIngrediens();
             ingredienslista.HämtaIngTitlar();
-            
-            
         
         }
     }

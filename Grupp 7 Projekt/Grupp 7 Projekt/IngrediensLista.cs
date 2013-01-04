@@ -52,6 +52,18 @@ namespace Grupp_7_Projekt
                 }
             }
         }
+        public string HämtaEnhet(string IngrName)
+        {
+            foreach (Ingredient ing in ingredienslista)
+            {
+                if (IngrName == ing.Name)
+                {
+                    return ing.Unit;
+                }
+            
+            }
+            return "NOT FOUND ERROR";
+        }
 
       /* public List<Recept> SökIngr(List<string> IngrNamn)
          {
