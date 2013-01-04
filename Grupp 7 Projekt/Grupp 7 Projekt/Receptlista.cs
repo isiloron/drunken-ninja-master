@@ -52,17 +52,86 @@ namespace Grupp_7_Projekt
             }
         }
 
-        public Recept SökRecept(string titel) //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
+
+        public Recept SökExactRecept(string SearchString) //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
         {
             foreach (Recept r in receptlista)
             {
-                if (r.Titel.Equals(titel))
+                if (r.Titel == SearchString)
                 {
                     return r;
                 }
             }
             return null;
          }
+
+        public List<Recept> SökMinMaxFett(int MinValue, int MaxValue)
+        {
+           List<Recept> ReturnList = new List<Recept>();
+            foreach (Recept r in receptlista)
+            {
+                if (r.GetTotalFatt() >= MinValue && r.GetTotalFatt() <= MaxValue)
+                {
+                    ReturnList.Add(r);
+                }
+            }
+            return ReturnList;
+        }
+        
+        public List<Recept> SökMinMaxEnergi(int MinValue, int MaxValue)
+        {
+            List<Recept> ReturLista = new List<Recept>();
+            foreach (Recept r in receptlista)
+            {
+                if (r.GetTotalEnergy() >= MinValue && r.GetTotalEnergy() <= MaxValue)
+                {
+                    ReturLista.Add(r);
+                }
+            }
+
+            return ReturLista;
+        }
+
+        public List<Recept> SökMinMaxFett(int MinValue, int MaxValue)
+        {
+            List<Recept> ReturLista = new List<Recept>();
+            foreach (Recept r in receptlista)
+            {
+                if (r.GetTotalFatt() >= MinValue && r.GetTotalFatt() <= MaxValue)
+                {
+                    ReturLista.Add(r);
+                }
+            }
+            return ReturLista;
+        }
+
+        public List<Recept> SökMinMaxKolhydrater(int MinValue, int MaxValue)
+        {
+            List<Recept> ReturLista = new List<Recept>();
+            foreach (Recept r in receptlista)
+            {
+                if (r.GetTotalCarbon() >= MinValue && r.GetTotalCarbon() <= MaxValue)
+                {
+                    ReturLista.Add(r);
+                }
+            }
+            return ReturLista;
+        }
+
+        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> IngrNamn)
+        {
+            List<Recept> ReturLista = new List<Recept>();
+            
+            foreach (Recept r in receptlista)
+            { 
+                foreach (ReceptSubStruct rs in r.IngrList)
+                {
+                }
+            }
+            return ReturLista;
+        
+        
+        }
     }
 
 }
