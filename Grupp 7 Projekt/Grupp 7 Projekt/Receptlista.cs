@@ -42,6 +42,7 @@ namespace Grupp_7_Projekt
                 if (NamnAttHänta == r.Titel)
                     return r;
             }
+            return null;
         }
 
         public void LäggTill(string titel, string instructions, List<ReceptSubStruct> IngrList, List<string> TagList)//En metod som lägger till ett recept i receptlistan

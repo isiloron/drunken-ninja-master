@@ -21,6 +21,7 @@ namespace Grupp_7_Projekt
         {
             receptlista.LaddaRecept();
             InitializeComponent();
+            listBox2.DataSource = receptlista.HämtaTitlar();
             
         }
 
@@ -44,13 +45,13 @@ namespace Grupp_7_Projekt
 
            
                     
-            label4.Text = "Potatis";
-            label7.Text = "Näringsvärden";
-            label5.Text = "Information";
-            textBox3.Text = "Potatisens näringsvärden ska stå här";
-            textBox1.Text = "Här ska det stå information om potatis";
-            label6.Hide();
-            textBox2.Hide();
+            lblRubrik.Text = "Potatis";
+            lblIng.Text = "Näringsvärden";
+            lblNär.Text = "Information";
+            textBoxIngr.Text = "Potatisens näringsvärden ska stå här";
+            textBoxNär.Text = "Här ska det stå information om potatis";
+            lblTil.Hide();
+            textBoxTil.Hide();
             pictureBox1.ImageLocation = "http://blogg.olandsbladet.se/vagentillvarvet/wp-content/uploads/2011/02/potatis.jpg";
 
         }
@@ -59,13 +60,13 @@ namespace Grupp_7_Projekt
         {
             StreamReader broc = new StreamReader("broccoli.txt");
 
-            label4.Text = broc.ReadLine();
-            label7.Text = broc.ReadLine();
-            label5.Text = "Information";
-            textBox3.Text = "Broccolis näringsvärden ska stå här";
-            textBox1.Text = "Här ska det stå information om broccoli";
-            label6.Hide();
-            textBox2.Hide();
+            lblRubrik.Text = broc.ReadLine();
+            lblIng.Text = broc.ReadLine();
+            lblNär.Text = "Information";
+            textBoxIngr.Text = "Broccolis näringsvärden ska stå här";
+            textBoxNär.Text = "Här ska det stå information om broccoli";
+            lblTil.Hide();
+            textBoxTil.Hide();
             pictureBox1.ImageLocation = "http://www.worldcommunitycookbook.org/season/guide/photos/broccoli.jpg";
 
         }
@@ -88,6 +89,16 @@ namespace Grupp_7_Projekt
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           Recept temp = receptlista.HämtaReceptAvNamn(listBox2.SelectedItem.ToString());
+           lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
+            foreach (ReceptSubStruct r in temp.IngrList)
+            {
+                textBoxIngr.Text += r.ingrName + r.ingrNumber.ToString() + ingr;
+           }
         }
 
 

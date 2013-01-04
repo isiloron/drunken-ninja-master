@@ -39,13 +39,14 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblRubrik = new System.Windows.Forms.Label();
+            this.lblNär = new System.Windows.Forms.Label();
+            this.lblTil = new System.Windows.Forms.Label();
+            this.lblIng = new System.Windows.Forms.Label();
+            this.textBoxNär = new System.Windows.Forms.TextBox();
+            this.textBoxTil = new System.Windows.Forms.TextBox();
+            this.textBoxIngr = new System.Windows.Forms.TextBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -78,6 +79,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.listBox2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
@@ -161,83 +163,93 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label4
+            // lblRubrik
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Window;
-            this.label4.Font = new System.Drawing.Font("Calibri", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(474, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(422, 49);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "\"Långaste namnet bror\"";
+            this.lblRubrik.AutoSize = true;
+            this.lblRubrik.BackColor = System.Drawing.SystemColors.Window;
+            this.lblRubrik.Font = new System.Drawing.Font("Calibri", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRubrik.Location = new System.Drawing.Point(474, 88);
+            this.lblRubrik.Name = "lblRubrik";
+            this.lblRubrik.Size = new System.Drawing.Size(422, 49);
+            this.lblRubrik.TabIndex = 7;
+            this.lblRubrik.Text = "\"Långaste namnet bror\"";
             // 
-            // label5
+            // lblNär
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Window;
-            this.label5.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(479, 365);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 23);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Näringsvärden:";
+            this.lblNär.AutoSize = true;
+            this.lblNär.BackColor = System.Drawing.SystemColors.Window;
+            this.lblNär.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNär.Location = new System.Drawing.Point(479, 365);
+            this.lblNär.Name = "lblNär";
+            this.lblNär.Size = new System.Drawing.Size(131, 23);
+            this.lblNär.TabIndex = 8;
+            this.lblNär.Text = "Näringsvärden:";
             // 
-            // label6
+            // lblTil
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.Window;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(676, 365);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 23);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Tillagning:";
+            this.lblTil.AutoSize = true;
+            this.lblTil.BackColor = System.Drawing.SystemColors.Window;
+            this.lblTil.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTil.Location = new System.Drawing.Point(676, 365);
+            this.lblTil.Name = "lblTil";
+            this.lblTil.Size = new System.Drawing.Size(91, 23);
+            this.lblTil.TabIndex = 9;
+            this.lblTil.Text = "Tillagning:";
             // 
-            // label7
+            // lblIng
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(479, 139);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 23);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Ingredienser:";
+            this.lblIng.AutoSize = true;
+            this.lblIng.BackColor = System.Drawing.SystemColors.Window;
+            this.lblIng.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIng.Location = new System.Drawing.Point(479, 139);
+            this.lblIng.Name = "lblIng";
+            this.lblIng.Size = new System.Drawing.Size(116, 23);
+            this.lblIng.TabIndex = 10;
+            this.lblIng.Text = "Ingredienser:";
             // 
-            // textBox1
+            // textBoxNär
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(483, 392);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 243);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "Mycket bra näring";
+            this.textBoxNär.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNär.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNär.Location = new System.Drawing.Point(483, 392);
+            this.textBoxNär.Multiline = true;
+            this.textBoxNär.Name = "textBoxNär";
+            this.textBoxNär.Size = new System.Drawing.Size(186, 243);
+            this.textBoxNär.TabIndex = 11;
+            this.textBoxNär.Text = "Mycket bra näring";
             // 
-            // textBox2
+            // textBoxTil
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(680, 392);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 243);
-            this.textBox2.TabIndex = 12;
-            this.textBox2.Text = "iadjawhdwaidhawdihawdhiawhid";
+            this.textBoxTil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTil.Location = new System.Drawing.Point(680, 392);
+            this.textBoxTil.Multiline = true;
+            this.textBoxTil.Name = "textBoxTil";
+            this.textBoxTil.Size = new System.Drawing.Size(259, 243);
+            this.textBoxTil.TabIndex = 12;
+            this.textBoxTil.Text = "iadjawhdwaidhawdihawdhiawhid";
             // 
-            // textBox3
+            // textBoxIngr
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(483, 165);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 183);
-            this.textBox3.TabIndex = 13;
-            this.textBox3.Text = "10Kg Dennis                           40% Nils                                   " +
+            this.textBoxIngr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxIngr.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIngr.Location = new System.Drawing.Point(483, 165);
+            this.textBoxIngr.Multiline = true;
+            this.textBoxIngr.Name = "textBoxIngr";
+            this.textBoxIngr.Size = new System.Drawing.Size(186, 183);
+            this.textBoxIngr.TabIndex = 13;
+            this.textBoxIngr.Text = "10Kg Dennis                           40% Nils                                   " +
                 "   Mycket Liter Jonas";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBoxIngr.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 18;
+            this.listBox2.Location = new System.Drawing.Point(12, 71);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 94);
+            this.listBox2.TabIndex = 1;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // Receptsida
             // 
@@ -245,13 +257,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(984, 694);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxIngr);
+            this.Controls.Add(this.textBoxTil);
+            this.Controls.Add(this.textBoxNär);
+            this.Controls.Add(this.lblIng);
+            this.Controls.Add(this.lblTil);
+            this.Controls.Add(this.lblNär);
+            this.Controls.Add(this.lblRubrik);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabControl1);
@@ -283,15 +295,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox txtboxtitlar;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblRubrik;
+        private System.Windows.Forms.Label lblNär;
+        private System.Windows.Forms.Label lblTil;
+        private System.Windows.Forms.Label lblIng;
+        private System.Windows.Forms.TextBox textBoxNär;
+        private System.Windows.Forms.TextBox textBoxTil;
+        private System.Windows.Forms.TextBox textBoxIngr;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
