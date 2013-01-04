@@ -118,14 +118,16 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> IngrNamn)
+        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> LetaLista)
         {
             List<Recept> ReturLista = new List<Recept>();
             
             foreach (Recept r in receptlista)
-            { 
+            {
+                int matches = 0;
                 foreach (ReceptSubStruct rs in r.IngrList)
                 {
+                   
                 }
             }
             return ReturLista;

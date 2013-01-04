@@ -13,16 +13,16 @@ namespace Grupp_7_Projekt
 		int fett;
         int protein;
         int energy;
-        int carbon;
+        int kolhydrater;
 		string name;
 		string unit;
 		string description;
 
         [XmlElement]
-        public int Carbon
+        public int Kolhydrater
         {
-            get { return carbon; }
-            set { carbon = value; }
+            get { return kolhydrater; }
+            set { kolhydrater = value; }
         }
 
 
@@ -67,7 +67,17 @@ namespace Grupp_7_Projekt
             get { return Description; }
             set { Description = value; }
         }
-		
+        public Ingredient(string NewName, string NewDescription, string NewMessureUnit, int NewEnergy, int NewProtein, int NewFett, int NewKolhydrater)
+        {
+            name = NewName;
+            description = NewDescription;
+            unit = NewMessureUnit;
+            energy = NewEnergy;
+            protein = NewProtein;
+            fett = NewFett;
+            kolhydrater = NewKolhydrater;
+        }
+
 		public Ingredient()
 		{
 			energy = 0;
