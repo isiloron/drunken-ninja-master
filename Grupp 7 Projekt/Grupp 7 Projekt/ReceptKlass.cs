@@ -45,7 +45,7 @@ namespace Grupp_7_Projekt
         {
             for (int z = 0; IngrList.Count > z; )
             {
-                if (RemoveName == IngrList[z].IngrName)
+                if (RemoveName == IngrList[z].ingrName)
                 {
                     IngrList.RemoveAt(z);
                     return true;
@@ -83,6 +83,16 @@ namespace Grupp_7_Projekt
             //TotalEnergy += GetEnergyValueFromIngrList(IngrList[z].IngrName * IngrList[z].ingrNumber;
             }
             return TotalEnergy;
+        }
+
+        public int GetTotalCarbon()
+        {
+            int TotalCarbon = 0;
+            for (int z = 0; z < IngrList.Count; z++)
+            {
+                //TotalCarbon += GetCarbonValueFromIngrList(IngrList[z].IngrName * IngrList[z].ingrNumber;
+            }
+            return TotalCarbon;
         }
 
         public void AddTag(string TagName)

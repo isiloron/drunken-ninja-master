@@ -13,9 +13,18 @@ namespace Grupp_7_Projekt
 		int fett;
         int protein;
         int energy;
+        int carbon;
 		string name;
 		string unit;
 		string description;
+
+        [XmlElement]
+        public int Carbon
+        {
+            get { return carbon; }
+            set { carbon = value; }
+        }
+
 
 		[XmlElement]
         public int Energy
