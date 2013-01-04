@@ -92,12 +92,12 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökMinMaxFett(int MinValue, int MaxValue)
+        public List<Recept> SökMinMaxProtein(int MinValue, int MaxValue)
         {
             List<Recept> ReturLista = new List<Recept>();
             foreach (Recept r in receptlista)
             {
-                if (r.GetTotalFatt() >= MinValue && r.GetTotalFatt() <= MaxValue)
+                if (r.GetTotalProtein() >= MinValue && r.GetTotalProtein() <= MaxValue)
                 {
                     ReturLista.Add(r);
                 }
@@ -110,7 +110,7 @@ namespace Grupp_7_Projekt
             List<Recept> ReturLista = new List<Recept>();
             foreach (Recept r in receptlista)
             {
-                if (r.GetTotalCarbon() >= MinValue && r.GetTotalCarbon() <= MaxValue)
+                if (r.GetTotalKolhyderater() >= MinValue && r.GetTotalKolhyderater() <= MaxValue)
                 {
                     ReturLista.Add(r);
                 }
@@ -121,13 +121,23 @@ namespace Grupp_7_Projekt
         public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> LetaLista)
         {
             List<Recept> ReturLista = new List<Recept>();
-            
-            foreach (Recept r in receptlista)
+
+            for (int z = 0; z < receptlista.Count; z++ )
             {
                 int matches = 0;
-                foreach (ReceptSubStruct rs in r.IngrList)
+                for (int x = 0; x < receptlista[z].IngrList.Count;x++)
+                {                    
+                    for (int c =0; c<LetaLista.Count; c++)
+                    {
+                        if (LetaLista[c] == receptlista[z].IngrList[x].ingrName)
+                        {
+                            matches++;
+                        }
+                    }
+                }
+                if (matches == LetaLista.Count)
                 {
-                   
+                    ReturLista.Add(receptlista[z]);
                 }
             }
             return ReturLista;
