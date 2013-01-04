@@ -9,7 +9,7 @@ namespace Grupp_7_Projekt
     {
        List<Ingredient> ingredienslista;
 
-       public IngrediensLista()
+       public IngrediensLista()// konstruktor
        {
            NyIngrediensBok();
        }
@@ -50,16 +50,18 @@ namespace Grupp_7_Projekt
                 }
             }
         }
-        
-       /* public  SökIngrediens(string ingrediensnamn)
-        {
-            foreach (Ingredient i in ingredienslista)
-            {
-                if (i.Name.Equals(ingrediensnamn))
-                {
-                    return i;
-                }
-            }
-        }*/
+
+        public List<Recept> SökIngr(List<string> IngrNamn)
+         {
+             List<Ingredient> ReturLista = new List<Ingredient>();
+            
+             foreach (Ingredient i in ingredienslista)
+             { 
+                 foreach (ReceptSubStruct rs in r.IngrList)
+                 {
+                 }
+             }
+             return ReturLista;
+         }
     }
 }
