@@ -52,11 +52,11 @@ namespace Grupp_7_Projekt
             }
         }
 
-        public Recept SökRecept(string SearchString) //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
+        public Recept SökRecept(string titel) //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
         {
             foreach (Recept r in receptlista)
             {
-                if (r.Titel.Equals(SearchString));
+                if (r.Titel.Equals(titel))
                 {
                     return r;
                 }

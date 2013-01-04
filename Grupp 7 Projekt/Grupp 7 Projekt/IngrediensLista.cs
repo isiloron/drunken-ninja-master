@@ -46,9 +46,15 @@ namespace Grupp_7_Projekt
                     ingredienslista.Remove(i);
             }
         }
-        public void SökIng()
+        public  SökIngrediens(string ingrediensnamn)
         {
-
+            foreach (Ingredient i in ingredienslista)
+            {
+                if (i.Name.Equals(ingrediensnamn))
+                {
+                    return i;
+                }
+            }
         }
     }
 }
