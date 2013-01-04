@@ -14,6 +14,7 @@ namespace Grupp_7_Projekt
     {
         Receptlista receptlista = new Receptlista();
         Ingredienssida ingredienssida = new Ingredienssida();
+        
 
         public Receptsida()
         {
@@ -79,7 +80,7 @@ namespace Grupp_7_Projekt
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            listBox1.Items.Add(ingredienssida.ingredienslista.HämtaIngTitlar());
         }
 
 

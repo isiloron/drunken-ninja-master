@@ -294,13 +294,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-<<<<<<< HEAD
         private System.Windows.Forms.TextBox txtboxtitlar;
         private System.Windows.Forms.TextBox textBox4;
-=======
-        private System.Windows.Forms.LinkLabel linkPotatis;
-        private System.Windows.Forms.LinkLabel linkBroccoli;
->>>>>>> origin/Tim
         private System.Windows.Forms.ListBox listBox1;
     }
 }
