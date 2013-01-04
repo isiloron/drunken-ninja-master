@@ -14,13 +14,14 @@ namespace Grupp_7_Projekt
     {
         Receptlista receptlista = new Receptlista();
         Ingredienssida ingredienssida = new Ingredienssida();
+
         
 
         public Receptsida()
         {
             receptlista.LaddaRecept();
             InitializeComponent();
-            listBox1.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar();
+            
         }
 
         private void Timpeton_Load(object sender, EventArgs e)
@@ -82,6 +83,11 @@ namespace Grupp_7_Projekt
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
 

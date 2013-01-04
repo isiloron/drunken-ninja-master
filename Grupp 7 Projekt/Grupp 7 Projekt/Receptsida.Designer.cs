@@ -32,9 +32,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,15 +88,6 @@
             this.tabPage1.Text = "Recept";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 71);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(163, 251);
-            this.listBox1.TabIndex = 4;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -106,6 +97,7 @@
             this.label1.Size = new System.Drawing.Size(99, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recept";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPage2
             // 
@@ -118,6 +110,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Ingredienser";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(12, 71);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(163, 251);
+            this.listBox1.TabIndex = 4;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label2
             // 
