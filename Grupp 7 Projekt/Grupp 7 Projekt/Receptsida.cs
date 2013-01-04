@@ -12,8 +12,12 @@ namespace Grupp_7_Projekt
 {
     public partial class Receptsida : Form
     {
+        Receptlista receptlista = new Receptlista();
+        Ingredienssida ingredienssida = new Ingredienssida();
+
         public Receptsida()
         {
+            receptlista.LaddaRecept();
             InitializeComponent();
         }
 

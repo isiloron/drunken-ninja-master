@@ -32,8 +32,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtboxtitlar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,8 +78,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.txtboxtitlar);
+            this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
@@ -91,23 +88,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Recept";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(26, 72);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 350);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // txtboxtitlar
-            // 
-            this.txtboxtitlar.Location = new System.Drawing.Point(26, 72);
-            this.txtboxtitlar.Multiline = true;
-            this.txtboxtitlar.Name = "txtboxtitlar";
-            this.txtboxtitlar.Size = new System.Drawing.Size(223, 453);
-            this.txtboxtitlar.TabIndex = 1;
             // 
             // label1
             // 
@@ -314,8 +294,13 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox txtboxtitlar;
         private System.Windows.Forms.TextBox textBox4;
+=======
+        private System.Windows.Forms.LinkLabel linkPotatis;
+        private System.Windows.Forms.LinkLabel linkBroccoli;
+>>>>>>> origin/Tim
         private System.Windows.Forms.ListBox listBox1;
     }
 }
