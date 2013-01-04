@@ -41,19 +41,21 @@ namespace Grupp_7_Projekt
             instructions = NewInstructions;
         }
 
-        public Recept(string NewTitel, string NewInstructions, ref List<ReceptSubStruct>NewIngrList, ref List<string>NewTagList)
+        public Recept(string NewTitel, string NewInstructions, List<ReceptSubStruct>NewIngrList, List<string>NewTagList)
         {
             titel = NewTitel;
             instructions = NewInstructions;
-            for (int z = 0; z < NewIngrList.Count; z++)
-            {
-                IngrList.Add(NewIngrList[z]);
+            IngrList = NewIngrList;
+            TagList = NewTagList;
+           // for (int z = 0; z < NewIngrList.Count; z++)
+            //{
+            //    IngrList.Add(NewIngrList[z]);
             
-            }
-            for (int z=0; z<NewTagList.Count; z++)
-            {
-                TagList.Add(NewTagList[z]);
-            }
+            //}
+            //for (int z=0; z<NewTagList.Count; z++)
+            //{
+            //    TagList.Add(NewTagList[z]);
+            //}
         }
 
         public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
