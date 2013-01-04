@@ -32,8 +32,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtboxtitlar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.linkBroccoli = new System.Windows.Forms.LinkLabel();
@@ -49,6 +47,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -81,8 +80,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.txtboxtitlar);
+            this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
@@ -92,23 +90,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Recept";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(26, 72);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 350);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // txtboxtitlar
-            // 
-            this.txtboxtitlar.Location = new System.Drawing.Point(26, 72);
-            this.txtboxtitlar.Multiline = true;
-            this.txtboxtitlar.Name = "txtboxtitlar";
-            this.txtboxtitlar.Size = new System.Drawing.Size(223, 453);
-            this.txtboxtitlar.TabIndex = 1;
             // 
             // label1
             // 
@@ -278,6 +259,15 @@
                 "   Mycket Liter Jonas";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Location = new System.Drawing.Point(12, 71);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(361, 508);
+            this.listBox1.TabIndex = 1;
+            // 
             // Receptsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,7 +321,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.LinkLabel linkPotatis;
         private System.Windows.Forms.LinkLabel linkBroccoli;
-        private System.Windows.Forms.TextBox txtboxtitlar;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
