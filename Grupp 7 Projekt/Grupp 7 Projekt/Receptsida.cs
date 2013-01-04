@@ -73,6 +73,11 @@ namespace Grupp_7_Projekt
 
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
 
     }
 }
