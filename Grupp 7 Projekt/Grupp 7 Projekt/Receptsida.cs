@@ -21,6 +21,10 @@ namespace Grupp_7_Projekt
             receptlista.LaddaRecept();
             InitializeComponent();
             listBox2.DataSource = receptlista.HämtaTitlar();
+
+            listBox1.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
+            
+
             
         }
 
