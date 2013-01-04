@@ -34,10 +34,12 @@ namespace Grupp_7_Projekt
             return TitelIngLista;
                                   
         }
-        public void LäggTillIng()
-        { 
 
+       public void LäggTillIng(int fett, int protein, int energy, int carbon, string name,	string unit, string description)
+        { 
+            ingredienslista.Add(new Ingredient(fett, protein, energy, carbon, name, unit, description));
         }
+       
         public void TaBortIng(string name)
         {
             foreach (Ingredient i in ingredienslista)
@@ -46,7 +48,8 @@ namespace Grupp_7_Projekt
                     ingredienslista.Remove(i);
             }
         }
-        public  SökIngrediens(string ingrediensnamn)
+        
+       /* public  SökIngrediens(string ingrediensnamn)
         {
             foreach (Ingredient i in ingredienslista)
             {
@@ -55,6 +58,6 @@ namespace Grupp_7_Projekt
                     return i;
                 }
             }
-        }
+        }*/
     }
 }
