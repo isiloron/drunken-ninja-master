@@ -42,10 +42,12 @@ namespace Grupp_7_Projekt
        
         public void TaBortIng(string name)
         {
-            foreach (Ingredient i in ingredienslista)
+            for (int i = 0; i < ingredienslista.Count; i++)//Loopar igenom receptlistan för en matchande titel för att sedan ta bort detta recept
             {
-                if (i.Name.Equals(name))
-                    ingredienslista.Remove(i);
+                if (ingredienslista[i].Name == name)
+                {
+                    ingredienslista.RemoveAt(i);
+                }
             }
         }
         
