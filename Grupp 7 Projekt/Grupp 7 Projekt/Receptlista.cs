@@ -43,17 +43,26 @@ namespace Grupp_7_Projekt
 
         public void TaBort(string titel)//En metod som tar bort ett recept ur receptlistan
         {
-            foreach (Recept r in receptlista)//Loopar igenom receptlistan för en matchande titel för att sedan ta bort detta recept
+            for (int r = 0; r < receptlista.Count; r++ )//Loopar igenom receptlistan för en matchande titel för att sedan ta bort detta recept
             {
-                if (r.Titel.Equals(titel))
-                receptlista.Remove(r);
+                if(receptlista[r].Titel == titel) 
+                {
+                    receptlista.RemoveAt(r);
+                } 
             }
         }
 
-        public void SökRecept() //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
+        public Recept SökRecept(string SearchString) //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
         {
-            
-        }
+            foreach (Recept r in receptlista)
+            {
+                if (r.Titel.Equals(SearchString));
+                {
+                    return r;
+                }
+            }
+            return null;
+         }
     }
 
 }
