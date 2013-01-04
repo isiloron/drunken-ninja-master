@@ -24,6 +24,10 @@ namespace Grupp_7_Projekt
         {
             receptlista = new List<Recept>();//"Tömmer" receptlistan
         }
+        public void NyttReceptKlass(Recept ReceptToAdd)
+        {
+            receptlista.Add(ReceptToAdd);
+        }
 
 
         public List<string>  HämtaTitlar()//En metod som returnerar en stringlista med alla recepttitlar från receptlistan (Tim använder sig av den här)
@@ -152,6 +156,11 @@ namespace Grupp_7_Projekt
             return ReturLista;
         
         
+        }
+
+        public void LäggTill(Recept nyaRecepted)
+        {
+            throw new NotImplementedException();
         }
     }
 

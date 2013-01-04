@@ -32,6 +32,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ButtonNyttRecept = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -46,7 +48,9 @@
             this.textBoxNär = new System.Windows.Forms.TextBox();
             this.textBoxTil = new System.Windows.Forms.TextBox();
             this.textBoxIngr = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.ButtonNewingr = new System.Windows.Forms.Button();
+            this.ButtonRemoveIngr = new System.Windows.Forms.Button();
+            this.ButtonRemoveRecepie = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -75,10 +79,13 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(387, 622);
             this.tabControl1.TabIndex = 5;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.IndexChange);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.ButtonRemoveRecepie);
+            this.tabPage1.Controls.Add(this.ButtonNyttRecept);
             this.tabPage1.Controls.Add(this.listBox2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,7 +95,26 @@
             this.tabPage1.Size = new System.Drawing.Size(379, 584);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Recept";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // ButtonNyttRecept
+            // 
+            this.ButtonNyttRecept.Location = new System.Drawing.Point(242, 73);
+            this.ButtonNyttRecept.Name = "ButtonNyttRecept";
+            this.ButtonNyttRecept.Size = new System.Drawing.Size(121, 23);
+            this.ButtonNyttRecept.TabIndex = 2;
+            this.ButtonNyttRecept.Text = "Nytt Recept";
+            this.ButtonNyttRecept.UseVisualStyleBackColor = true;
+            this.ButtonNyttRecept.Click += new System.EventHandler(this.ButtonNyttRecept_Click);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 18;
+            this.listBox2.Location = new System.Drawing.Point(12, 71);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(224, 490);
+            this.listBox2.TabIndex = 1;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -99,10 +125,11 @@
             this.label1.Size = new System.Drawing.Size(99, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Recept";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ButtonRemoveIngr);
+            this.tabPage2.Controls.Add(this.ButtonNewingr);
             this.tabPage2.Controls.Add(this.listBox1);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
@@ -118,7 +145,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 71);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(163, 251);
+            this.listBox1.Size = new System.Drawing.Size(236, 498);
             this.listBox1.TabIndex = 4;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -161,7 +188,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblRubrik
             // 
@@ -239,17 +265,36 @@
             this.textBoxIngr.TabIndex = 13;
             this.textBoxIngr.Text = "10Kg Dennis                           40% Nils                                   " +
                 "   Mycket Liter Jonas";
-            this.textBoxIngr.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // listBox2
+            // ButtonNewingr
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 18;
-            this.listBox2.Location = new System.Drawing.Point(12, 71);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 94);
-            this.listBox2.TabIndex = 1;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            this.ButtonNewingr.Location = new System.Drawing.Point(271, 73);
+            this.ButtonNewingr.Name = "ButtonNewingr";
+            this.ButtonNewingr.Size = new System.Drawing.Size(75, 23);
+            this.ButtonNewingr.TabIndex = 5;
+            this.ButtonNewingr.Text = "Ny";
+            this.ButtonNewingr.UseVisualStyleBackColor = true;
+            this.ButtonNewingr.Click += new System.EventHandler(this.ButtonNewingr_Click);
+            // 
+            // ButtonRemoveIngr
+            // 
+            this.ButtonRemoveIngr.Location = new System.Drawing.Point(271, 102);
+            this.ButtonRemoveIngr.Name = "ButtonRemoveIngr";
+            this.ButtonRemoveIngr.Size = new System.Drawing.Size(75, 23);
+            this.ButtonRemoveIngr.TabIndex = 6;
+            this.ButtonRemoveIngr.Text = "Ta Bort";
+            this.ButtonRemoveIngr.UseVisualStyleBackColor = true;
+            this.ButtonRemoveIngr.Click += new System.EventHandler(this.ButtonRemoveIngr_Click);
+            // 
+            // ButtonRemoveRecepie
+            // 
+            this.ButtonRemoveRecepie.Location = new System.Drawing.Point(242, 102);
+            this.ButtonRemoveRecepie.Name = "ButtonRemoveRecepie";
+            this.ButtonRemoveRecepie.Size = new System.Drawing.Size(121, 23);
+            this.ButtonRemoveRecepie.TabIndex = 3;
+            this.ButtonRemoveRecepie.Text = "Ta bort";
+            this.ButtonRemoveRecepie.UseVisualStyleBackColor = true;
+            this.ButtonRemoveRecepie.Click += new System.EventHandler(this.ButtonRemoveRecepie_Click);
             // 
             // Receptsida
             // 
@@ -269,7 +314,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Receptsida";
             this.Text = "Timpeton";
-            this.Load += new System.EventHandler(this.Timpeton_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -304,5 +348,9 @@
         private System.Windows.Forms.TextBox textBoxIngr;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button ButtonNyttRecept;
+        private System.Windows.Forms.Button ButtonNewingr;
+        private System.Windows.Forms.Button ButtonRemoveRecepie;
+        private System.Windows.Forms.Button ButtonRemoveIngr;
     }
 }

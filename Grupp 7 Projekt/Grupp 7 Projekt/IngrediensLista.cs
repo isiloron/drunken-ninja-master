@@ -34,6 +34,18 @@ namespace Grupp_7_Projekt
             return TitelIngLista;
                                   
         }
+        public Ingredient HämtaIngrKlass(string NamnAttHämta)
+        {
+            foreach (Ingredient ingr in ingredienslista)
+            {
+                if (ingr.Name == NamnAttHämta)
+                {
+                    return ingr;
+                }
+            }
+            return null;
+        
+        }
 
        public void LäggTillIng(string name,string unit, string description,	int fett, int protein, int energy, int carbon)
         { 
