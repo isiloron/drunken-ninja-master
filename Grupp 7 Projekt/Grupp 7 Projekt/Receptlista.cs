@@ -35,6 +35,14 @@ namespace Grupp_7_Projekt
            }
             return titellista;
         }
+        public Recept HämtaReceptAvNamn(string NamnAttHänta)
+        {
+            foreach (Recept r in receptlista)
+            {
+                if (NamnAttHänta == r.Titel)
+                    return r;
+            }
+        }
 
         public void LäggTill(string titel, string instructions, List<ReceptSubStruct> IngrList, List<string> TagList)//En metod som lägger till ett recept i receptlistan
         {
@@ -65,7 +73,7 @@ namespace Grupp_7_Projekt
             return null;
          }
 
-        public List<Recept> SökMinMaxFett(int MinValue, int MaxValue)
+        public List<Recept> SökMinMaxFett(int MinValue, int MaxValue) //Söker på min/max fett och returerar en lista med alla matchande recept
         {
            List<Recept> ReturnList = new List<Recept>();
             foreach (Recept r in receptlista)
@@ -77,8 +85,8 @@ namespace Grupp_7_Projekt
             }
             return ReturnList;
         }
-        
-        public List<Recept> SökMinMaxEnergi(int MinValue, int MaxValue)
+
+        public List<Recept> SökMinMaxEnergi(int MinValue, int MaxValue) //Söker på min/max energi och returerar en lista med alla matchande recept
         {
             List<Recept> ReturLista = new List<Recept>();
             foreach (Recept r in receptlista)
@@ -92,7 +100,7 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökMinMaxProtein(int MinValue, int MaxValue)
+        public List<Recept> SökMinMaxProtein(int MinValue, int MaxValue) //Söker på min/max protein och returerar en lista med alla matchande recept
         {
             List<Recept> ReturLista = new List<Recept>();
             foreach (Recept r in receptlista)
@@ -105,7 +113,7 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökMinMaxKolhydrater(int MinValue, int MaxValue)
+        public List<Recept> SökMinMaxKolhydrater(int MinValue, int MaxValue , List<Recept> ReceptListaAttSöka) //Söker på min/max kolhydrater och returerar en lista med alla matchande recept
         {
             List<Recept> ReturLista = new List<Recept>();
             foreach (Recept r in receptlista)
@@ -118,18 +126,18 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> LetaLista)
+        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> LetaLista, List<Recept> ReceptListaAttSöka) //Tar in en lista med stränger(ingridienser) och returerar en lista med alla recept som inehåller samntliga ingridienser
         {
             List<Recept> ReturLista = new List<Recept>();
 
-            for (int z = 0; z < receptlista.Count; z++ )
+            for (int z = 0; z < ReceptListaAttSöka.Count; z++ )
             {
                 int matches = 0;
-                for (int x = 0; x < receptlista[z].IngrList.Count;x++)
+                for (int x = 0; x < ReceptListaAttSöka[z].IngrList.Count;x++)
                 {                    
                     for (int c =0; c<LetaLista.Count; c++)
                     {
-                        if (LetaLista[c] == receptlista[z].IngrList[x].ingrName)
+                        if (LetaLista[c] == ReceptListaAttSöka[z].IngrList[x].ingrName)
                         {
                             matches++;
                         }

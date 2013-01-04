@@ -107,14 +107,14 @@ namespace Grupp_7_Projekt
             return TotalEnergy;
         }
 
-        public int GetTotalCarbon()
+        public int GetTotalKolhyderater()
         {
-            int TotalCarbon = 0;
+            int TotalKolhyderater = 0;
             for (int z = 0; z < IngrList.Count; z++)
             {
                 //TotalCarbon += GetCarbonValueFromIngrList(IngrList[z].IngrName * IngrList[z].ingrNumber;
             }
-            return TotalCarbon;
+            return TotalKolhyderater;
         }
 
         public void AddTag(string TagName)
