@@ -20,6 +20,11 @@ namespace Grupp_7_Projekt
             SparaOchLaddaRecept.LaddaXML(out receptlista);//Laddar in recepten till receptlistan (från XMLserialiseraren)
         }
 
+        private void SparaRecept()
+        {
+            SparaOchLaddaRecept.SparaXML(ref receptlista);
+        }
+
         public void NyReceptbok()//Back-up metod
         {
             receptlista = new List<Recept>();//"Tömmer" receptlistan
@@ -27,6 +32,7 @@ namespace Grupp_7_Projekt
         public void NyttReceptKlass(Recept ReceptToAdd)
         {
             receptlista.Add(ReceptToAdd);
+            SparaRecept();
         }
 
 
@@ -52,6 +58,7 @@ namespace Grupp_7_Projekt
         public void LäggTill(string titel, string instructions, List<ReceptSubStruct> IngrList, List<string> TagList)//En metod som lägger till ett recept i receptlistan
         {
             receptlista.Add(new Recept(titel, instructions, IngrList, TagList));
+            SparaRecept();
         }
 
         public void TaBort(string titel)//En metod som tar bort ett recept ur receptlistan
@@ -61,27 +68,29 @@ namespace Grupp_7_Projekt
                 if(receptlista[r].Titel == titel) 
                 {
                     receptlista.RemoveAt(r);
+                    SparaRecept();
                 } 
             }
         }
 
 
-        public Recept SökExactRecept(string SearchString) //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
+        public List<Recept> SökReceptNamn(string searchstring) //En metod som gör att man ska kunna söka efter specifika recept i receptlistan
         {
+            List<Recept> returnlist = new List<Recept>();
             foreach (Recept r in receptlista)
             {
-                if (r.Titel == SearchString)
+                if (r.Titel.Contains(searchstring))
                 {
-                    return r;
+                    returnlist.Add(r);
                 }
             }
-            return null;
+            return returnlist;
          }
 
-        public List<Recept> SökMinMaxFett(int MinValue, int MaxValue) //Söker på min/max fett och returerar en lista med alla matchande recept
+        public List<Recept> SökMinMaxFett(int MinValue, int MaxValue, List<Recept> searchlist) //Söker på min/max fett och returerar en lista med alla matchande recept
         {
            List<Recept> ReturnList = new List<Recept>();
-            foreach (Recept r in receptlista)
+            foreach (Recept r in searchlist)
             {
                 if (r.GetTotalFatt() >= MinValue && r.GetTotalFatt() <= MaxValue)
                 {
@@ -91,10 +100,10 @@ namespace Grupp_7_Projekt
             return ReturnList;
         }
 
-        public List<Recept> SökMinMaxEnergi(int MinValue, int MaxValue) //Söker på min/max energi och returerar en lista med alla matchande recept
+        public List<Recept> SökMinMaxEnergi(int MinValue, int MaxValue, List<Recept> searchlist) //Söker på min/max energi och returerar en lista med alla matchande recept
         {
             List<Recept> ReturLista = new List<Recept>();
-            foreach (Recept r in receptlista)
+            foreach (Recept r in searchlist)
             {
                 if (r.GetTotalEnergy() >= MinValue && r.GetTotalEnergy() <= MaxValue)
                 {
@@ -105,10 +114,10 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökMinMaxProtein(int MinValue, int MaxValue) //Söker på min/max protein och returerar en lista med alla matchande recept
+        public List<Recept> SökMinMaxProtein(int MinValue, int MaxValue, List<Recept> searchlist) //Söker på min/max protein och returerar en lista med alla matchande recept
         {
             List<Recept> ReturLista = new List<Recept>();
-            foreach (Recept r in receptlista)
+            foreach (Recept r in searchlist)
             {
                 if (r.GetTotalProtein() >= MinValue && r.GetTotalProtein() <= MaxValue)
                 {
@@ -118,10 +127,10 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökMinMaxKolhydrater(int MinValue, int MaxValue , List<Recept> ReceptListaAttSöka) //Söker på min/max kolhydrater och returerar en lista med alla matchande recept
+        public List<Recept> SökMinMaxKolhydrater(int MinValue, int MaxValue , List<Recept> searchlist) //Söker på min/max kolhydrater och returerar en lista med alla matchande recept
         {
             List<Recept> ReturLista = new List<Recept>();
-            foreach (Recept r in receptlista)
+            foreach (Recept r in searchlist)
             {
                 if (r.GetTotalKolhyderater() >= MinValue && r.GetTotalKolhyderater() <= MaxValue)
                 {
@@ -131,24 +140,24 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> LetaLista, List<Recept> ReceptListaAttSöka) //Tar in en lista med stränger(ingridienser) och returerar en lista med alla recept som inehåller samntliga ingridienser
+        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> stringstosearch, List<Recept> receptlisttoseach) //Tar in en lista med stränger(ingridienser) och returerar en lista med alla recept som inehåller samntliga ingridienser
         {
             List<Recept> ReturLista = new List<Recept>();
 
-            for (int z = 0; z < ReceptListaAttSöka.Count; z++ )
+            for (int z = 0; z < receptlisttoseach.Count; z++)
             {
                 int matches = 0;
-                for (int x = 0; x < ReceptListaAttSöka[z].IngrList.Count;x++)
-                {                    
-                    for (int c =0; c<LetaLista.Count; c++)
+                for (int x = 0; x < receptlisttoseach[z].IngrList.Count; x++)
+                {
+                    for (int c = 0; c < stringstosearch.Count; c++)
                     {
-                        if (LetaLista[c] == ReceptListaAttSöka[z].IngrList[x].ingrName)
+                        if (stringstosearch[c] == receptlisttoseach[z].IngrList[x].ingrName)
                         {
                             matches++;
                         }
                     }
                 }
-                if (matches == LetaLista.Count)
+                if (matches == stringstosearch.Count)
                 {
                     ReturLista.Add(receptlista[z]);
                 }
@@ -156,11 +165,6 @@ namespace Grupp_7_Projekt
             return ReturLista;
         
         
-        }
-
-        public void LäggTill(Recept nyaRecepted)
-        {
-            throw new NotImplementedException();
         }
     }
 

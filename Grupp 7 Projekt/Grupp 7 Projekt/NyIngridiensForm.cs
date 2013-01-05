@@ -15,7 +15,29 @@ namespace Grupp_7_Projekt
         {
             InitializeComponent();
         }
+        private void NyIngridiensForm_Load(object sender, EventArgs e)
+        {
+            comboBoxEnhet.Items.Add("Styck");
+            comboBoxEnhet.Items.Add("Mililiter");
+            comboBoxEnhet.Items.Add("Gram");
+        }
+        private void ComboBoxEnhet_Change(object sender, EventArgs e)
+        {
+            WarningLable.Show();
+        if (comboBoxEnhet.SelectedItem.ToString() == "Styck")
+            WarningLable.Text = "OBS! Ange energivärden per styck!";
+
+        if (comboBoxEnhet.SelectedItem.ToString() == "Mililiter")
+        WarningLable.Text = "OBS! Ange energivärden per 100 mililiter!";
+
+        if (comboBoxEnhet.SelectedItem.ToString() == "Gram")
+        WarningLable.Text = "OBS! Ange energivärden per 100g!";
+        
+        }
+        
         public Ingredient newingr;
+        
+        
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -23,7 +45,7 @@ namespace Grupp_7_Projekt
                 {
                     if (Int32.Parse(textBoxFett.Text) < 100 && Int32.Parse(textBoxFett.Text) >= 0)
                 {
-                    newingr = new Ingredient(TextBoxNamn.Text, TextBoxBeskr.Text, textBoxEnhet.Text, Int32.Parse(textBoxEnergy.Text), Int32.Parse(textBoxProtein.Text), Int32.Parse(textBoxFett.Text), Int32.Parse(textBoxKolh.Text));
+                    newingr = new Ingredient(TextBoxNamn.Text, TextBoxBeskr.Text, comboBoxEnhet.SelectedItem.ToString() , Int32.Parse(textBoxEnergy.Text), Int32.Parse(textBoxProtein.Text), Int32.Parse(textBoxFett.Text), Int32.Parse(textBoxKolh.Text));
                     this.Close();
                 }
                     else
@@ -38,5 +60,7 @@ namespace Grupp_7_Projekt
                 
 
             }
+
+        
         }
     }

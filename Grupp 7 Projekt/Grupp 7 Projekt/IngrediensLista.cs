@@ -18,6 +18,10 @@ namespace Grupp_7_Projekt
         {
             SparaOchLaddaIngredienser.LaddaXML(out ingredienslista);
         }
+        public void SparaIngrediens()
+        {
+            SparaOchLaddaIngredienser.SparaXML(ref ingredienslista);
+        }
 
         public void NyIngrediensBok()
         {
@@ -50,11 +54,13 @@ namespace Grupp_7_Projekt
        public void LäggTillIng(string name,string unit, string description,	int fett, int protein, int energy, int carbon)
         { 
             ingredienslista.Add(new Ingredient(name, unit, description, fett, protein, energy, carbon));
+            SparaIngrediens();
         }
 
        public void LäggTillIngrKlass(Ingredient NewIngr)
        {
            ingredienslista.Add(NewIngr);
+           SparaIngrediens();
        }
        
         public void TaBortIng(string name)
@@ -65,6 +71,7 @@ namespace Grupp_7_Projekt
                 if (ingredienslista[i].Name == name)
                 {
                     ingredienslista.RemoveAt(i);
+                    SparaIngrediens();
 
                 }
             }
@@ -110,7 +117,7 @@ namespace Grupp_7_Projekt
                     }
                 }
             }
-            Total = Total / recept.IngrList.Count;
+               Total = (int)(Total / recept.IngrList.Count);
             return Total;
         }
 
@@ -146,18 +153,5 @@ namespace Grupp_7_Projekt
 
                 return Total;
             }
-
-      /* public List<Recept> SökIngr(List<string> IngrNamn)
-         {
-             List<Ingredient> ReturLista = new List<Ingredient>();
-            
-             foreach (Ingredient i in ingredienslista)
-             { 
-                 foreach (ReceptSubStruct rs in r.IngrList)
-                 {
-                 }
-             }
-             return ReturLista;
-         }*/
     }
 }
