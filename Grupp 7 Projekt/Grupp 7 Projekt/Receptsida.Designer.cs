@@ -42,6 +42,28 @@
             this.listBoxIngr = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.SearchTabRecept = new System.Windows.Forms.TabPage();
+            this.TBoxSearchReceptMAXKolhyd = new System.Windows.Forms.TextBox();
+            this.TBoxSearchReceptMinKolhyd = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TBoxSearchReceptMAXProtein = new System.Windows.Forms.TextBox();
+            this.TboxSearchReceptMAXFett = new System.Windows.Forms.TextBox();
+            this.TboxSearchReceptMAXEnergi = new System.Windows.Forms.TextBox();
+            this.ButtonSearchRecept = new System.Windows.Forms.Button();
+            this.listBoxSearchReceptResults = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TBoxSearchReceptTags = new System.Windows.Forms.TextBox();
+            this.TBoxSearchReceptMinProtein = new System.Windows.Forms.TextBox();
+            this.TboxSearchReceptMinFett = new System.Windows.Forms.TextBox();
+            this.TboxSearchReceptMinEnergi = new System.Windows.Forms.TextBox();
+            this.TboxSearchReceptTitel = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SearchTabIngr = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblRubrik = new System.Windows.Forms.Label();
@@ -51,36 +73,15 @@
             this.textBoxNär = new System.Windows.Forms.TextBox();
             this.textBoxTil = new System.Windows.Forms.TextBox();
             this.textBoxIngr = new System.Windows.Forms.TextBox();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.SearchTabRecept = new System.Windows.Forms.TabPage();
-            this.SearchTabIngr = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TboxSearchReceptTitel = new System.Windows.Forms.TextBox();
-            this.TboxSearchReceptMinEnergi = new System.Windows.Forms.TextBox();
-            this.TboxSearchReceptMinFett = new System.Windows.Forms.TextBox();
-            this.TBoxSearchReceptMinProtein = new System.Windows.Forms.TextBox();
-            this.TBoxSearchReceptTags = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.listBoxSearchReceptResults = new System.Windows.Forms.ListBox();
-            this.ButtonSearchRecept = new System.Windows.Forms.Button();
-            this.TboxSearchReceptMAXEnergi = new System.Windows.Forms.TextBox();
-            this.TboxSearchReceptMAXFett = new System.Windows.Forms.TextBox();
-            this.TBoxSearchReceptMAXProtein = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.TBoxSearchReceptMAXKolhyd = new System.Windows.Forms.TextBox();
-            this.TBoxSearchReceptMinKolhyd = new System.Windows.Forms.TextBox();
+            this.SkrivUt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.SearchTabRecept.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -224,6 +225,206 @@
             this.tabPage3.Text = "Sök";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.SearchTabRecept);
+            this.tabControl2.Controls.Add(this.SearchTabIngr);
+            this.tabControl2.Location = new System.Drawing.Point(6, 48);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(373, 536);
+            this.tabControl2.TabIndex = 2;
+            // 
+            // SearchTabRecept
+            // 
+            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMAXKolhyd);
+            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMinKolhyd);
+            this.SearchTabRecept.Controls.Add(this.label10);
+            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMAXProtein);
+            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMAXFett);
+            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMAXEnergi);
+            this.SearchTabRecept.Controls.Add(this.ButtonSearchRecept);
+            this.SearchTabRecept.Controls.Add(this.listBoxSearchReceptResults);
+            this.SearchTabRecept.Controls.Add(this.label9);
+            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptTags);
+            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMinProtein);
+            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMinFett);
+            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMinEnergi);
+            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptTitel);
+            this.SearchTabRecept.Controls.Add(this.label8);
+            this.SearchTabRecept.Controls.Add(this.label7);
+            this.SearchTabRecept.Controls.Add(this.label6);
+            this.SearchTabRecept.Controls.Add(this.label5);
+            this.SearchTabRecept.Controls.Add(this.label4);
+            this.SearchTabRecept.Location = new System.Drawing.Point(4, 22);
+            this.SearchTabRecept.Name = "SearchTabRecept";
+            this.SearchTabRecept.Padding = new System.Windows.Forms.Padding(3);
+            this.SearchTabRecept.Size = new System.Drawing.Size(365, 510);
+            this.SearchTabRecept.TabIndex = 0;
+            this.SearchTabRecept.Text = "Recept";
+            this.SearchTabRecept.UseVisualStyleBackColor = true;
+            // 
+            // TBoxSearchReceptMAXKolhyd
+            // 
+            this.TBoxSearchReceptMAXKolhyd.Location = new System.Drawing.Point(191, 176);
+            this.TBoxSearchReceptMAXKolhyd.Name = "TBoxSearchReceptMAXKolhyd";
+            this.TBoxSearchReceptMAXKolhyd.Size = new System.Drawing.Size(51, 20);
+            this.TBoxSearchReceptMAXKolhyd.TabIndex = 18;
+            // 
+            // TBoxSearchReceptMinKolhyd
+            // 
+            this.TBoxSearchReceptMinKolhyd.Location = new System.Drawing.Point(134, 176);
+            this.TBoxSearchReceptMinKolhyd.Name = "TBoxSearchReceptMinKolhyd";
+            this.TBoxSearchReceptMinKolhyd.Size = new System.Drawing.Size(51, 20);
+            this.TBoxSearchReceptMinKolhyd.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 179);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(105, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Min/Max Kolhydrater";
+            // 
+            // TBoxSearchReceptMAXProtein
+            // 
+            this.TBoxSearchReceptMAXProtein.Location = new System.Drawing.Point(191, 140);
+            this.TBoxSearchReceptMAXProtein.Name = "TBoxSearchReceptMAXProtein";
+            this.TBoxSearchReceptMAXProtein.Size = new System.Drawing.Size(51, 20);
+            this.TBoxSearchReceptMAXProtein.TabIndex = 15;
+            // 
+            // TboxSearchReceptMAXFett
+            // 
+            this.TboxSearchReceptMAXFett.Location = new System.Drawing.Point(191, 108);
+            this.TboxSearchReceptMAXFett.Name = "TboxSearchReceptMAXFett";
+            this.TboxSearchReceptMAXFett.Size = new System.Drawing.Size(51, 20);
+            this.TboxSearchReceptMAXFett.TabIndex = 14;
+            // 
+            // TboxSearchReceptMAXEnergi
+            // 
+            this.TboxSearchReceptMAXEnergi.Location = new System.Drawing.Point(191, 66);
+            this.TboxSearchReceptMAXEnergi.Name = "TboxSearchReceptMAXEnergi";
+            this.TboxSearchReceptMAXEnergi.Size = new System.Drawing.Size(51, 20);
+            this.TboxSearchReceptMAXEnergi.TabIndex = 13;
+            // 
+            // ButtonSearchRecept
+            // 
+            this.ButtonSearchRecept.Location = new System.Drawing.Point(118, 285);
+            this.ButtonSearchRecept.Name = "ButtonSearchRecept";
+            this.ButtonSearchRecept.Size = new System.Drawing.Size(75, 23);
+            this.ButtonSearchRecept.TabIndex = 12;
+            this.ButtonSearchRecept.Text = "Sök";
+            this.ButtonSearchRecept.UseVisualStyleBackColor = true;
+            this.ButtonSearchRecept.Click += new System.EventHandler(this.ButtonSearchRecept_Click);
+            // 
+            // listBoxSearchReceptResults
+            // 
+            this.listBoxSearchReceptResults.FormattingEnabled = true;
+            this.listBoxSearchReceptResults.Location = new System.Drawing.Point(6, 332);
+            this.listBoxSearchReceptResults.Name = "listBoxSearchReceptResults";
+            this.listBoxSearchReceptResults.Size = new System.Drawing.Size(353, 173);
+            this.listBoxSearchReceptResults.TabIndex = 11;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(236, 244);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(110, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Seperera med komma";
+            // 
+            // TBoxSearchReceptTags
+            // 
+            this.TBoxSearchReceptTags.Location = new System.Drawing.Point(118, 244);
+            this.TBoxSearchReceptTags.Name = "TBoxSearchReceptTags";
+            this.TBoxSearchReceptTags.Size = new System.Drawing.Size(100, 20);
+            this.TBoxSearchReceptTags.TabIndex = 9;
+            // 
+            // TBoxSearchReceptMinProtein
+            // 
+            this.TBoxSearchReceptMinProtein.Location = new System.Drawing.Point(134, 140);
+            this.TBoxSearchReceptMinProtein.Name = "TBoxSearchReceptMinProtein";
+            this.TBoxSearchReceptMinProtein.Size = new System.Drawing.Size(51, 20);
+            this.TBoxSearchReceptMinProtein.TabIndex = 8;
+            // 
+            // TboxSearchReceptMinFett
+            // 
+            this.TboxSearchReceptMinFett.Location = new System.Drawing.Point(134, 108);
+            this.TboxSearchReceptMinFett.Name = "TboxSearchReceptMinFett";
+            this.TboxSearchReceptMinFett.Size = new System.Drawing.Size(51, 20);
+            this.TboxSearchReceptMinFett.TabIndex = 7;
+            // 
+            // TboxSearchReceptMinEnergi
+            // 
+            this.TboxSearchReceptMinEnergi.Location = new System.Drawing.Point(134, 66);
+            this.TboxSearchReceptMinEnergi.Name = "TboxSearchReceptMinEnergi";
+            this.TboxSearchReceptMinEnergi.Size = new System.Drawing.Size(51, 20);
+            this.TboxSearchReceptMinEnergi.TabIndex = 6;
+            // 
+            // TboxSearchReceptTitel
+            // 
+            this.TboxSearchReceptTitel.Location = new System.Drawing.Point(134, 24);
+            this.TboxSearchReceptTitel.Name = "TboxSearchReceptTitel";
+            this.TboxSearchReceptTitel.Size = new System.Drawing.Size(100, 20);
+            this.TboxSearchReceptTitel.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 247);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Taggar:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 143);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Min/Max Protein";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Min/Max Fett";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Min/Max energi";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Titel:";
+            // 
+            // SearchTabIngr
+            // 
+            this.SearchTabIngr.Location = new System.Drawing.Point(4, 22);
+            this.SearchTabIngr.Name = "SearchTabIngr";
+            this.SearchTabIngr.Padding = new System.Windows.Forms.Padding(3);
+            this.SearchTabIngr.Size = new System.Drawing.Size(365, 510);
+            this.SearchTabIngr.TabIndex = 1;
+            this.SearchTabIngr.Text = "Ingrediens";
+            this.SearchTabIngr.UseVisualStyleBackColor = true;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -321,205 +522,15 @@
             this.textBoxIngr.Text = "10Kg Dennis                           40% Nils                                   " +
                 "   Mycket Liter Jonas";
             // 
-            // tabControl2
+            // SkrivUt
             // 
-            this.tabControl2.Controls.Add(this.SearchTabRecept);
-            this.tabControl2.Controls.Add(this.SearchTabIngr);
-            this.tabControl2.Location = new System.Drawing.Point(6, 48);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(373, 536);
-            this.tabControl2.TabIndex = 2;
-            // 
-            // SearchTabRecept
-            // 
-            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMAXKolhyd);
-            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMinKolhyd);
-            this.SearchTabRecept.Controls.Add(this.label10);
-            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMAXProtein);
-            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMAXFett);
-            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMAXEnergi);
-            this.SearchTabRecept.Controls.Add(this.ButtonSearchRecept);
-            this.SearchTabRecept.Controls.Add(this.listBoxSearchReceptResults);
-            this.SearchTabRecept.Controls.Add(this.label9);
-            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptTags);
-            this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMinProtein);
-            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMinFett);
-            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMinEnergi);
-            this.SearchTabRecept.Controls.Add(this.TboxSearchReceptTitel);
-            this.SearchTabRecept.Controls.Add(this.label8);
-            this.SearchTabRecept.Controls.Add(this.label7);
-            this.SearchTabRecept.Controls.Add(this.label6);
-            this.SearchTabRecept.Controls.Add(this.label5);
-            this.SearchTabRecept.Controls.Add(this.label4);
-            this.SearchTabRecept.Location = new System.Drawing.Point(4, 22);
-            this.SearchTabRecept.Name = "SearchTabRecept";
-            this.SearchTabRecept.Padding = new System.Windows.Forms.Padding(3);
-            this.SearchTabRecept.Size = new System.Drawing.Size(365, 510);
-            this.SearchTabRecept.TabIndex = 0;
-            this.SearchTabRecept.Text = "Recept";
-            this.SearchTabRecept.UseVisualStyleBackColor = true;
-            // 
-            // SearchTabIngr
-            // 
-            this.SearchTabIngr.Location = new System.Drawing.Point(4, 22);
-            this.SearchTabIngr.Name = "SearchTabIngr";
-            this.SearchTabIngr.Padding = new System.Windows.Forms.Padding(3);
-            this.SearchTabIngr.Size = new System.Drawing.Size(365, 510);
-            this.SearchTabIngr.TabIndex = 1;
-            this.SearchTabIngr.Text = "Ingrediens";
-            this.SearchTabIngr.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Titel:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Min/Max energi";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 111);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Min/Max Fett";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 143);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Min/Max Protein";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 247);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Taggar:";
-            // 
-            // TboxSearchReceptTitel
-            // 
-            this.TboxSearchReceptTitel.Location = new System.Drawing.Point(134, 24);
-            this.TboxSearchReceptTitel.Name = "TboxSearchReceptTitel";
-            this.TboxSearchReceptTitel.Size = new System.Drawing.Size(100, 20);
-            this.TboxSearchReceptTitel.TabIndex = 5;
-            // 
-            // TboxSearchReceptMinEnergi
-            // 
-            this.TboxSearchReceptMinEnergi.Location = new System.Drawing.Point(134, 66);
-            this.TboxSearchReceptMinEnergi.Name = "TboxSearchReceptMinEnergi";
-            this.TboxSearchReceptMinEnergi.Size = new System.Drawing.Size(51, 20);
-            this.TboxSearchReceptMinEnergi.TabIndex = 6;
-            // 
-            // TboxSearchReceptMinFett
-            // 
-            this.TboxSearchReceptMinFett.Location = new System.Drawing.Point(134, 108);
-            this.TboxSearchReceptMinFett.Name = "TboxSearchReceptMinFett";
-            this.TboxSearchReceptMinFett.Size = new System.Drawing.Size(51, 20);
-            this.TboxSearchReceptMinFett.TabIndex = 7;
-            // 
-            // TBoxSearchReceptMinProtein
-            // 
-            this.TBoxSearchReceptMinProtein.Location = new System.Drawing.Point(134, 140);
-            this.TBoxSearchReceptMinProtein.Name = "TBoxSearchReceptMinProtein";
-            this.TBoxSearchReceptMinProtein.Size = new System.Drawing.Size(51, 20);
-            this.TBoxSearchReceptMinProtein.TabIndex = 8;
-            // 
-            // TBoxSearchReceptTags
-            // 
-            this.TBoxSearchReceptTags.Location = new System.Drawing.Point(118, 244);
-            this.TBoxSearchReceptTags.Name = "TBoxSearchReceptTags";
-            this.TBoxSearchReceptTags.Size = new System.Drawing.Size(100, 20);
-            this.TBoxSearchReceptTags.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(236, 244);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Seperera med komma";
-            // 
-            // listBoxSearchReceptResults
-            // 
-            this.listBoxSearchReceptResults.FormattingEnabled = true;
-            this.listBoxSearchReceptResults.Location = new System.Drawing.Point(6, 332);
-            this.listBoxSearchReceptResults.Name = "listBoxSearchReceptResults";
-            this.listBoxSearchReceptResults.Size = new System.Drawing.Size(353, 173);
-            this.listBoxSearchReceptResults.TabIndex = 11;
-            // 
-            // ButtonSearchRecept
-            // 
-            this.ButtonSearchRecept.Location = new System.Drawing.Point(118, 285);
-            this.ButtonSearchRecept.Name = "ButtonSearchRecept";
-            this.ButtonSearchRecept.Size = new System.Drawing.Size(75, 23);
-            this.ButtonSearchRecept.TabIndex = 12;
-            this.ButtonSearchRecept.Text = "Sök";
-            this.ButtonSearchRecept.UseVisualStyleBackColor = true;
-            this.ButtonSearchRecept.Click += new System.EventHandler(this.ButtonSearchRecept_Click);
-            // 
-            // TboxSearchReceptMAXEnergi
-            // 
-            this.TboxSearchReceptMAXEnergi.Location = new System.Drawing.Point(191, 66);
-            this.TboxSearchReceptMAXEnergi.Name = "TboxSearchReceptMAXEnergi";
-            this.TboxSearchReceptMAXEnergi.Size = new System.Drawing.Size(51, 20);
-            this.TboxSearchReceptMAXEnergi.TabIndex = 13;
-            // 
-            // TboxSearchReceptMAXFett
-            // 
-            this.TboxSearchReceptMAXFett.Location = new System.Drawing.Point(191, 108);
-            this.TboxSearchReceptMAXFett.Name = "TboxSearchReceptMAXFett";
-            this.TboxSearchReceptMAXFett.Size = new System.Drawing.Size(51, 20);
-            this.TboxSearchReceptMAXFett.TabIndex = 14;
-            // 
-            // TBoxSearchReceptMAXProtein
-            // 
-            this.TBoxSearchReceptMAXProtein.Location = new System.Drawing.Point(191, 140);
-            this.TBoxSearchReceptMAXProtein.Name = "TBoxSearchReceptMAXProtein";
-            this.TBoxSearchReceptMAXProtein.Size = new System.Drawing.Size(51, 20);
-            this.TBoxSearchReceptMAXProtein.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 179);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 13);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Min/Max Kolhydrater";
-            // 
-            // TBoxSearchReceptMAXKolhyd
-            // 
-            this.TBoxSearchReceptMAXKolhyd.Location = new System.Drawing.Point(191, 176);
-            this.TBoxSearchReceptMAXKolhyd.Name = "TBoxSearchReceptMAXKolhyd";
-            this.TBoxSearchReceptMAXKolhyd.Size = new System.Drawing.Size(51, 20);
-            this.TBoxSearchReceptMAXKolhyd.TabIndex = 18;
-            // 
-            // TBoxSearchReceptMinKolhyd
-            // 
-            this.TBoxSearchReceptMinKolhyd.Location = new System.Drawing.Point(134, 176);
-            this.TBoxSearchReceptMinKolhyd.Name = "TBoxSearchReceptMinKolhyd";
-            this.TBoxSearchReceptMinKolhyd.Size = new System.Drawing.Size(51, 20);
-            this.TBoxSearchReceptMinKolhyd.TabIndex = 17;
+            this.SkrivUt.Location = new System.Drawing.Point(890, 657);
+            this.SkrivUt.Name = "SkrivUt";
+            this.SkrivUt.Size = new System.Drawing.Size(64, 32);
+            this.SkrivUt.TabIndex = 14;
+            this.SkrivUt.Text = "Skriv ut";
+            this.SkrivUt.UseVisualStyleBackColor = true;
+            this.SkrivUt.Click += new System.EventHandler(this.SkrivUt_Click);
             // 
             // Receptsida
             // 
@@ -527,6 +538,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(984, 694);
+            this.Controls.Add(this.SkrivUt);
             this.Controls.Add(this.textBoxIngr);
             this.Controls.Add(this.textBoxTil);
             this.Controls.Add(this.textBoxNär);
@@ -547,10 +559,10 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.SearchTabRecept.ResumeLayout(false);
             this.SearchTabRecept.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,5 +614,6 @@
         private System.Windows.Forms.TextBox TBoxSearchReceptMAXKolhyd;
         private System.Windows.Forms.TextBox TBoxSearchReceptMinKolhyd;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button SkrivUt;
     }
 }

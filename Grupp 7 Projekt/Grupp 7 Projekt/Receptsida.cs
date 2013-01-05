@@ -160,5 +160,12 @@ namespace Grupp_7_Projekt
                 MessageBox.Show("Search failed");
             }
         }
+
+        private void SkrivUt_Click(object sender, EventArgs e)
+        {
+            PrintDialog skrivut = new PrintDialog();
+            skrivut.ShowDialog();
+            
+        }
     }
 }
