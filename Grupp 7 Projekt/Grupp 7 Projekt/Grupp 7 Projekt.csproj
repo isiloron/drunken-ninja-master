@@ -55,11 +55,11 @@
     <Compile Include="Inlogg.Designer.cs">
       <DependentUpon>Inlogg.cs</DependentUpon>
     </Compile>
-    <Compile Include="NyIngridiens.cs">
+    <Compile Include="NyIngridiensForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NyIngridiens.Designer.cs">
-      <DependentUpon>NyIngridiens.cs</DependentUpon>
+    <Compile Include="NyIngridiensForm.Designer.cs">
+      <DependentUpon>NyIngridiensForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NyttReceptForm.cs">
       <SubType>Form</SubType>
@@ -82,8 +82,8 @@
     <EmbeddedResource Include="Inlogg.resx">
       <DependentUpon>Inlogg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NyIngridiens.resx">
-      <DependentUpon>NyIngridiens.cs</DependentUpon>
+    <EmbeddedResource Include="NyIngridiensForm.resx">
+      <DependentUpon>NyIngridiensForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NyttReceptForm.resx">
       <DependentUpon>NyttReceptForm.cs</DependentUpon>

@@ -82,7 +82,7 @@ namespace Grupp_7_Projekt
             int TotalProtein = 0;
             for (int z = 0; z < IngrList.Count; z++)
             {
-                //Totalcal += GetCalValueFromIngrList(IngrList[<].IngrName) * IngrList[z].ingrNumber;
+                //Totalcal += ingridens
             }
           return TotalProtein;
         }

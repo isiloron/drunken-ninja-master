@@ -51,6 +51,11 @@ namespace Grupp_7_Projekt
         { 
             ingredienslista.Add(new Ingredient(name, unit, description, fett, protein, energy, carbon));
         }
+
+       public void LäggTillIngrKlass(Ingredient NewIngr)
+       {
+           ingredienslista.Add(NewIngr);
+       }
        
         public void TaBortIng(string name)
         {
@@ -74,8 +79,73 @@ namespace Grupp_7_Projekt
                 }
             
             }
-            return "#";
+            return "####";
         }
+        public int GetTotalEnergy(Recept recept)
+        {
+            int Total = 0;
+            foreach (ReceptSubStruct rss in recept.IngrList)
+            {
+                foreach (Ingredient ingr in ingredienslista)
+                {
+                    if (ingr.Name == rss.ingrName)
+                    {
+                        Total += ingr.Energy;
+                    }
+                }
+            }
+            return Total;
+        }
+
+            public int GetTotalFett(Recept recept)
+        {
+            int Total = 0;
+            foreach (ReceptSubStruct rss in recept.IngrList)
+            {
+                foreach (Ingredient ingr in ingredienslista)
+                {
+                    if (ingr.Name == rss.ingrName)
+                    {
+                        Total += ingr.Fett;
+                    }
+                }
+            }
+            Total = Total / recept.IngrList.Count;
+            return Total;
+        }
+
+            public int GetTotalKolhyd(Recept recept)
+            {
+                int Total = 0;
+                foreach (ReceptSubStruct rss in recept.IngrList)
+                {
+                    foreach (Ingredient ingr in ingredienslista)
+                    {
+                        if (ingr.Name == rss.ingrName)
+                        {
+                            Total += ingr.Kolhydrater;
+                        }
+                    }
+                }
+
+                return Total;
+            }
+            public int GetTotalProtein(Recept recept)
+            {
+                int Total = 0;
+                foreach (ReceptSubStruct rss in recept.IngrList)
+                {
+                    foreach (Ingredient ingr in ingredienslista)
+                    {
+                        if (ingr.Name == rss.ingrName)
+                        {
+                            Total += ingr.Protein;
+                        }
+                    }
+                }
+
+                return Total;
+            }
 
       /* public List<Recept> SökIngr(List<string> IngrNamn)
          {

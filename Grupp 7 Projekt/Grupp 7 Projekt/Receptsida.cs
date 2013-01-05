@@ -12,17 +12,17 @@ namespace Grupp_7_Projekt
 {
     public partial class Receptsida : Form
     {
-        Receptlista receptlista = new Receptlista();
-        Ingredienssida ingredienssida = new Ingredienssida();
+        static Receptlista receptlista = new Receptlista();
+        static Ingredienssida ingredienssida = new Ingredienssida();
 
 
         public Receptsida()
         {
             receptlista.LaddaRecept();
             InitializeComponent();
-            listBox2.DataSource = receptlista.HämtaTitlar();
+            ListBoxRecept.DataSource = receptlista.HämtaTitlar();
 
-            listBox1.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
+            listBoxIngr.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
         }
 
         private void IndexChange(object sender, EventArgs e)
@@ -43,16 +43,24 @@ namespace Grupp_7_Projekt
         }
 
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Recept temp = receptlista.HämtaReceptAvNamn(listBox2.SelectedItem.ToString());
+            Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
             lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
             foreach (ReceptSubStruct r in temp.IngrList)
             {
+                //This part updates the 
                 textBoxIngr.Text += r.ingrName + " ";
                 textBoxIngr.Text += r.ingrNumber.ToString() + " ";
                 textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
                 textBoxIngr.Text += Environment.NewLine;
+
+                //This part updates the energy values
+                textBoxNär.Text = "";
+                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
+                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
+                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalProtein(temp) +" Proteiner \r\n";
+                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalFett(temp) + "% Fett \r\n";
 
             }
         }
@@ -64,15 +72,15 @@ namespace Grupp_7_Projekt
             if (nrf.Recept != null)
             {
                 receptlista.NyttReceptKlass(nrf.Recept);
-                listBox2.DataSource = receptlista.HämtaTitlar();
+                ListBoxRecept.DataSource = receptlista.HämtaTitlar();
             }
 
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxIngr_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ingredient temp = ingredienssida.ingredienslista.HämtaIngrKlass(listBox1.SelectedItem.ToString());
+            Ingredient temp = ingredienssida.ingredienslista.HämtaIngrKlass(listBoxIngr.SelectedItem.ToString());
             lblRubrik.Text = temp.Name;
             textBoxTil.Text = temp.Description;
             textBoxNär.Text = "";
@@ -84,8 +92,8 @@ namespace Grupp_7_Projekt
             DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill ta bort markerat recept?", "Ta bort recept", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                receptlista.TaBort(listBox2.SelectedItem.ToString());
-                listBox2.DataSource = receptlista.HämtaTitlar();
+                receptlista.TaBort(ListBoxRecept.SelectedItem.ToString());
+                ListBoxRecept.DataSource = receptlista.HämtaTitlar();
             }
         }
 
@@ -94,13 +102,20 @@ namespace Grupp_7_Projekt
             DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill ta bort markerad ingridiens?", "Ta bort ingridiens", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                ingredienssida.ingredienslista.TaBortIng(listBox1.SelectedItem.ToString());
-                listBox1.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar();
+                ingredienssida.ingredienslista.TaBortIng(listBoxIngr.SelectedItem.ToString());
+                listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar();
             }
         }
 
         private void ButtonNewingr_Click(object sender, EventArgs e)
         {
+            NyIngridiensForm nig = new NyIngridiensForm();
+            nig.ShowDialog();
+            if (nig.newingr != null)
+            {
+                ingredienssida.ingredienslista.LäggTillIngrKlass(nig.newingr);
+                listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar();
+            }
 
         }
     }

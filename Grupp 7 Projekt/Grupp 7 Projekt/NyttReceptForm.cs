@@ -42,6 +42,7 @@ namespace Grupp_7_Projekt
 
         private void Addingr_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 IngrList.Add(new ReceptSubStruct(TextboxIngr.Text, Int32.Parse(textBoxMängd.Text)));
