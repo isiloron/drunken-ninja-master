@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Printing;
 
 namespace Grupp_7_Projekt
 {
@@ -163,9 +164,12 @@ namespace Grupp_7_Projekt
 
         private void SkrivUt_Click(object sender, EventArgs e)
         {
-            PrintDialog skrivut = new PrintDialog();
-            skrivut.ShowDialog();
+
+            ingredienssida.Skrivaren();
             
         }
+
+       
+        
     }
 }

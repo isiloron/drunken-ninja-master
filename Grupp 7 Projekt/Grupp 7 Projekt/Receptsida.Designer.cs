@@ -147,7 +147,7 @@
             this.ListBoxRecept.ItemHeight = 18;
             this.ListBoxRecept.Location = new System.Drawing.Point(12, 71);
             this.ListBoxRecept.Name = "ListBoxRecept";
-            this.ListBoxRecept.Size = new System.Drawing.Size(224, 490);
+            this.ListBoxRecept.Size = new System.Drawing.Size(224, 472);
             this.ListBoxRecept.TabIndex = 1;
             this.ListBoxRecept.SelectedIndexChanged += new System.EventHandler(this.listBoxRecept_SelectedIndexChanged);
             // 
@@ -177,9 +177,10 @@
             // 
             // ButtonRemoveIngr
             // 
-            this.ButtonRemoveIngr.Location = new System.Drawing.Point(271, 102);
+            this.ButtonRemoveIngr.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonRemoveIngr.Location = new System.Drawing.Point(242, 102);
             this.ButtonRemoveIngr.Name = "ButtonRemoveIngr";
-            this.ButtonRemoveIngr.Size = new System.Drawing.Size(75, 23);
+            this.ButtonRemoveIngr.Size = new System.Drawing.Size(121, 23);
             this.ButtonRemoveIngr.TabIndex = 6;
             this.ButtonRemoveIngr.Text = "Ta Bort";
             this.ButtonRemoveIngr.UseVisualStyleBackColor = true;
@@ -187,9 +188,10 @@
             // 
             // ButtonNewingr
             // 
-            this.ButtonNewingr.Location = new System.Drawing.Point(271, 73);
+            this.ButtonNewingr.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonNewingr.Location = new System.Drawing.Point(242, 73);
             this.ButtonNewingr.Name = "ButtonNewingr";
-            this.ButtonNewingr.Size = new System.Drawing.Size(75, 23);
+            this.ButtonNewingr.Size = new System.Drawing.Size(121, 23);
             this.ButtonNewingr.TabIndex = 5;
             this.ButtonNewingr.Text = "Ny";
             this.ButtonNewingr.UseVisualStyleBackColor = true;
@@ -197,10 +199,12 @@
             // 
             // listBoxIngr
             // 
+            this.listBoxIngr.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxIngr.FormattingEnabled = true;
+            this.listBoxIngr.ItemHeight = 18;
             this.listBoxIngr.Location = new System.Drawing.Point(12, 71);
             this.listBoxIngr.Name = "listBoxIngr";
-            this.listBoxIngr.Size = new System.Drawing.Size(236, 498);
+            this.listBoxIngr.Size = new System.Drawing.Size(224, 472);
             this.listBoxIngr.TabIndex = 4;
             this.listBoxIngr.SelectedIndexChanged += new System.EventHandler(this.listBoxIngr_SelectedIndexChanged);
             // 
