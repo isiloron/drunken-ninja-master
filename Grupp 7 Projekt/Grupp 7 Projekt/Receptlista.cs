@@ -84,7 +84,7 @@ namespace Grupp_7_Projekt
             List<Recept> returnlist = new List<Recept>();
             foreach (Recept r in receptlista)
             {
-                if (r.Titel.Contains(searchstring))
+                if (r.Titel.IndexOf(searchstring,StringComparison.OrdinalIgnoreCase)>=0)
                 {
                     returnlist.Add(r);
                 }
