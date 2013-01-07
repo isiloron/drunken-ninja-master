@@ -217,7 +217,7 @@ namespace Grupp_7_Projekt
         private void buttonSearchIngr_Click(object sender, EventArgs e)
         {
             List<Ingredient> ResultList = new List<Ingredient>();
-            ResultList = ingredienssida.ingredienslista.;
+            ResultList = ingredienssida.ingredienslista.Clone();
             ResultList = ingredienssida.ingredienslista.SökIngrNamn(ResultList, TboxSearchIngrName.Text);
 
         }

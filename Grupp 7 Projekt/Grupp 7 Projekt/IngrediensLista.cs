@@ -38,6 +38,10 @@ namespace Grupp_7_Projekt
             return TitelIngLista;
                                   
         }
+        public List<Ingredient> Clone()
+        {
+            return ingredienslista;
+        }
         public Ingredient HämtaIngrKlass(string NamnAttHämta)
         {
             foreach (Ingredient ingr in ingredienslista)
