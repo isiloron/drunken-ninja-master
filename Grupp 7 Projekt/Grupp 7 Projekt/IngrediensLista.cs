@@ -98,14 +98,14 @@ namespace Grupp_7_Projekt
         {
             foreach (Ingredient ing in ingredienslista)
             {
-                if (IngrName == ing.Name)
-                {
-                    return ing.Unit;
-                }
-            
+				if (IngrName == ing.Name)
+				{
+					return ing.Unit;
+				}
             }
-            return "####";
+			return "Saknas";
         }
+
         public int GetTotalEnergy(Recept recept)
         {
             int Total = 0;
