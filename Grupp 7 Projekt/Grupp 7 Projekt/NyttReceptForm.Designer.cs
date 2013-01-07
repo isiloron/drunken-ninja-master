@@ -45,6 +45,9 @@
             this.RemoveTag = new System.Windows.Forms.Button();
             this.textBoxMängd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TextBoxPortioner = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonFinish
@@ -194,11 +197,39 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Mängd";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Detta recept är för:";
+            // 
+            // TextBoxPortioner
+            // 
+            this.TextBoxPortioner.Location = new System.Drawing.Point(121, 103);
+            this.TextBoxPortioner.Name = "TextBoxPortioner";
+            this.TextBoxPortioner.Size = new System.Drawing.Size(94, 20);
+            this.TextBoxPortioner.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(221, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "portioner\r\n";
+            // 
             // NyttReceptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 441);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TextBoxPortioner);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxMängd);
             this.Controls.Add(this.RemoveTag);
@@ -242,5 +273,8 @@
         private System.Windows.Forms.Button RemoveTag;
         private System.Windows.Forms.TextBox textBoxMängd;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TextBoxPortioner;
+        private System.Windows.Forms.Label label7;
     }
 }

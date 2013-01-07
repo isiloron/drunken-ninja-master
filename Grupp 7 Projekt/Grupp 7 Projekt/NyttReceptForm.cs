@@ -21,10 +21,15 @@ namespace Grupp_7_Projekt
         Recept NewRecept;
         private void buttonFinish_Click(object sender, EventArgs e)
         {
+            int portioner = Int32.Parse(TextBoxPortioner.Text);
             List<string> TagList = new List<string>();
             foreach (object obj in listBoxTaggs.Items)
             {
                 TagList.Add(obj.ToString());
+            }
+            for (int z = 0; z < IngrList.Count; z++)
+            {
+                IngrList[z] = new ReceptSubStruct(IngrList[z].ingrName, IngrList[z].ingrNumber / portioner);
             }
 
             NewRecept = new Recept(TextBoxTitel.Text, TextBoxDescription.Text, IngrList, TagList);

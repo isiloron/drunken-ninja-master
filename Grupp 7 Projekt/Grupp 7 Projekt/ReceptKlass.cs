@@ -49,6 +49,8 @@ namespace Grupp_7_Projekt
             TagList = NewTagList;
         }
 
+
+        
         public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
         {
             for (int z = 0; IngrList.Count > z; )
