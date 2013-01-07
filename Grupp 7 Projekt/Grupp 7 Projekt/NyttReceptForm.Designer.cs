@@ -200,7 +200,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 106);
+            this.label6.Location = new System.Drawing.Point(390, 375);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 13);
             this.label6.TabIndex = 17;
@@ -208,7 +208,7 @@
             // 
             // TextBoxPortioner
             // 
-            this.TextBoxPortioner.Location = new System.Drawing.Point(121, 103);
+            this.TextBoxPortioner.Location = new System.Drawing.Point(483, 372);
             this.TextBoxPortioner.Name = "TextBoxPortioner";
             this.TextBoxPortioner.Size = new System.Drawing.Size(94, 20);
             this.TextBoxPortioner.TabIndex = 18;
@@ -216,7 +216,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(221, 106);
+            this.label7.Location = new System.Drawing.Point(583, 375);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 19;
