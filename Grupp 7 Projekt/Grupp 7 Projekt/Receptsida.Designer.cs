@@ -52,7 +52,6 @@
             this.TboxSearchReceptMAXEnergi = new System.Windows.Forms.TextBox();
             this.ButtonSearchRecept = new System.Windows.Forms.Button();
             this.listBoxSearchReceptResults = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.TBoxSearchReceptTags = new System.Windows.Forms.TextBox();
             this.TBoxSearchReceptMinProtein = new System.Windows.Forms.TextBox();
             this.TboxSearchReceptMinFett = new System.Windows.Forms.TextBox();
@@ -74,6 +73,13 @@
             this.textBoxTil = new System.Windows.Forms.TextBox();
             this.textBoxIngr = new System.Windows.Forms.TextBox();
             this.SkrivUt = new System.Windows.Forms.Button();
+            this.listBoxSearchTags = new System.Windows.Forms.ListBox();
+            this.buttonRemoveSearchTag = new System.Windows.Forms.Button();
+            this.buttonAddSearchTag = new System.Windows.Forms.Button();
+            this.listBoxSearchIngrResults = new System.Windows.Forms.ListBox();
+            this.buttonSearchIngr = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TboxSearchIngrName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -81,6 +87,7 @@
             this.tabPage3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.SearchTabRecept.SuspendLayout();
+            this.SearchTabIngr.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -241,6 +248,9 @@
             // 
             // SearchTabRecept
             // 
+            this.SearchTabRecept.Controls.Add(this.buttonAddSearchTag);
+            this.SearchTabRecept.Controls.Add(this.buttonRemoveSearchTag);
+            this.SearchTabRecept.Controls.Add(this.listBoxSearchTags);
             this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMAXKolhyd);
             this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMinKolhyd);
             this.SearchTabRecept.Controls.Add(this.label10);
@@ -249,7 +259,6 @@
             this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMAXEnergi);
             this.SearchTabRecept.Controls.Add(this.ButtonSearchRecept);
             this.SearchTabRecept.Controls.Add(this.listBoxSearchReceptResults);
-            this.SearchTabRecept.Controls.Add(this.label9);
             this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptTags);
             this.SearchTabRecept.Controls.Add(this.TBoxSearchReceptMinProtein);
             this.SearchTabRecept.Controls.Add(this.TboxSearchReceptMinFett);
@@ -314,7 +323,7 @@
             // 
             // ButtonSearchRecept
             // 
-            this.ButtonSearchRecept.Location = new System.Drawing.Point(118, 285);
+            this.ButtonSearchRecept.Location = new System.Drawing.Point(110, 303);
             this.ButtonSearchRecept.Name = "ButtonSearchRecept";
             this.ButtonSearchRecept.Size = new System.Drawing.Size(75, 23);
             this.ButtonSearchRecept.TabIndex = 12;
@@ -329,19 +338,11 @@
             this.listBoxSearchReceptResults.Name = "listBoxSearchReceptResults";
             this.listBoxSearchReceptResults.Size = new System.Drawing.Size(353, 173);
             this.listBoxSearchReceptResults.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(236, 244);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Seperera med komma";
+            this.listBoxSearchReceptResults.SelectedIndexChanged += new System.EventHandler(this.listBoxSearchReceptResults_SelectedIndexChanged);
             // 
             // TBoxSearchReceptTags
             // 
-            this.TBoxSearchReceptTags.Location = new System.Drawing.Point(118, 244);
+            this.TBoxSearchReceptTags.Location = new System.Drawing.Point(18, 222);
             this.TBoxSearchReceptTags.Name = "TBoxSearchReceptTags";
             this.TBoxSearchReceptTags.Size = new System.Drawing.Size(100, 20);
             this.TBoxSearchReceptTags.TabIndex = 9;
@@ -377,7 +378,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 247);
+            this.label8.Location = new System.Drawing.Point(15, 206);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 4;
@@ -421,6 +422,10 @@
             // 
             // SearchTabIngr
             // 
+            this.SearchTabIngr.Controls.Add(this.TboxSearchIngrName);
+            this.SearchTabIngr.Controls.Add(this.label9);
+            this.SearchTabIngr.Controls.Add(this.buttonSearchIngr);
+            this.SearchTabIngr.Controls.Add(this.listBoxSearchIngrResults);
             this.SearchTabIngr.Location = new System.Drawing.Point(4, 22);
             this.SearchTabIngr.Name = "SearchTabIngr";
             this.SearchTabIngr.Padding = new System.Windows.Forms.Padding(3);
@@ -536,6 +541,68 @@
             this.SkrivUt.UseVisualStyleBackColor = true;
             this.SkrivUt.Click += new System.EventHandler(this.SkrivUt_Click);
             // 
+            // listBoxSearchTags
+            // 
+            this.listBoxSearchTags.FormattingEnabled = true;
+            this.listBoxSearchTags.Location = new System.Drawing.Point(134, 202);
+            this.listBoxSearchTags.Name = "listBoxSearchTags";
+            this.listBoxSearchTags.Size = new System.Drawing.Size(120, 95);
+            this.listBoxSearchTags.TabIndex = 19;
+            // 
+            // buttonRemoveSearchTag
+            // 
+            this.buttonRemoveSearchTag.Location = new System.Drawing.Point(260, 202);
+            this.buttonRemoveSearchTag.Name = "buttonRemoveSearchTag";
+            this.buttonRemoveSearchTag.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemoveSearchTag.TabIndex = 20;
+            this.buttonRemoveSearchTag.Text = "Ta bort";
+            this.buttonRemoveSearchTag.UseVisualStyleBackColor = true;
+            this.buttonRemoveSearchTag.Click += new System.EventHandler(this.buttonRemoveSearchTag_Click);
+            // 
+            // buttonAddSearchTag
+            // 
+            this.buttonAddSearchTag.Location = new System.Drawing.Point(18, 248);
+            this.buttonAddSearchTag.Name = "buttonAddSearchTag";
+            this.buttonAddSearchTag.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddSearchTag.TabIndex = 21;
+            this.buttonAddSearchTag.Text = "Lägg till";
+            this.buttonAddSearchTag.UseVisualStyleBackColor = true;
+            this.buttonAddSearchTag.Click += new System.EventHandler(this.buttonAddSearchTag_Click);
+            // 
+            // listBoxSearchIngrResults
+            // 
+            this.listBoxSearchIngrResults.FormattingEnabled = true;
+            this.listBoxSearchIngrResults.Location = new System.Drawing.Point(6, 396);
+            this.listBoxSearchIngrResults.Name = "listBoxSearchIngrResults";
+            this.listBoxSearchIngrResults.Size = new System.Drawing.Size(353, 108);
+            this.listBoxSearchIngrResults.TabIndex = 0;
+            // 
+            // buttonSearchIngr
+            // 
+            this.buttonSearchIngr.Location = new System.Drawing.Point(120, 367);
+            this.buttonSearchIngr.Name = "buttonSearchIngr";
+            this.buttonSearchIngr.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchIngr.TabIndex = 1;
+            this.buttonSearchIngr.Text = "Sök";
+            this.buttonSearchIngr.UseVisualStyleBackColor = true;
+            this.buttonSearchIngr.Click += new System.EventHandler(this.buttonSearchIngr_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Namn";
+            // 
+            // TboxSearchIngrName
+            // 
+            this.TboxSearchIngrName.Location = new System.Drawing.Point(65, 30);
+            this.TboxSearchIngrName.Name = "TboxSearchIngrName";
+            this.TboxSearchIngrName.Size = new System.Drawing.Size(100, 20);
+            this.TboxSearchIngrName.TabIndex = 3;
+            // 
             // Receptsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -566,6 +633,8 @@
             this.tabControl2.ResumeLayout(false);
             this.SearchTabRecept.ResumeLayout(false);
             this.SearchTabRecept.PerformLayout();
+            this.SearchTabIngr.ResumeLayout(false);
+            this.SearchTabIngr.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -601,7 +670,6 @@
         private System.Windows.Forms.TabPage SearchTabIngr;
         private System.Windows.Forms.Button ButtonSearchRecept;
         private System.Windows.Forms.ListBox listBoxSearchReceptResults;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TBoxSearchReceptTags;
         private System.Windows.Forms.TextBox TBoxSearchReceptMinProtein;
         private System.Windows.Forms.TextBox TboxSearchReceptMinFett;
@@ -619,5 +687,12 @@
         private System.Windows.Forms.TextBox TBoxSearchReceptMinKolhyd;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button SkrivUt;
+        private System.Windows.Forms.Button buttonAddSearchTag;
+        private System.Windows.Forms.Button buttonRemoveSearchTag;
+        private System.Windows.Forms.ListBox listBoxSearchTags;
+        private System.Windows.Forms.TextBox TboxSearchIngrName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonSearchIngr;
+        private System.Windows.Forms.ListBox listBoxSearchIngrResults;
     }
 }

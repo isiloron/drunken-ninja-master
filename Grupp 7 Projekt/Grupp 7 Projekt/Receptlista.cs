@@ -35,6 +35,11 @@ namespace Grupp_7_Projekt
             SparaRecept();
         }
 
+        public List<Recept> Clone()
+        {
+            return receptlista;
+        }
+
 
         public List<string>  HämtaTitlar()//En metod som returnerar en stringlista med alla recepttitlar från receptlistan (Tim använder sig av den här)
         {
@@ -163,8 +168,31 @@ namespace Grupp_7_Projekt
                 }
             }
             return ReturLista;
-        
-        
+        }
+        public List<Recept> SökReceptSomHarTag (List<string> StringListToSeach, List<Recept> receptlisttoseach)
+        { 
+            List<Recept> ReturnList = new List<Recept>();
+            foreach (Recept recept in receptlisttoseach )
+            {
+                int matches = 0;
+                foreach (string str in recept.TagList)
+                {
+
+                   foreach (string searchstring in StringListToSeach)
+                   {
+                       if (str == searchstring)
+                       {
+                           matches++;
+                       }
+                   }
+                }
+                if (matches == StringListToSeach.Count)
+                {
+                    ReturnList.Add(recept);
+                }
+            
+            }
+            return ReturnList;
         }
     }
 

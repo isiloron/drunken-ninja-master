@@ -51,6 +51,20 @@ namespace Grupp_7_Projekt
         
         }
 
+        public List<Ingredient> SökIngrNamn(List<Ingredient> ListaAttsöka, string SökNamn)
+        { 
+            List<Ingredient> ReturnList = new List<Ingredient>();
+            foreach (Ingredient ingr in ListaAttsöka)
+            {
+                if (ingr.Name == SökNamn)
+                {
+                    ReturnList.Add(ingr);
+                }
+            }
+
+            return ReturnList;
+        }
+
        public void LäggTillIng(string name,string unit, string description,	int fett, int protein, int energy, int carbon)
         { 
             ingredienslista.Add(new Ingredient(name, unit, description, fett, protein, energy, carbon));

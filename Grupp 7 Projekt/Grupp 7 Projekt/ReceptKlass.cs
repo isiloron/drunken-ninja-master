@@ -47,15 +47,6 @@ namespace Grupp_7_Projekt
             instructions = NewInstructions;
             IngrList = NewIngrList;
             TagList = NewTagList;
-           // for (int z = 0; z < NewIngrList.Count; z++)
-            //{
-            //    IngrList.Add(NewIngrList[z]);
-            
-            //}
-            //for (int z=0; z<NewTagList.Count; z++)
-            //{
-            //    TagList.Add(NewTagList[z]);
-            //}
         }
 
         public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
@@ -120,7 +111,15 @@ namespace Grupp_7_Projekt
         public void AddTag(string TagName)
         {
             //Check and see if tag already exist
-            for (int z = 0; z < TagList.Count; z++)
+            bool exists = false;
+            foreach (string tag in TagList)
+            {
+                if (TagName == tag)
+                {
+                    exists = true;
+                }
+            }
+            if (exists == false)
             {
                 TagList.Add(TagName);
             }
