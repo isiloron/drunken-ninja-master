@@ -48,25 +48,28 @@ namespace Grupp_7_Projekt
 
         private void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
-            lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
-            textBoxTil.Text = temp.Instructions;
-            foreach (ReceptSubStruct r in temp.IngrList)
-            {
-                //This part updates the ingrident box
-                textBoxIngr.Text += r.ingrName + " ";
-                textBoxIngr.Text += r.ingrNumber.ToString() + " ";
-                textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
-                textBoxIngr.Text += Environment.NewLine;
+			try
+			{
+				Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
+				lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
+				textBoxTil.Text = temp.Instructions;
+				foreach (ReceptSubStruct r in temp.IngrList)
+				{
+					//This part updates the ingrident box
+					textBoxIngr.Text += r.ingrName + " ";
+					textBoxIngr.Text += r.ingrNumber.ToString() + " ";
+					textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
+					textBoxIngr.Text += Environment.NewLine;
 
-                //This part updates the energy values
-                textBoxNär.Text = "";
-                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
-                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
-                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalProtein(temp) +" Proteiner \r\n";
-                textBoxNär.Text +=  ingredienssida.ingredienslista.GetTotalFett(temp) + "% Fett \r\n";
-
-            }
+					//This part updates the energy values
+					textBoxNär.Text = "";
+					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
+					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
+					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Proteiner \r\n";
+					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + "% Fett \r\n";
+				}
+			}
+			catch { }
         }
 
         private void ButtonNyttRecept_Click(object sender, EventArgs e)
@@ -84,11 +87,15 @@ namespace Grupp_7_Projekt
 
         private void listBoxIngr_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ingredient temp = ingredienssida.ingredienslista.HämtaIngrKlass(listBoxIngr.SelectedItem.ToString());
-            lblRubrik.Text = temp.Name;
-            textBoxTil.Text = temp.Description;
-            textBoxNär.Text = "";
-            textBoxNär.Text += temp.Energy + " Energy\r\n"+ temp.Fett +"% Fett\r\n"+ temp.Kolhydrater +" Kolhydrater\r\n"+ temp.Protein + " Protein";
+			try
+			{
+				Ingredient temp = ingredienssida.ingredienslista.HämtaIngrKlass(listBoxIngr.SelectedItem.ToString());
+				lblRubrik.Text = temp.Name;
+				textBoxTil.Text = temp.Description;
+				textBoxNär.Text = "";
+				textBoxNär.Text += temp.Energy + " Energy\r\n" + temp.Fett + "% Fett\r\n" + temp.Kolhydrater + " Kolhydrater\r\n" + temp.Protein + " Protein";
+			}
+			catch { }
         }
 
         private void ButtonRemoveRecepie_Click(object sender, EventArgs e)
