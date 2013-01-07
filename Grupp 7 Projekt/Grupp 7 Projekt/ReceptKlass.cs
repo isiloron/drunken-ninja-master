@@ -68,44 +68,68 @@ namespace Grupp_7_Projekt
         }
 
 
-        public int GetTotalProtein() //Returns total calories for whole recepie
+        public int GetTotalProtein(ref List<Ingredient> ingridienslista) //Returns total calories for whole recepie
         {
-            int TotalProtein = 0;
-            for (int z = 0; z < IngrList.Count; z++)
+            int Total = 0;
+            foreach (ReceptSubStruct subs in IngrList)
             {
-                //Totalcal += ingridens
+                foreach (Ingredient ingr in ingridienslista)
+                {
+                    if (subs.ingrName == ingr.Name)
+                    {
+                        Total += ingr.Protein;
+                    }
+                }
             }
-          return TotalProtein;
+            return Total;
         }
 
         
-        public int GetTotalFatt() //Returns energy value for whole recepie
+        public int GetTotalFatt(ref List<Ingredient> ingridienslista) //Returns energy value for whole recepie
         { 
-            int TotalFatt =0;
-            for (int z = 0; z < IngrList.Count; z++)
+            int Total =0;
+            foreach (ReceptSubStruct subs in IngrList)
             {
-               // TotalFatt += GetFatValueFromIngrList(IngrList[<].IngrName) * IngrList[z].ingrNumber;
+                foreach (Ingredient ingr in ingridienslista)
+                {
+                    if (subs.ingrName == ingr.Name)
+                    {
+                        Total += ingr.Fett;
+                    }
+                }
             }
-            return TotalFatt;
+            return Total;
         }
-        public int GetTotalEnergy()
+        public int GetTotalEnergy(ref List<Ingredient> ingridenslista)
         {
-            int TotalEnergy = 0;
-            for (int z = 0; z < IngrList.Count; z++)
-            { 
-            //TotalEnergy += GetEnergyValueFromIngrList(IngrList[z].IngrName * IngrList[z].ingrNumber;
+            int Total = 0;
+            foreach (ReceptSubStruct subs in IngrList)
+            {
+                foreach (Ingredient ingr in ingridenslista)
+                {
+                    if (subs.ingrName == ingr.Name)
+                    {
+                        Total += ingr.Energy;
+                    }
+                }
             }
-            return TotalEnergy;
+            return Total;
         }
 
-        public int GetTotalKolhyderater()
+        public int GetTotalKolhyderater(ref List<Ingredient> ingridenslista)
         {
-            int TotalKolhyderater = 0;
-            for (int z = 0; z < IngrList.Count; z++)
+            int Total = 0;
+            foreach (ReceptSubStruct subs in IngrList)
             {
-                //TotalCarbon += GetCarbonValueFromIngrList(IngrList[z].IngrName * IngrList[z].ingrNumber;
+                foreach (Ingredient ingr in ingridenslista)
+                {
+                    if (subs.ingrName == ingr.Name)
+                    {
+                        Total += ingr.Kolhydrater;
+                    }
+                }
             }
-            return TotalKolhyderater;
+            return Total;
         }
 
         public void AddTag(string TagName)

@@ -7,7 +7,7 @@ namespace Grupp_7_Projekt
 {
     class IngrediensLista
     {
-       List<Ingredient> ingredienslista;
+       public List<Ingredient> ingredienslista;
 
        public IngrediensLista()// konstruktor
        {
