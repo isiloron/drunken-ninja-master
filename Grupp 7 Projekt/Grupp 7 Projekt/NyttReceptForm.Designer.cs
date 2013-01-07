@@ -56,35 +56,35 @@
             this.buttonFinish.Name = "buttonFinish";
             this.buttonFinish.Size = new System.Drawing.Size(164, 23);
             this.buttonFinish.TabIndex = 0;
-            this.buttonFinish.Text = "Create";
+            this.buttonFinish.Text = "Skapa";
             this.buttonFinish.UseVisualStyleBackColor = true;
             this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
             // 
             // TextBoxTitel
             // 
-            this.TextBoxTitel.Location = new System.Drawing.Point(12, 51);
+            this.TextBoxTitel.Location = new System.Drawing.Point(12, 23);
             this.TextBoxTitel.Name = "TextBoxTitel";
             this.TextBoxTitel.Size = new System.Drawing.Size(221, 20);
             this.TextBoxTitel.TabIndex = 1;
             // 
             // TextBoxDescription
             // 
-            this.TextBoxDescription.Location = new System.Drawing.Point(12, 200);
+            this.TextBoxDescription.Location = new System.Drawing.Point(12, 73);
             this.TextBoxDescription.Multiline = true;
             this.TextBoxDescription.Name = "TextBoxDescription";
-            this.TextBoxDescription.Size = new System.Drawing.Size(363, 200);
+            this.TextBoxDescription.Size = new System.Drawing.Size(372, 327);
             this.TextBoxDescription.TabIndex = 2;
             // 
             // TextboxIngr
             // 
-            this.TextboxIngr.Location = new System.Drawing.Point(374, 46);
+            this.TextboxIngr.Location = new System.Drawing.Point(390, 23);
             this.TextboxIngr.Name = "TextboxIngr";
             this.TextboxIngr.Size = new System.Drawing.Size(120, 20);
             this.TextboxIngr.TabIndex = 3;
             // 
             // textBoxTaggs
             // 
-            this.textBoxTaggs.Location = new System.Drawing.Point(464, 231);
+            this.textBoxTaggs.Location = new System.Drawing.Point(390, 231);
             this.textBoxTaggs.Name = "textBoxTaggs";
             this.textBoxTaggs.Size = new System.Drawing.Size(120, 20);
             this.textBoxTaggs.TabIndex = 4;
@@ -92,16 +92,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 35);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Titel";
+            this.label1.Text = "Titel:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(134, 184);
+            this.label2.Location = new System.Drawing.Point(9, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 6;
@@ -110,25 +110,25 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(405, 30);
+            this.label3.Location = new System.Drawing.Point(387, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Ingridents";
+            this.label3.Text = "Ingredienser:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(513, 215);
+            this.label4.Location = new System.Drawing.Point(387, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Taggs";
+            this.label4.Text = "Taggar:";
             // 
             // listBoxIngr
             // 
             this.listBoxIngr.FormattingEnabled = true;
-            this.listBoxIngr.Location = new System.Drawing.Point(464, 71);
+            this.listBoxIngr.Location = new System.Drawing.Point(390, 73);
             this.listBoxIngr.Name = "listBoxIngr";
             this.listBoxIngr.Size = new System.Drawing.Size(120, 95);
             this.listBoxIngr.TabIndex = 9;
@@ -136,54 +136,54 @@
             // listBoxTaggs
             // 
             this.listBoxTaggs.FormattingEnabled = true;
-            this.listBoxTaggs.Location = new System.Drawing.Point(464, 257);
+            this.listBoxTaggs.Location = new System.Drawing.Point(390, 257);
             this.listBoxTaggs.Name = "listBoxTaggs";
             this.listBoxTaggs.Size = new System.Drawing.Size(120, 95);
             this.listBoxTaggs.TabIndex = 10;
             // 
             // Addingr
             // 
-            this.Addingr.Location = new System.Drawing.Point(606, 43);
+            this.Addingr.Location = new System.Drawing.Point(541, 47);
             this.Addingr.Name = "Addingr";
             this.Addingr.Size = new System.Drawing.Size(75, 23);
             this.Addingr.TabIndex = 11;
-            this.Addingr.Text = "Add";
+            this.Addingr.Text = "Lägg till";
             this.Addingr.UseVisualStyleBackColor = true;
             this.Addingr.Click += new System.EventHandler(this.Addingr_Click);
             // 
             // RemoveIngr
             // 
-            this.RemoveIngr.Location = new System.Drawing.Point(590, 143);
+            this.RemoveIngr.Location = new System.Drawing.Point(516, 145);
             this.RemoveIngr.Name = "RemoveIngr";
             this.RemoveIngr.Size = new System.Drawing.Size(75, 23);
             this.RemoveIngr.TabIndex = 12;
-            this.RemoveIngr.Text = "Remove";
+            this.RemoveIngr.Text = "Tabort";
             this.RemoveIngr.UseVisualStyleBackColor = true;
             this.RemoveIngr.Click += new System.EventHandler(this.RemoveIngr_Click);
             // 
             // AddTag
             // 
-            this.AddTag.Location = new System.Drawing.Point(590, 228);
+            this.AddTag.Location = new System.Drawing.Point(516, 231);
             this.AddTag.Name = "AddTag";
             this.AddTag.Size = new System.Drawing.Size(75, 23);
             this.AddTag.TabIndex = 13;
-            this.AddTag.Text = "Add";
+            this.AddTag.Text = "Lägg till";
             this.AddTag.UseVisualStyleBackColor = true;
             this.AddTag.Click += new System.EventHandler(this.AddTag_Click);
             // 
             // RemoveTag
             // 
-            this.RemoveTag.Location = new System.Drawing.Point(590, 329);
+            this.RemoveTag.Location = new System.Drawing.Point(516, 329);
             this.RemoveTag.Name = "RemoveTag";
             this.RemoveTag.Size = new System.Drawing.Size(75, 23);
             this.RemoveTag.TabIndex = 14;
-            this.RemoveTag.Text = "Remove";
+            this.RemoveTag.Text = "Tabort";
             this.RemoveTag.UseVisualStyleBackColor = true;
             this.RemoveTag.Click += new System.EventHandler(this.RemoveTag_Click);
             // 
             // textBoxMängd
             // 
-            this.textBoxMängd.Location = new System.Drawing.Point(500, 46);
+            this.textBoxMängd.Location = new System.Drawing.Point(516, 22);
             this.textBoxMängd.Name = "textBoxMängd";
             this.textBoxMängd.Size = new System.Drawing.Size(100, 20);
             this.textBoxMängd.TabIndex = 15;
@@ -191,11 +191,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(522, 30);
+            this.label5.Location = new System.Drawing.Point(513, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Mängd";
+            this.label5.Text = "Mängd:";
             // 
             // label6
             // 
@@ -249,6 +249,7 @@
             this.Controls.Add(this.buttonFinish);
             this.Name = "NyttReceptForm";
             this.Text = "NyttReceptForm";
+            this.Load += new System.EventHandler(this.NyttReceptForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

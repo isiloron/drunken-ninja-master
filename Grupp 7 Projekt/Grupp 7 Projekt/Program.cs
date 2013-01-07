@@ -16,7 +16,7 @@ namespace Grupp_7_Projekt
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Inlogg());
-            Application.Run(new Receptsida());
+            Application.Run(new Receptsida(true));
 		}
 	}
 }

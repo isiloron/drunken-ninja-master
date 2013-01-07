@@ -82,5 +82,10 @@ namespace Grupp_7_Projekt
             }
         }
 
+        private void NyttReceptForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         }
     }

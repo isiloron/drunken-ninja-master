@@ -146,7 +146,7 @@
             // 
             // ButtonNewingr
             // 
-            this.ButtonNewingr.Location = new System.Drawing.Point(113, 257);
+            this.ButtonNewingr.Location = new System.Drawing.Point(133, 257);
             this.ButtonNewingr.Name = "ButtonNewingr";
             this.ButtonNewingr.Size = new System.Drawing.Size(105, 48);
             this.ButtonNewingr.TabIndex = 7;
@@ -177,7 +177,7 @@
             this.WarningLable.AutoSize = true;
             this.WarningLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WarningLable.ForeColor = System.Drawing.Color.Red;
-            this.WarningLable.Location = new System.Drawing.Point(49, 101);
+            this.WarningLable.Location = new System.Drawing.Point(49, 92);
             this.WarningLable.Name = "WarningLable";
             this.WarningLable.Size = new System.Drawing.Size(214, 18);
             this.WarningLable.TabIndex = 16;

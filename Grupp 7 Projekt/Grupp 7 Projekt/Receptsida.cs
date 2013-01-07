@@ -17,13 +17,21 @@ namespace Grupp_7_Projekt
         static Ingredienssida ingredienssida = new Ingredienssida();        //Deklarerar Ingredienslistan
 
 
-        public Receptsida() //Konstruktor
+        public Receptsida(bool loggedIn) //Konstruktor
         {
             receptlista.LaddaRecept();
             InitializeComponent();
             ListBoxRecept.DataSource = receptlista.HämtaTitlar();
 
             listBoxIngr.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
+
+            if (!loggedIn)
+            {
+                ButtonNyttRecept.Visible = false;
+                ButtonRemoveRecepie.Visible = false;
+                ButtonNewingr.Visible = false;
+                ButtonRemoveIngr.Visible = false;
+             }
         }
 
         private void IndexChange(object sender, EventArgs e) // Metod som fixar flikarna och deras innehåll
@@ -226,6 +234,11 @@ namespace Grupp_7_Projekt
             List<Ingredient> ResultList = new List<Ingredient>();
             ResultList = ingredienssida.ingredienslista.Clone();
             ResultList = ingredienssida.ingredienslista.SökIngrNamn(ResultList, TboxSearchIngrName.Text);
+
+        }
+
+        private void textBoxNär_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
