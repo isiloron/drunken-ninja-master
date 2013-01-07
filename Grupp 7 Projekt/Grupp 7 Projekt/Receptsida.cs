@@ -13,11 +13,11 @@ namespace Grupp_7_Projekt
 {
     public partial class Receptsida : Form
     {
-        static Receptlista receptlista = new Receptlista();
-        static Ingredienssida ingredienssida = new Ingredienssida();
+        static Receptlista receptlista = new Receptlista();                 //Deklarerar Receptlistan
+        static Ingredienssida ingredienssida = new Ingredienssida();        //Deklarerar Ingredienslistan
 
 
-        public Receptsida()
+        public Receptsida() //Konstruktor
         {
             receptlista.LaddaRecept();
             InitializeComponent();
@@ -26,27 +26,27 @@ namespace Grupp_7_Projekt
             listBoxIngr.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
         }
 
-        private void IndexChange(object sender, EventArgs e)
+        private void IndexChange(object sender, EventArgs e) // Metod som fixar flikarna och deras innehåll
         {
             if (tabControl1.SelectedIndex == 0)
             {
-                lblIng.Show();
-                textBoxIngr.Show();
-                lblTil.Text = "Tillagning";
+                lblIng.Show();              //Visar Bngredienlabelsen
+                textBoxIngr.Show();         //Visar Ingredienstextboxen
+                lblTil.Text = "Tillagning"; //Textboxen för Tillagning
                 listBoxRecept_SelectedIndexChanged(null, null);
             }
             if (tabControl1.SelectedIndex == 1)
             {
-                lblIng.Hide();
-                textBoxIngr.Hide();
-                lblTil.Text = "Beskrivning";
+                lblIng.Hide();                  //Gömmer Ingredienslabeln (när man tabbar till ingrediensfliken)
+                textBoxIngr.Hide();             //Gömmer Ingredienstextboxen (när man tabbar till ingrediensfliken)
+                lblTil.Text = "Beskrivning";    //Beskrivniningsruta
                 listBoxIngr_SelectedIndexChanged(null, null );
             }
         
         }
 
 
-        private void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)     //Sökmetoden
         {
 			try
 			{
@@ -55,13 +55,13 @@ namespace Grupp_7_Projekt
 				textBoxTil.Text = temp.Instructions;
 				foreach (ReceptSubStruct r in temp.IngrList)
 				{
-					//This part updates the ingrident box
+					//Uppdaterar ingredienstexboxen
 					textBoxIngr.Text += r.ingrName + " ";
 					textBoxIngr.Text += r.ingrNumber.ToString() + " ";
 					textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
 					textBoxIngr.Text += Environment.NewLine;
 
-					//This part updates the energy values
+					//Uppdaterar energivärderna
 					textBoxNär.Text = "";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
@@ -72,20 +72,20 @@ namespace Grupp_7_Projekt
 			catch { }
         }
 
-        private void ButtonNyttRecept_Click(object sender, EventArgs e)
+        private void ButtonNyttRecept_Click(object sender, EventArgs e) //Lägg till recept
         {
-            NyttReceptForm nrf = new NyttReceptForm();
+            NyttReceptForm nrf = new NyttReceptForm(); // Initierar ny receptform för att läga till recept
             nrf.ShowDialog();
             if (nrf.Recept != null)
             {
-                receptlista.NyttReceptKlass(nrf.Recept);
-                ListBoxRecept.DataSource = receptlista.HämtaTitlar();
+                receptlista.NyttReceptKlass(nrf.Recept);  // Hämtar NyttReceptmetoden
+                ListBoxRecept.DataSource = receptlista.HämtaTitlar(); // Laddar om receptlistan efter man lagt till ett recept
             }
 
 
         }
 
-        private void listBoxIngr_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxIngr_SelectedIndexChanged(object sender, EventArgs e) //Visar alla värden mm på korrekta platser
         {
 			try
 			{
@@ -98,39 +98,39 @@ namespace Grupp_7_Projekt
 			catch { }
         }
 
-        private void ButtonRemoveRecepie_Click(object sender, EventArgs e)
+        private void ButtonRemoveRecepie_Click(object sender, EventArgs e) // TaBortReceptmetoden
         {
             DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill ta bort markerat recept?", "Ta bort recept", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (dialogResult == DialogResult.Yes) // Frågar om man vill ta bort recept... captain obvious...
             {
-                receptlista.TaBort(ListBoxRecept.SelectedItem.ToString());
-                ListBoxRecept.DataSource = receptlista.HämtaTitlar();
+                receptlista.TaBort(ListBoxRecept.SelectedItem.ToString()); // Tar bort receptet
+                ListBoxRecept.DataSource = receptlista.HämtaTitlar();      // Laddar om receptlistan
             }
         }
 
-        private void ButtonRemoveIngr_Click(object sender, EventArgs e)
+        private void ButtonRemoveIngr_Click(object sender, EventArgs e) // Ta bort ingrediens metod 
         {
             DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill ta bort markerad ingridiens?", "Ta bort ingridiens", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (dialogResult == DialogResult.Yes) //Frågar om man vill ta bort ingrediens... captain obvious...
             {
-                ingredienssida.ingredienslista.TaBortIng(listBoxIngr.SelectedItem.ToString());
-                listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar();
+                ingredienssida.ingredienslista.TaBortIng(listBoxIngr.SelectedItem.ToString()); // Tar bort ingrediensen
+                listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar(); // Laddar om recept
             }
         }
 
-        private void ButtonNewingr_Click(object sender, EventArgs e)
+        private void ButtonNewingr_Click(object sender, EventArgs e) // Lägg till ingrediensknapp
         {
-            NyIngridiensForm nig = new NyIngridiensForm();
+            NyIngridiensForm nig = new NyIngridiensForm();      // Initierar ny form
             nig.ShowDialog();
             if (nig.newingr != null)
             {
-                ingredienssida.ingredienslista.LäggTillIngrKlass(nig.newingr);
-                listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar();
+                ingredienssida.ingredienslista.LäggTillIngrKlass(nig.newingr); // Lägger till ingrediens
+                listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar(); // Laddar om ingredienser
             }
 
         }
 
-        private void ButtonSearchRecept_Click(object sender, EventArgs e)
+        private void ButtonSearchRecept_Click(object sender, EventArgs e) // Avancerade sökfunktionen
         {
             listBoxSearchReceptResults.Items.Clear();
             try
