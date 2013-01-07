@@ -56,6 +56,7 @@ namespace Grupp_7_Projekt
 
         private void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)     //Sökmetoden
         {
+
 			try
 			{
 				Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
@@ -75,6 +76,7 @@ namespace Grupp_7_Projekt
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Proteiner \r\n";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + "% Fett \r\n";
+                                        
 				}
 			}
 			catch { }
@@ -240,6 +242,28 @@ namespace Grupp_7_Projekt
         private void textBoxNär_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void txtBoxPort_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int antport;
+                antport = int.Parse(txtBoxPort.Text);
+
+                Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
+                textBoxIngr.Clear();
+                foreach (ReceptSubStruct r in temp.IngrList)
+                {
+                    //Uppdaterar ingredienstexboxen
+                    textBoxIngr.Text += r.ingrName + " ";
+                    textBoxIngr.Text += r.ingrNumber * antport + " ";
+                    textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
+                    textBoxIngr.Text += Environment.NewLine;
+                }
+            }
+            catch { }
         }
 
        
