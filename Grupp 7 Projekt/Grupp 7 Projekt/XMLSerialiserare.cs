@@ -1,4 +1,17 @@
-﻿using System;
+﻿ /*
+ *DISCLAIMER
+ *Klassen "public static class XMLSerializer<T> where T : class"
+ *är en lånad klass från
+ *http://csharpskolan.se/showarticle.php?id=44#ObjectXMLSerializer.cs5
+ *som används som verktyg i detta projekt för att spara godtyckliga
+ *objekt till XML filer.
+ *
+ *De metoder vi använder ifrån denna klass är:
+ *public static T Load(string path), som laddar ett XML dokument.
+ *public static void Save(T serializableObject, string path), som sparar ett XML dokument.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +21,7 @@ using System.IO.IsolatedStorage;
 
 namespace Grupp_7_Projekt
 {
-	//Denna klass är ett verktyg hämtat från csharpskolan.se
-	public static class XMLSerialiserare<T> where T : class
+	public static class XMLSerializer<T> where T : class
 	{
 		public static T Load(string path)
 		{
@@ -94,12 +106,12 @@ namespace Grupp_7_Projekt
 	{
 		public static void LaddaXML(out List<Recept> receptlista)
 		{
-			receptlista = XMLSerialiserare<List<Recept>>.Load("receptbok.xml");
+			receptlista = XMLSerializer<List<Recept>>.Load("receptbok.xml");
 		}
 
 		public static void SparaXML(ref List<Recept> receptlista)
 		{
-			XMLSerialiserare<List<Recept>>.Save(receptlista, "receptbok.xml");
+			XMLSerializer<List<Recept>>.Save(receptlista, "receptbok.xml");
 		}
 	}
 
@@ -107,12 +119,12 @@ namespace Grupp_7_Projekt
 	{
 		public static void LaddaXML(out List<Ingredient> ingredienslista)
 		{
-			ingredienslista = XMLSerialiserare<List<Ingredient>>.Load("ingredienser.xml");
+			ingredienslista = XMLSerializer<List<Ingredient>>.Load("ingredienser.xml");
 		}
 
 		public static void SparaXML(ref List<Ingredient> ingredienslista)
 		{
-			XMLSerialiserare<List<Ingredient>>.Save(ingredienslista, "ingredienser.xml");
+			XMLSerializer<List<Ingredient>>.Save(ingredienslista, "ingredienser.xml");
 		}
 	}
 }
