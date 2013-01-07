@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utskrftsform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utskrftsform.Designer.cs">
+      <DependentUpon>Utskrftsform.cs</DependentUpon>
+    </Compile>
     <Compile Include="ingrediensKlass.cs" />
     <Compile Include="IngrediensLista.cs" />
     <Compile Include="Ingredienssida.cs" />
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="Receptsida.resx">
       <DependentUpon>Receptsida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utskrftsform.resx">
+      <DependentUpon>Utskrftsform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="password.dat" />
     <None Include="Properties\Settings.settings">

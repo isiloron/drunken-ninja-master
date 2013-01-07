@@ -190,9 +190,9 @@ namespace Grupp_7_Projekt
 
         private void SkrivUt_Click(object sender, EventArgs e)
         {
-
-            ingredienssida.Skrivaren();
             
+            Utskrftsform utskrift = new Utskrftsform(receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString()));
+            utskrift.Show();
         }
 
         private void buttonAddSearchTag_Click(object sender, EventArgs e)

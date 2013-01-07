@@ -25,7 +25,6 @@ namespace Grupp_7_Projekt
             PrintDocument skrivdokument = new PrintDocument();
 
             skrivut.Document = skrivdokument;
-           
             
             DialogResult skrivresultat = skrivut.ShowDialog();
 
