@@ -88,7 +88,7 @@ namespace Grupp_7_Projekt
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Protein \r\n";
-					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + "% Fett \r\n";
+					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + " Fett \r\n";
                                         
 				}
 			}
@@ -116,7 +116,7 @@ namespace Grupp_7_Projekt
 				lblRubrik.Text = temp.Name;
 				textBoxTil.Text = temp.Description;
 				textBoxNär.Text = "";
-				textBoxNär.Text += temp.Energy + " Energi\r\n" + temp.Fett + "% Fett\r\n" + temp.Kolhydrater + " Kolhydrater\r\n" + temp.Protein + " Protein";
+				textBoxNär.Text += temp.Energy + " Energi\r\n" + temp.Fett + " Fett\r\n" + temp.Kolhydrater + " Kolhydrater\r\n" + temp.Protein + " Protein";
 			}
 			catch { }
             
@@ -241,7 +241,7 @@ namespace Grupp_7_Projekt
                 textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
                 textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
                 textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Proteiner \r\n";
-                textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + "% Fett \r\n";
+                textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + " Fett \r\n";
 
             }
         }

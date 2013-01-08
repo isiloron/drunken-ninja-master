@@ -410,9 +410,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(15, 206);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Taggar:";
+            this.label8.Text = "Kategorier:";
             // 
             // label7
             // 

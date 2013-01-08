@@ -117,9 +117,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(387, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Taggar:";
+            this.label4.Text = "Kategorier:";
             // 
             // listBoxIngr
             // 
