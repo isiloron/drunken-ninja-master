@@ -16,7 +16,7 @@ namespace Grupp_7_Projekt
             ingredienslista.LaddaIngrediens();
             ingredienslista.HämtaIngTitlar();
 
-
+            // Hämtar ingredienser från ingredienslistan(ingredienslistan har hämtat data från ett XML-dokument). Ingredienssidan skickas i sin tur vidare till Receptsidan. 
 
         }
         
