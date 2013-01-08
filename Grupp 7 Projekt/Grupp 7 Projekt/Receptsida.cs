@@ -87,6 +87,17 @@ namespace Grupp_7_Projekt
 				}
 			}
 			catch { }
+            
+            if (ListBoxRecept.SelectedItem.ToString() == "Tomat")
+            {
+                pictureBox1.Image = Image.FromFile(@"C:\Users\pvn12002\Documents\GitHub\drunken-ninja-master\Grupp 7 Projekt\Grupp 7 Projekt\Laxsoppa.jpg");
+            }
+            else if (ListBoxRecept.SelectedItem.ToString() == "Morot")
+            {
+                pictureBox1.Image = Image.FromFile(@"C:\Users\pvn12002\Documents\GitHub\drunken-ninja-master\Grupp 7 Projekt\Grupp 7 Projekt\pastacarbonara.jpg");
+            }
+            else
+                pictureBox1.Image = Image.FromFile(@"C:\Users\pvn12002\Documents\GitHub\drunken-ninja-master\Grupp 7 Projekt\Grupp 7 Projekt\chopped-fingers.jpg");
         }
 
         private void ButtonNyttRecept_Click(object sender, EventArgs e) //Lägg till recept
@@ -113,6 +124,8 @@ namespace Grupp_7_Projekt
 				textBoxNär.Text += temp.Energy + " Energy\r\n" + temp.Fett + "% Fett\r\n" + temp.Kolhydrater + " Kolhydrater\r\n" + temp.Protein + " Protein";
 			}
 			catch { }
+            
+       
         }
 
         private void ButtonRemoveRecepie_Click(object sender, EventArgs e) // TaBortReceptmetoden
