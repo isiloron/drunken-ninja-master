@@ -10,7 +10,7 @@ namespace Grupp_7_Projekt
     class Ingredienssida
     {
         public IngrediensLista ingredienslista = new IngrediensLista();
-        public Ingredienssida()
+        public Ingredienssida() // Konstruktor
         {
 
             ingredienslista.LaddaIngrediens();
