@@ -90,6 +90,16 @@ namespace Grupp_7_Projekt
                 lblAntPort.Hide();              //Gömmer AntPort label från Ingredienstaben
                 listBoxIngr_SelectedIndexChanged(null, null );
             }
+            if (tabControl1.SelectedIndex == 2)
+            {
+                lblAntPort.Show();          //Visar AntPort label i Recepttaben
+                comboBoxPort.Show();        //Visar ComboBox i Recepttaben
+                lblIng.Show();              //Visar Bngredienlabelsen
+                textBoxIngr.Show();         //Visar Ingredienstextboxen
+                lblTil.Text = "Tillagning"; //Textboxen för Tillagning
+                lblNär.Text = "Näringsvärde / portion:"; //Överskrift för näringsvärden recept
+                listBoxRecept_SelectedIndexChanged(null, null);
+            }
         
         }
 
@@ -310,16 +320,6 @@ namespace Grupp_7_Projekt
 
         }
 
-        private void buttonDummy_Click(object sender, EventArgs e) //Simon Test funktion
-        {
-            List<string> TagList = receptlista.GetAllTags();
-            string showtags = "";
-            foreach(string derp in TagList)
-            {
-                showtags += derp + "\r\n";
-            }
-            MessageBox.Show(showtags);
-        }
 
        
         
