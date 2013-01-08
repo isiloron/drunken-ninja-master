@@ -50,6 +50,7 @@
             this.comboBoxIngr = new System.Windows.Forms.ComboBox();
             this.buttonNewIngr = new System.Windows.Forms.Button();
             this.labelIngrUnit = new System.Windows.Forms.Label();
+            this.NyBild = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonFinish
@@ -246,11 +247,22 @@
             this.labelIngrUnit.TabIndex = 22;
             this.labelIngrUnit.Text = "Enhet";
             // 
+            // NyBild
+            // 
+            this.NyBild.Location = new System.Drawing.Point(541, 406);
+            this.NyBild.Name = "NyBild";
+            this.NyBild.Size = new System.Drawing.Size(75, 23);
+            this.NyBild.TabIndex = 23;
+            this.NyBild.Text = "Lägg till bild";
+            this.NyBild.UseVisualStyleBackColor = true;
+            this.NyBild.Click += new System.EventHandler(this.NyBild_Click);
+            // 
             // NyttReceptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 441);
+            this.ClientSize = new System.Drawing.Size(666, 443);
+            this.Controls.Add(this.NyBild);
             this.Controls.Add(this.labelIngrUnit);
             this.Controls.Add(this.buttonNewIngr);
             this.Controls.Add(this.comboBoxIngr);
@@ -304,5 +316,6 @@
         private System.Windows.Forms.ComboBox comboBoxIngr;
         private System.Windows.Forms.Button buttonNewIngr;
         private System.Windows.Forms.Label labelIngrUnit;
+        public System.Windows.Forms.Button NyBild;
     }
 }

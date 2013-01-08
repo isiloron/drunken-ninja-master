@@ -11,6 +11,7 @@ namespace Grupp_7_Projekt
     {
         string titel; //Name of the recepie
         string instructions; //Instructions on how to make it
+        string bildsökväg = "";
 
 		[XmlElement]
 		public string Titel
@@ -25,6 +26,13 @@ namespace Grupp_7_Projekt
 			get { return instructions; }
 			set { instructions = value; }
 		}
+
+        [XmlElement]
+        public string Bildsökväg
+        {
+            get { return bildsökväg; }
+            set { bildsökväg = value;}
+        }
 
 		[XmlElement]
 		public List<ReceptSubStruct> IngrList = new List<ReceptSubStruct>(); //List of ingr to use
@@ -41,12 +49,13 @@ namespace Grupp_7_Projekt
             instructions = NewInstructions;
         }
 
-        public Recept(string NewTitel, string NewInstructions, List<ReceptSubStruct>NewIngrList, List<string>NewTagList)
+        public Recept(string NewTitel, string NewInstructions, List<ReceptSubStruct>NewIngrList, List<string>NewTagList, string bildsökväg)
         {
             titel = NewTitel;
             instructions = NewInstructions;
             IngrList = NewIngrList;
             TagList = NewTagList;
+            Bildsökväg = bildsökväg;
         }
 
 

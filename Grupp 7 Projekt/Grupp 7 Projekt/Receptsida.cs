@@ -61,7 +61,7 @@ namespace Grupp_7_Projekt
         }
 
 
-        private void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)     //Sökmetoden
+        public void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)     //Sökmetoden
         {
 
 			try
@@ -69,6 +69,12 @@ namespace Grupp_7_Projekt
 				Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
 				lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
 				textBoxTil.Text = temp.Instructions;
+
+                if (temp.Bildsökväg == "")
+                    pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.chopped_fingers;
+                else
+                    pictureBox1.Image = Image.FromFile(temp.Bildsökväg);
+
 				foreach (ReceptSubStruct r in temp.IngrList)
 				{
 					//Uppdaterar ingredienstexboxen
@@ -86,21 +92,10 @@ namespace Grupp_7_Projekt
                                         
 				}
 			}
-			catch { }
-
-            if (ListBoxRecept.SelectedItem.ToString() == "Tomat")
-            {
-                pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.Laxsoppa;
-            }
-            else if (ListBoxRecept.SelectedItem.ToString() == "Morot")
-            {
-                pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.pastacarbonara;
-            }
-            else
-                pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.chopped_fingers;
+			catch { }    
         }
 
-        private void ButtonNyttRecept_Click(object sender, EventArgs e) //Lägg till recept
+        public void ButtonNyttRecept_Click(object sender, EventArgs e) //Lägg till recept
         {
             NyttReceptForm nrf = new NyttReceptForm(ref ingredienssida.ingredienslista.ingredienslista); // Initierar ny receptform för att läga till recept
             nrf.ShowDialog();

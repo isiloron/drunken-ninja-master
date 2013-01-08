@@ -59,9 +59,9 @@ namespace Grupp_7_Projekt
             return null;
         }
 
-        public void LäggTill(string titel, string instructions, List<ReceptSubStruct> IngrList, List<string> TagList)//En metod som lägger till ett recept i receptlistan
+        public void LäggTill(string titel, string instructions, List<ReceptSubStruct> IngrList, List<string> TagList, string bildsökväg)//En metod som lägger till ett recept i receptlistan
         {
-            receptlista.Add(new Recept(titel, instructions, IngrList, TagList));
+            receptlista.Add(new Recept(titel, instructions, IngrList, TagList, bildsökväg));
             SparaRecept();
         }
 
