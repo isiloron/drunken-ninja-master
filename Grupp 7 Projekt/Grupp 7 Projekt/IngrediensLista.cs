@@ -55,7 +55,7 @@ namespace Grupp_7_Projekt
         
         }
 
-        public List<Ingredient> SökIngrNamn(List<Ingredient> ListaAttsöka, string SökNamn)
+        public List<Ingredient> SökIngrNamn(List<Ingredient> ListaAttsöka, string SökNamn)//används denna simon?
         { 
             List<Ingredient> ReturnList = new List<Ingredient>();
             foreach (Ingredient ingr in ListaAttsöka)
@@ -69,7 +69,7 @@ namespace Grupp_7_Projekt
             return ReturnList;
         }
 
-       public void LäggTillIng(string name,string unit, string description,	int fett, int protein, int energy, int carbon)
+       public void LäggTillIng(string name,string unit, string description,	int fett, int protein, int energy, int carbon)//Lägger till en ingrediens med olika näringsvärden
         { 
             ingredienslista.Add(new Ingredient(name, unit, description, fett, protein, energy, carbon));
             SparaIngrediens();
@@ -81,15 +81,15 @@ namespace Grupp_7_Projekt
            SparaIngrediens();
        }
        
-        public void TaBortIng(string name)
+        public void TaBortIng(string name)//Tar Bort en ingrediens
         {
-            for (int i = 0; i < ingredienslista.Count; i++)//Loopar igenom ingredienslistan för en matchande titel för att sedan ta bort detta recept
+            for (int i = 0; i < ingredienslista.Count; i++)//Loopar igenom ingredienslistan 
             {
 
-                if (ingredienslista[i].Name == name)
+                if (ingredienslista[i].Name == name)//letar för en matchande titel 
                 {
-                    ingredienslista.RemoveAt(i);
-                    SparaIngrediens();
+                    ingredienslista.RemoveAt(i); // tarbort från ingdredienslista
+                    SparaIngrediens(); // sparar sedan listan.
 
                 }
             }
