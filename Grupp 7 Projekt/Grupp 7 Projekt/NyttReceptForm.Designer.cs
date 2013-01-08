@@ -49,6 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxIngr = new System.Windows.Forms.ComboBox();
             this.buttonNewIngr = new System.Windows.Forms.Button();
+            this.labelIngrUnit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonFinish
@@ -206,6 +207,7 @@
             this.TextBoxPortioner.Name = "TextBoxPortioner";
             this.TextBoxPortioner.Size = new System.Drawing.Size(94, 20);
             this.TextBoxPortioner.TabIndex = 18;
+            this.TextBoxPortioner.Text = "1";
             // 
             // label7
             // 
@@ -223,6 +225,7 @@
             this.comboBoxIngr.Name = "comboBoxIngr";
             this.comboBoxIngr.Size = new System.Drawing.Size(121, 21);
             this.comboBoxIngr.TabIndex = 20;
+            this.comboBoxIngr.SelectedIndexChanged += new System.EventHandler(this.IngrComboBox_Change);
             // 
             // buttonNewIngr
             // 
@@ -234,11 +237,21 @@
             this.buttonNewIngr.UseVisualStyleBackColor = true;
             this.buttonNewIngr.Click += new System.EventHandler(this.buttonNewIngr_Click);
             // 
+            // labelIngrUnit
+            // 
+            this.labelIngrUnit.AutoSize = true;
+            this.labelIngrUnit.Location = new System.Drawing.Point(623, 23);
+            this.labelIngrUnit.Name = "labelIngrUnit";
+            this.labelIngrUnit.Size = new System.Drawing.Size(35, 13);
+            this.labelIngrUnit.TabIndex = 22;
+            this.labelIngrUnit.Text = "Enhet";
+            // 
             // NyttReceptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 441);
+            this.Controls.Add(this.labelIngrUnit);
             this.Controls.Add(this.buttonNewIngr);
             this.Controls.Add(this.comboBoxIngr);
             this.Controls.Add(this.label7);
@@ -262,7 +275,6 @@
             this.Controls.Add(this.buttonFinish);
             this.Name = "NyttReceptForm";
             this.Text = "NyttReceptForm";
-            this.Load += new System.EventHandler(this.NyttReceptForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +303,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxIngr;
         private System.Windows.Forms.Button buttonNewIngr;
+        private System.Windows.Forms.Label labelIngrUnit;
     }
 }
