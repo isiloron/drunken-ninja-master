@@ -126,6 +126,8 @@
     <None Include="chopped-fingers.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="pastacarbonara.jpg" />
+    <None Include="Laxsoppa.jpg" />
     <Content Include="tblcloth.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

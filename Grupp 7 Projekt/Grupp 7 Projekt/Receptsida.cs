@@ -87,17 +87,17 @@ namespace Grupp_7_Projekt
 				}
 			}
 			catch { }
-            
+
             if (ListBoxRecept.SelectedItem.ToString() == "Tomat")
             {
-                pictureBox1.Image = Image.FromFile(@"C:\Users\pvn12002\Documents\GitHub\drunken-ninja-master\Grupp 7 Projekt\Grupp 7 Projekt\Laxsoppa.jpg");
+                pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.Laxsoppa;
             }
             else if (ListBoxRecept.SelectedItem.ToString() == "Morot")
             {
-                pictureBox1.Image = Image.FromFile(@"C:\Users\pvn12002\Documents\GitHub\drunken-ninja-master\Grupp 7 Projekt\Grupp 7 Projekt\pastacarbonara.jpg");
+                pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.pastacarbonara;
             }
             else
-                pictureBox1.Image = Image.FromFile(@"C:\Users\pvn12002\Documents\GitHub\drunken-ninja-master\Grupp 7 Projekt\Grupp 7 Projekt\chopped-fingers.jpg");
+                pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.chopped_fingers;
         }
 
         private void ButtonNyttRecept_Click(object sender, EventArgs e) //Lägg till recept

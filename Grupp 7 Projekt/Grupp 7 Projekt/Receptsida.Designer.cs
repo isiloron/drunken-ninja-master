@@ -511,6 +511,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Grupp_7_Projekt.Properties.Resources.chopped_fingers;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(680, 139);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(259, 209);
