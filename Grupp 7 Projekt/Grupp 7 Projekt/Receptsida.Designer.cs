@@ -535,11 +535,11 @@
             this.lblNär.AutoSize = true;
             this.lblNär.BackColor = System.Drawing.SystemColors.Window;
             this.lblNär.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNär.Location = new System.Drawing.Point(479, 494);
+            this.lblNär.Location = new System.Drawing.Point(477, 494);
             this.lblNär.Name = "lblNär";
-            this.lblNär.Size = new System.Drawing.Size(131, 23);
+            this.lblNär.Size = new System.Drawing.Size(205, 23);
             this.lblNär.TabIndex = 8;
-            this.lblNär.Text = "Näringsvärden:";
+            this.lblNär.Text = "Näringsvärden / portion:";
             // 
             // lblTil
             // 
