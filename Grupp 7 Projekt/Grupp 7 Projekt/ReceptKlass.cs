@@ -11,7 +11,7 @@ namespace Grupp_7_Projekt
     {
         string titel; //Receptets namn
         string instructions; //Instruktioner
-        string bildsökväg = "";
+        string bildsökväg = ""; //Sparar sökväg för bilden till det relaterade receptet.
 
 		[XmlElement]
 		public string Titel
@@ -40,16 +40,16 @@ namespace Grupp_7_Projekt
 		[XmlElement]
 		public List<string> TagList = new List<string>(); //Taggar relaterade till detta recept
 
-		public Recept()
+		public Recept() //Tom konstruktor
 		{ }
 
-        public Recept(string NewTitel, string NewInstructions)
+        public Recept(string NewTitel, string NewInstructions) //Lightwight construktor
         {
             Titel = NewTitel;
             instructions = NewInstructions;
         }
 
-        public Recept(string NewTitel, string NewInstructions, List<ReceptSubStruct>NewIngrList, List<string>NewTagList, string bildsökväg)
+        public Recept(string NewTitel, string NewInstructions, List<ReceptSubStruct>NewIngrList, List<string>NewTagList, string bildsökväg) //Konstruktor
         {
             titel = NewTitel;
             instructions = NewInstructions;
@@ -73,7 +73,7 @@ namespace Grupp_7_Projekt
             return false;
         }
 
-        public void AddIngr(string NewName, int NewNumber)
+        public void AddIngr(string NewName, int NewNumber) //Lägger till ny ingr med in namn och antal/nummer
         {
             IngrList.Add(new ReceptSubStruct(NewName, NewNumber));
         }
@@ -145,7 +145,7 @@ namespace Grupp_7_Projekt
 
         public void AddTag(string TagName)
         {
-            //Kollar om tag redan existerar
+            //Kollar om tag redan existerar, annars läggs den inte in. Denna funktion blev aldrig implementerad och kallas aldrig på
             bool exists = false;
             foreach (string tag in TagList)
             {
@@ -159,8 +159,8 @@ namespace Grupp_7_Projekt
                 TagList.Add(TagName);
             }
         }
-        
-        public bool RemoveTag(string RemoveName)
+
+        public bool RemoveTag(string RemoveName) //tar bort tag, returerar false om tagen inte hittats. Denna funktion blev aldrig implementerad och kallas aldrig på
         {
             for (int z = 0; z < TagList.Count; z++)
             {
@@ -172,7 +172,8 @@ namespace Grupp_7_Projekt
             }
             return false;
         }
-        public List<string> GetTagList()
+        
+        public List<string> GetTagList() //Returerar taglistan
         {
             return TagList;
         }

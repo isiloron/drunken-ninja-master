@@ -61,7 +61,7 @@ namespace Grupp_7_Projekt
         }
 
 
-        public void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)     //Sökmetoden
+        public void listBoxRecept_SelectedIndexChanged(object sender, EventArgs e)     //Updaterar visningsfönstret, kallas på när användaren markerat ett nytt recept
         {
 
 			try
@@ -70,6 +70,7 @@ namespace Grupp_7_Projekt
 				lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
 				textBoxTil.Text = temp.Instructions;
 
+                //Uppdaterar bilden
                 if (temp.Bildsökväg == "")
                     pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.chopped_fingers;
                 else
@@ -108,7 +109,7 @@ namespace Grupp_7_Projekt
 
         }
 
-        private void listBoxIngr_SelectedIndexChanged(object sender, EventArgs e) //Visar alla värden mm på korrekta platser
+        private void listBoxIngr_SelectedIndexChanged(object sender, EventArgs e) //Updaterar visningsfönstret när användaren väljer ny ingr
         {
 			try
 			{
@@ -155,7 +156,7 @@ namespace Grupp_7_Projekt
 
         }
 
-        private void ButtonSearchRecept_Click(object sender, EventArgs e) // Avancerade sökfunktionen
+        private void ButtonSearchRecept_Click(object sender, EventArgs e) //Sökfunktionen, skapar en ny lista som skickas ner genom alla sökfunkioner
         {
             listBoxSearchReceptResults.Items.Clear();
             try
@@ -182,7 +183,7 @@ namespace Grupp_7_Projekt
                 {
                 ResultList = receptlista.SökMinMaxKolhydrater(Int32.Parse(TBoxSearchReceptMinKolhyd.Text), Int32.Parse(TBoxSearchReceptMAXKolhyd.Text), ResultList, ref ingredienssida.ingredienslista.ingredienslista);
                 }
-                if (listBoxSearchTags.Items.Count != 0)
+                if (listBoxSearchTags.Items.Count != 0) //Om taggar angets, sök
                 {
                     
                     List<string> seachtags = new List<string>();
@@ -194,7 +195,7 @@ namespace Grupp_7_Projekt
                     ResultList = receptlista.SökReceptSomHarTag(seachtags, ResultList);
 
                 }
-                foreach (Recept rep in ResultList)
+                foreach (Recept rep in ResultList) //Updaterar resultatboxen
                 {
                     listBoxSearchReceptResults.Items.Add(rep.Titel);
                 }
@@ -212,18 +213,18 @@ namespace Grupp_7_Projekt
             utskrift.Show();
         }
 
-        private void buttonAddSearchTag_Click(object sender, EventArgs e)
+        private void buttonAddSearchTag_Click(object sender, EventArgs e) //Lägger till en tag att söka på
         {
             listBoxSearchTags.Items.Add(TBoxSearchReceptTags.Text);
             TBoxSearchReceptTags.Text = "";
         }
 
-        private void buttonRemoveSearchTag_Click(object sender, EventArgs e)
+        private void buttonRemoveSearchTag_Click(object sender, EventArgs e) //tar bort en tag från söklistan
         {
             listBoxSearchTags.Items.Remove(listBoxSearchTags.SelectedItem);
         }
 
-        private void listBoxSearchReceptResults_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxSearchReceptResults_SelectedIndexChanged(object sender, EventArgs e) //Uppdaterar visningen av recept från sökresulten
         {
             Recept temp = receptlista.HämtaReceptAvNamn(listBoxSearchReceptResults.SelectedItem.ToString());
             lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
@@ -246,7 +247,7 @@ namespace Grupp_7_Projekt
             }
         }
 
-        private void buttonSearchIngr_Click(object sender, EventArgs e)
+        private void buttonSearchIngr_Click(object sender, EventArgs e) //Sök ingr (inte 100% fungerande!)
         {
             List<Ingredient> ResultList = new List<Ingredient>();
             ResultList = ingredienssida.ingredienslista.Clone();
@@ -276,7 +277,7 @@ namespace Grupp_7_Projekt
 
         }
 
-        private void buttonDummy_Click(object sender, EventArgs e) //Simon Test knapp
+        private void buttonDummy_Click(object sender, EventArgs e) //Simon Test funktion
         {
             List<string> TagList = receptlista.GetAllTags();
             string showtags = "";

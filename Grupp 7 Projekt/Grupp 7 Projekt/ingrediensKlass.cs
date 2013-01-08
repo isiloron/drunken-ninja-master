@@ -10,6 +10,7 @@ namespace Grupp_7_Projekt
 
     public class Ingredient
     {
+        //variabler som används
 		int fett;
         int protein;
         int energy;
@@ -68,7 +69,7 @@ namespace Grupp_7_Projekt
             set { description = value; }
         }
         public Ingredient(string NewName, string NewDescription, string NewMessureUnit, int NewEnergy, int NewProtein, int NewFett, int NewKolhydrater)
-        {
+        { //Konstruktor
             name = NewName;
             description = NewDescription;
             unit = NewMessureUnit;
@@ -79,7 +80,7 @@ namespace Grupp_7_Projekt
         }
 
 		public Ingredient()
-		{
+		{ //kontruktor
 			energy = 0;
 			protein = 0;
             fett = 0;
@@ -89,12 +90,12 @@ namespace Grupp_7_Projekt
 		}
 
         public Ingredient(string NewName, string NewMessureUnit)
-        {
+        { //konstruktor
             name = NewName;
             unit = NewMessureUnit;
         }
         public Ingredient(string NewName, string NewMessureUnit, string NewDescription, int NewCal, int NewProtein, int NewFett)
-        {
+        {//konstruktor
             name = NewName;
             unit = NewMessureUnit;
             description = NewDescription;
