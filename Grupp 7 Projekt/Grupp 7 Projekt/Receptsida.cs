@@ -25,6 +25,8 @@ namespace Grupp_7_Projekt
 
             listBoxIngr.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
             comboBoxPort.SelectedIndex = 1;
+            comboBoxPort.SelectedValue = comboBoxPort.SelectedIndex;
+
 
             if (!loggedIn)
             {
@@ -39,6 +41,8 @@ namespace Grupp_7_Projekt
         {
             if (tabControl1.SelectedIndex == 0)
             {
+                lblAntPort.Show();          //Visar AntPort label i Recepttaben
+                comboBoxPort.Show();        //Visar ComboBox i Recepttaben
                 lblIng.Show();              //Visar Bngredienlabelsen
                 textBoxIngr.Show();         //Visar Ingredienstextboxen
                 lblTil.Text = "Tillagning"; //Textboxen för Tillagning
@@ -49,6 +53,8 @@ namespace Grupp_7_Projekt
                 lblIng.Hide();                  //Gömmer Ingredienslabeln (när man tabbar till ingrediensfliken)
                 textBoxIngr.Hide();             //Gömmer Ingredienstextboxen (när man tabbar till ingrediensfliken)
                 lblTil.Text = "Beskrivning";    //Beskrivniningsruta
+                comboBoxPort.Hide();            //Gömmer ComboBox från Ingredienstaben
+                lblAntPort.Hide();              //Gömmer AntPort label från Ingredienstaben
                 listBoxIngr_SelectedIndexChanged(null, null );
             }
         

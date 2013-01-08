@@ -80,7 +80,7 @@
             this.textBoxTil = new System.Windows.Forms.TextBox();
             this.textBoxIngr = new System.Windows.Forms.TextBox();
             this.SkrivUt = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblAntPort = new System.Windows.Forms.Label();
             this.comboBoxPort = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -604,14 +604,14 @@
             this.SkrivUt.UseVisualStyleBackColor = true;
             this.SkrivUt.Click += new System.EventHandler(this.SkrivUt_Click);
             // 
-            // label11
+            // lblAntPort
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(483, 334);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 13);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Antal Portioner:";
+            this.lblAntPort.AutoSize = true;
+            this.lblAntPort.Location = new System.Drawing.Point(483, 334);
+            this.lblAntPort.Name = "lblAntPort";
+            this.lblAntPort.Size = new System.Drawing.Size(79, 13);
+            this.lblAntPort.TabIndex = 15;
+            this.lblAntPort.Text = "Antal Portioner:";
             // 
             // comboBoxPort
             // 
@@ -650,7 +650,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(984, 694);
             this.Controls.Add(this.comboBoxPort);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblAntPort);
             this.Controls.Add(this.SkrivUt);
             this.Controls.Add(this.textBoxIngr);
             this.Controls.Add(this.textBoxTil);
@@ -736,7 +736,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonSearchIngr;
         private System.Windows.Forms.ListBox listBoxSearchIngrResults;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblAntPort;
         private System.Windows.Forms.ComboBox comboBoxPort;
     }
 }
