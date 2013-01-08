@@ -19,21 +19,8 @@ namespace Grupp_7_Projekt
 
 
         }
-        public void Skrivaren()
-        {
-            PrintDialog skrivut = new PrintDialog();
-            PrintDocument skrivdokument = new PrintDocument();
-
-            skrivut.Document = skrivdokument;
-            
-            DialogResult skrivresultat = skrivut.ShowDialog();
-
-            if (skrivresultat == DialogResult.OK)
-            {
-                skrivdokument.Print();
-                
-            }
+        
         }
     }
-}
+
 

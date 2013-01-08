@@ -148,6 +148,7 @@
             this.btnskrivut.TabIndex = 11;
             this.btnskrivut.Text = "Skriv ut";
             this.btnskrivut.UseVisualStyleBackColor = false;
+            this.btnskrivut.Click += new System.EventHandler(this.btnskrivut_Click);
             // 
             // Utskrftsform
             // 
@@ -168,6 +169,7 @@
             this.Controls.Add(this.textBoxutskrift);
             this.Name = "Utskrftsform";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Utskrftsform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxbakgrund)).EndInit();
             this.ResumeLayout(false);
