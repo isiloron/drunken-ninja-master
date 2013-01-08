@@ -19,6 +19,7 @@ namespace Grupp_7_Projekt
 		string unit;
 		string description;
 
+		//Egenskaper för medlemmarna.
         [XmlElement]
         public int Kolhydrater
         {
@@ -68,7 +69,9 @@ namespace Grupp_7_Projekt
             get { return description; }
             set { description = value; }
         }
-        public Ingredient(string NewName, string NewDescription, string NewMessureUnit, int NewEnergy, int NewProtein, int NewFett, int NewKolhydrater)
+
+		//Konstruktorer
+		public Ingredient(string NewName, string NewDescription, string NewMessureUnit, int NewEnergy, int NewProtein, int NewFett, int NewKolhydrater)
         { //Konstruktor
             name = NewName;
             description = NewDescription;
@@ -80,7 +83,7 @@ namespace Grupp_7_Projekt
         }
 
 		public Ingredient()
-		{ //kontruktor
+		{ //Tom kontruktor
 			energy = 0;
 			protein = 0;
             fett = 0;
@@ -88,21 +91,5 @@ namespace Grupp_7_Projekt
 			unit = "SAKNAR ENHET";
 			description = "SAKNAR BESKRIVNING";
 		}
-
-        public Ingredient(string NewName, string NewMessureUnit)
-        { //konstruktor
-            name = NewName;
-            unit = NewMessureUnit;
-        }
-        public Ingredient(string NewName, string NewMessureUnit, string NewDescription, int NewCal, int NewProtein, int NewFett)
-        {//konstruktor
-            name = NewName;
-            unit = NewMessureUnit;
-            description = NewDescription;
-            energy = NewCal;
-            protein = NewProtein;
-            fett = NewFett;
-        
-        }
     }
 }
