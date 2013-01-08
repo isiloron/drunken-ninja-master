@@ -259,25 +259,12 @@ namespace Grupp_7_Projekt
 
         }
 
-        private void textBoxNär_TextChanged(object sender, EventArgs e)
+        public void comboBoxPort_SelectedIndexChanged(object sender, EventArgs e) //Beräknar antal portioner
         {
-
-        }
-
-
-
-
-        public void comboBoxPort_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
             try
             {
-                
                 int antport1;
                 antport1 = int.Parse(comboBoxPort.SelectedItem.ToString());
-             
-
                 Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
                 textBoxIngr.Clear();
                 foreach (ReceptSubStruct r in temp.IngrList)
@@ -291,6 +278,17 @@ namespace Grupp_7_Projekt
             }
             catch { }
 
+        }
+
+        private void buttonDummy_Click(object sender, EventArgs e) //Simon Test knapp
+        {
+            List<string> TagList = receptlista.GetAllTags();
+            string showtags = "";
+            foreach(string derp in TagList)
+            {
+                showtags += derp + "\r\n";
+            }
+            MessageBox.Show(showtags);
         }
 
        

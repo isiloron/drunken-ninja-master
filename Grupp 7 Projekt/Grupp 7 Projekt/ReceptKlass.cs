@@ -163,6 +163,10 @@ namespace Grupp_7_Projekt
             }
             return false;
         }
+        public List<string> GetTagList()
+        {
+            return TagList;
+        }
 
     }
 

@@ -8,7 +8,6 @@ namespace Grupp_7_Projekt
     class Receptlista
     {
         List<Recept> receptlista;
-        //String.Join(Environment.NewLine, recept);
         
         public Receptlista()//Konstruktor
         {
@@ -196,6 +195,32 @@ namespace Grupp_7_Projekt
             
             }
             return ReturnList;
+        }
+        public List<string> GetAllTags()
+        {
+            List<string> ReturnList = new List<string>();
+            foreach (Recept rep in receptlista)
+            {
+                foreach (string tag in rep.TagList)
+                {
+                    bool exists = false;
+                    foreach (string temp in ReturnList)
+                    {
+                        if (temp == tag)
+                        {
+                            exists = true;
+                        }
+                    }
+                    if (!exists)
+                    {
+                        ReturnList.Add(tag);
+                    }
+                
+                }
+            
+            }
+            return ReturnList;
+        
         }
     }
 
