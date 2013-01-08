@@ -7,35 +7,35 @@ namespace Grupp_7_Projekt
 {
     class IngrediensLista
     {
-       public List<Ingredient> ingredienslista;
+       public List<Ingredient> ingredienslista; // deklarerar en ny lista
 
        public IngrediensLista()// konstruktor
        {
-           NyIngrediensBok();
+           NyIngrediensBok(); //skapar en tom lista
        }
         
         public void LaddaIngrediens()
         {
-            SparaOchLaddaIngredienser.LaddaXML(out ingredienslista);
+            SparaOchLaddaIngredienser.LaddaXML(out ingredienslista); //Laddar Ingredienser till listan från XMLSerialiserare.cs
         }
         public void SparaIngrediens()
         {
-            SparaOchLaddaIngredienser.SparaXML(ref ingredienslista);
+            SparaOchLaddaIngredienser.SparaXML(ref ingredienslista); //Sparar Ingredienser från Listan till XMLSerialiserare.cs
         }
 
-        public void NyIngrediensBok()
+        public void NyIngrediensBok()//Metod som skapar en tömmer ingredienslistan
         {
             ingredienslista = new List<Ingredient>();
         }
 
-        public List<string> HämtaIngTitlar()
+        public List<string> HämtaIngTitlar()  //en metod för att hämta ingrediens titlarna
         {
-            List<string> TitelIngLista = new List<string>();
-            foreach (Ingredient i in ingredienslista)
+            List<string> TitelIngLista = new List<string>();//Initierar en ny lista för titlar
+            foreach (Ingredient i in ingredienslista)//Loppar igenom IngrediensLista 
             {
-                TitelIngLista.Add(i.Name);
+                TitelIngLista.Add(i.Name); //Lägger alla ingrediens titlar i Name i ReceptKlass
             }
-            return TitelIngLista;
+            return TitelIngLista; //returnerar till stringlista
                                   
         }
         public List<Ingredient> Clone()
@@ -83,7 +83,7 @@ namespace Grupp_7_Projekt
        
         public void TaBortIng(string name)
         {
-            for (int i = 0; i < ingredienslista.Count; i++)//Loopar igenom receptlistan för en matchande titel för att sedan ta bort detta recept
+            for (int i = 0; i < ingredienslista.Count; i++)//Loopar igenom ingredienslistan för en matchande titel för att sedan ta bort detta recept
             {
 
                 if (ingredienslista[i].Name == name)
