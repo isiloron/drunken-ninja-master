@@ -19,7 +19,7 @@ namespace Grupp_7_Projekt
         {
             InitializeComponent();
 
-            FileStream lösen = new FileStream("password.dat", FileMode.OpenOrCreate); //Öppna filström till password.dat, och skapa den om den inte redan finns
+            FileStream lösen = new FileStream("password.dat", FileMode.OpenOrCreate); //Öppna filström till password.dat, eller skapa den om den inte redan finns
             StreamReader pass = new StreamReader(lösen);
             string password = pass.ReadLine();  //Läs password-filen
             if (password == null)        // Om lösenordsfilen är tom, visa sidan för att sätta lösenord (Visas första gången programmet körs)
@@ -97,7 +97,6 @@ namespace Grupp_7_Projekt
         private void linkGuestLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)     //Vid tryck på Logga in som gäst, ha kvar inloggningsboolean som false och logga in som gäst
         {
             loggedIn = false;
-            //Logga in som gäst
             Receptsida newform = new Receptsida(loggedIn);
             newform.Show();
             this.Hide();
@@ -120,7 +119,7 @@ namespace Grupp_7_Projekt
             {
                 if (txtNewPassword.Text == txtConfNewPassword.Text) //Om båda nya lösenordsrutor matchar
                 {
-                    FileStream passStream = new FileStream("password.dat", FileMode.Truncate, FileAccess.ReadWrite); //Öppna password.dat och sätt den till att skriva över det som redan står
+                    FileStream passStream = new FileStream("password.dat", FileMode.Truncate, FileAccess.ReadWrite); //Öppna password.dat, trunkera den och sätt så man kan skriva i den
                     StreamWriter passOverwrite = new StreamWriter(passStream);
                     string SetNewPass = txtNewPassword.Text; // Spara texten från nytt lösenords-rutan till en sträng
                     passOverwrite.Write(SetNewPass);    //skriv det nya lösenordet i passwordfilen, och stäng filen
