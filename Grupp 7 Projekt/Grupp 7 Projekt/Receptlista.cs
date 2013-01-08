@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Grupp_7_Projekt
 {
-    class Receptlista
+    class Receptlista //Dennis Stallinga har hand om denna klass
     {
         List<Recept> receptlista; // deklarerar en tom lista
         

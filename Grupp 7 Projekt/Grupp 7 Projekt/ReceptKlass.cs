@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace Grupp_7_Projekt
 {
-    public class Recept
+    public class Recept //Simon Palmér har hand om denna klass
     {
         string titel; //Receptets namn
         string instructions; //Instruktioner

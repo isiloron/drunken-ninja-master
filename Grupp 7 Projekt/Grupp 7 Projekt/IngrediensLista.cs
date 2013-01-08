@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Grupp_7_Projekt
 {
-    class IngrediensLista
+    class IngrediensLista //Nils Krawczuk har hand om denna klass
     {
        public List<Ingredient> ingredienslista; // deklarerar en ny lista
 

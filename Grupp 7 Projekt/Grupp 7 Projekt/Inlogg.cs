@@ -10,7 +10,7 @@ using System.IO;
 
 namespace Grupp_7_Projekt
 {
-    public partial class Inlogg : Form
+    public partial class Inlogg : Form //Jonas Håkansson har hand om denna klass
     {
         int passwordcount = 1;  //variabel med antal inloggningsförsök
         public static bool loggedIn = false; //boolean för att kontrollera om man är inloggad eller inte

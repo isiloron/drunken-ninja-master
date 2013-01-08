@@ -10,7 +10,7 @@ using System.Drawing.Printing;
 
 namespace Grupp_7_Projekt
 {
-    public partial class Utskrftsform : Form
+    public partial class Utskrftsform : Form //Dennis Stallinga har hand om denna klass
     {
         private PrintDocument SkrivutDok = new PrintDocument();
         public Utskrftsform(TextBox textBoxIngr, ComboBox comboBoxPort, Label lblTitel, TextBox textBoxnär, TextBox textBoxTil, PictureBox pictureBox1)

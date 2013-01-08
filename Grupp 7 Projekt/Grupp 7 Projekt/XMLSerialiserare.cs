@@ -21,7 +21,7 @@ using System.IO.IsolatedStorage;
 
 namespace Grupp_7_Projekt
 {
-	public static class XMLSerializer<T> where T : class
+	public static class XMLSerializer<T> where T : class //Linus Järvelä har hand om denna klass
 	{
 		public static T Load(string path)
 		{

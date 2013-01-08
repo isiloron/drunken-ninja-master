@@ -7,7 +7,7 @@ using System.Drawing.Printing;
 
 namespace Grupp_7_Projekt
 {
-    class Ingredienssida
+    class Ingredienssida //Patrick Vestin har hand om denna klass
     {
         public IngrediensLista ingredienslista = new IngrediensLista();
         public Ingredienssida() // Konstruktor

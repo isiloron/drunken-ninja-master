@@ -11,7 +11,7 @@ using System.Drawing.Printing;
 
 namespace Grupp_7_Projekt
 {
-    public partial class Receptsida : Form
+    public partial class Receptsida : Form //Tim Thornell har hand om denna klass
     {
         static Receptlista receptlista = new Receptlista();                 //Deklarerar Receptlistan
         static Ingredienssida ingredienssida = new Ingredienssida();        //Deklarerar Ingredienslistan
