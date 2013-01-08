@@ -23,35 +23,5 @@ namespace Grupp_7_Projekt
             pictureBoxut.Image = pictureBox1.Image;
             pictureBoxbakgrund.SendToBack();
         }
-
-        private void Utskrftsform_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxut_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxnärut_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxutskrift_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnskrivut_Click(object sender, EventArgs e)
-        {
-             
-        }
     }
 }

@@ -583,7 +583,6 @@
             this.textBoxTil.Size = new System.Drawing.Size(259, 243);
             this.textBoxTil.TabIndex = 12;
             this.textBoxTil.Text = "Beskrivning";
-            this.textBoxTil.TextChanged += new System.EventHandler(this.textBoxTil_TextChanged);
             // 
             // textBoxIngr
             // 
@@ -665,8 +664,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabControl1);
             this.Name = "Receptsida";
-            this.Text = "Timpeton";
-            this.Load += new System.EventHandler(this.Receptsida_Load);
+            this.Text = "NutriGuide";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

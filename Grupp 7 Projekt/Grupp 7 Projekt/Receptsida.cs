@@ -208,7 +208,7 @@ namespace Grupp_7_Projekt
         private void SkrivUt_Click(object sender, EventArgs e)
         {
             
-            Utskrftsform utskrift = new Utskrftsform(receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString()));
+            Utskrftsform utskrift = new Utskrftsform( textBoxIngr, comboBoxPort, lblRubrik, textBoxNär, textBoxTil, pictureBox1);
             utskrift.Show();
         }
 

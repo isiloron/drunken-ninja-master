@@ -52,7 +52,6 @@
             this.textBoxutskrift.ReadOnly = true;
             this.textBoxutskrift.Size = new System.Drawing.Size(223, 429);
             this.textBoxutskrift.TabIndex = 0;
-            this.textBoxutskrift.TextChanged += new System.EventHandler(this.textBoxutskrift_TextChanged);
             // 
             // lbltitelut
             // 
@@ -72,7 +71,6 @@
             this.textBoxnärut.Name = "textBoxnärut";
             this.textBoxnärut.Size = new System.Drawing.Size(186, 90);
             this.textBoxnärut.TabIndex = 2;
-            this.textBoxnärut.TextChanged += new System.EventHandler(this.textBoxnärut_TextChanged);
             // 
             // textBoxtilut
             // 
@@ -92,7 +90,6 @@
             this.pictureBoxut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxut.TabIndex = 4;
             this.pictureBoxut.TabStop = false;
-            this.pictureBoxut.Click += new System.EventHandler(this.pictureBoxut_Click);
             // 
             // lblingut
             // 
@@ -141,7 +138,6 @@
             this.pictureBoxbakgrund.Size = new System.Drawing.Size(555, 670);
             this.pictureBoxbakgrund.TabIndex = 10;
             this.pictureBoxbakgrund.TabStop = false;
-            this.pictureBoxbakgrund.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnskrivut
             // 
@@ -152,7 +148,6 @@
             this.btnskrivut.TabIndex = 11;
             this.btnskrivut.Text = "Skriv ut";
             this.btnskrivut.UseVisualStyleBackColor = false;
-            this.btnskrivut.Click += new System.EventHandler(this.btnskrivut_Click);
             // 
             // Utskrftsform
             // 
@@ -173,7 +168,6 @@
             this.Controls.Add(this.textBoxutskrift);
             this.Name = "Utskrftsform";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Utskrftsform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxbakgrund)).EndInit();
             this.ResumeLayout(false);
