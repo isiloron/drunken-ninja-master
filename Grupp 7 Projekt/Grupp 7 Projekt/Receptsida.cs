@@ -35,6 +35,37 @@ namespace Grupp_7_Projekt
                 ButtonNewingr.Visible = false;
                 ButtonRemoveIngr.Visible = false;
              }
+
+            try
+            {
+                Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
+                lblRubrik.Text = temp.Titel; textBoxIngr.Text = "";
+                textBoxTil.Text = temp.Instructions;
+
+                //Uppdaterar bilden
+                if (temp.Bildsökväg == "")
+                    pictureBox1.Image = Grupp_7_Projekt.Properties.Resources.chopped_fingers;
+                else
+                    pictureBox1.Image = Image.FromFile(temp.Bildsökväg);
+
+                foreach (ReceptSubStruct r in temp.IngrList)
+                {
+                    //Uppdaterar ingredienstextboxen
+                    textBoxIngr.Text += r.ingrName + " ";
+                    textBoxIngr.Text += r.ingrNumber.ToString() + " ";
+                    textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
+                    textBoxIngr.Text += Environment.NewLine;
+
+                    //Uppdaterar näringsvärdena
+                    textBoxNär.Text = "";
+                    textBoxNär.Text += "Energi: " + ingredienssida.ingredienslista.GetTotalEnergy(temp) + " kCal \r\n";
+                    textBoxNär.Text += "Kolhydrater: " + ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " g \r\n";
+                    textBoxNär.Text += "Protein: " + ingredienssida.ingredienslista.GetTotalProtein(temp) + " g \r\n";
+                    textBoxNär.Text += "Fett: " + ingredienssida.ingredienslista.GetTotalFett(temp) + " g \r\n";
+
+                }
+            }
+            catch { }    
         }
 
         private void IndexChange(object sender, EventArgs e) // Metod som fixar flikarna och deras innehåll
@@ -46,6 +77,7 @@ namespace Grupp_7_Projekt
                 lblIng.Show();              //Visar Bngredienlabelsen
                 textBoxIngr.Show();         //Visar Ingredienstextboxen
                 lblTil.Text = "Tillagning"; //Textboxen för Tillagning
+                lblNär.Text = "Näringsvärde / portion:"; //Överskrift för näringsvärden recept
                 listBoxRecept_SelectedIndexChanged(null, null);
             }
             if (tabControl1.SelectedIndex == 1)
@@ -53,6 +85,7 @@ namespace Grupp_7_Projekt
                 lblIng.Hide();                  //Gömmer Ingredienslabeln (när man tabbar till ingrediensfliken)
                 textBoxIngr.Hide();             //Gömmer Ingredienstextboxen (när man tabbar till ingrediensfliken)
                 lblTil.Text = "Beskrivning";    //Beskrivniningsruta
+                lblNär.Text = "Näringsvärde / 100g: "; //Överskrift för näringsvärden recept
                 comboBoxPort.Hide();            //Gömmer ComboBox från Ingredienstaben
                 lblAntPort.Hide();              //Gömmer AntPort label från Ingredienstaben
                 listBoxIngr_SelectedIndexChanged(null, null );
@@ -86,10 +119,10 @@ namespace Grupp_7_Projekt
 
 					//Uppdaterar näringsvärdena
 					textBoxNär.Text = "";
-					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
-					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
-					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Protein \r\n";
-					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + " Fett \r\n";
+                    textBoxNär.Text += "Energi: " + ingredienssida.ingredienslista.GetTotalEnergy(temp) + " kCal \r\n";
+                    textBoxNär.Text += "Kolhydrater: " + ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " g \r\n";
+                    textBoxNär.Text += "Protein: " + ingredienssida.ingredienslista.GetTotalProtein(temp) + " g \r\n";
+                    textBoxNär.Text += "Fett: " + ingredienssida.ingredienslista.GetTotalFett(temp) + " g \r\n";
                                         
 				}
 			}
@@ -117,7 +150,7 @@ namespace Grupp_7_Projekt
 				lblRubrik.Text = temp.Name;
 				textBoxTil.Text = temp.Description;
 				textBoxNär.Text = "";
-				textBoxNär.Text += temp.Energy + " Energi\r\n" + temp.Fett + " Fett\r\n" + temp.Kolhydrater + " Kolhydrater\r\n" + temp.Protein + " Protein";
+                textBoxNär.Text += "Energi: " + temp.Energy + " kCal \r\n" + "Kolhydrater: " + temp.Kolhydrater + " g \r\n" + "Protein: " + temp.Protein + " g \r\n" + "Fett: " + temp.Fett + " g";
 			}
 			catch { }
             
@@ -239,10 +272,10 @@ namespace Grupp_7_Projekt
 
                 //Uppdaterar näringsvärden
                 textBoxNär.Text = "";
-                textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
-                textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
-                textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Proteiner \r\n";
-                textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + " Fett \r\n";
+                textBoxNär.Text += "Energi: " + ingredienssida.ingredienslista.GetTotalEnergy(temp) + " kCal \r\n";
+                textBoxNär.Text += "Kolhydrater: " + ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " g \r\n";
+                textBoxNär.Text += "Proteiner: " + ingredienssida.ingredienslista.GetTotalProtein(temp) + " g \r\n";
+                textBoxNär.Text += "Fett: " + ingredienssida.ingredienslista.GetTotalFett(temp) + " g \r\n";
 
             }
         }
