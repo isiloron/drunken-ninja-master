@@ -24,7 +24,7 @@ namespace Grupp_7_Projekt
             SparaOchLaddaRecept.SparaXML(ref receptlista);
         }
 
-        public void NyReceptbok()//Back-up metod
+        public void NyReceptbok()//Metod som skapar en tom lista
         {
             receptlista = new List<Recept>();//"Tömmer" receptlistan
         }
