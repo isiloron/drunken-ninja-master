@@ -42,9 +42,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ButtonNewingr = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.WarningLable = new System.Windows.Forms.Label();
             this.comboBoxEnhet = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.WarningLable = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TextBoxNamn
@@ -77,14 +80,14 @@
             // 
             // textBoxEnergy
             // 
-            this.textBoxEnergy.Location = new System.Drawing.Point(161, 174);
+            this.textBoxEnergy.Location = new System.Drawing.Point(161, 200);
             this.textBoxEnergy.Name = "textBoxEnergy";
             this.textBoxEnergy.Size = new System.Drawing.Size(100, 20);
             this.textBoxEnergy.TabIndex = 5;
             // 
             // textBoxProtein
             // 
-            this.textBoxProtein.Location = new System.Drawing.Point(161, 200);
+            this.textBoxProtein.Location = new System.Drawing.Point(161, 174);
             this.textBoxProtein.Name = "textBoxProtein";
             this.textBoxProtein.Size = new System.Drawing.Size(100, 20);
             this.textBoxProtein.TabIndex = 6;
@@ -129,16 +132,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 177);
+            this.label5.Location = new System.Drawing.Point(49, 203);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Energy:";
+            this.label5.Text = "Energi:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 203);
+            this.label6.Location = new System.Drawing.Point(49, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 11;
@@ -163,27 +166,6 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Enhet:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(259, 151);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(15, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "%";
-            // 
-            // WarningLable
-            // 
-            this.WarningLable.AutoSize = true;
-            this.WarningLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WarningLable.ForeColor = System.Drawing.Color.Red;
-            this.WarningLable.Location = new System.Drawing.Point(49, 92);
-            this.WarningLable.Name = "WarningLable";
-            this.WarningLable.Size = new System.Drawing.Size(214, 18);
-            this.WarningLable.TabIndex = 16;
-            this.WarningLable.Text = "OBS! Ange värden per 100g";
-            this.WarningLable.Visible = false;
-            // 
             // comboBoxEnhet
             // 
             this.comboBoxEnhet.FormattingEnabled = true;
@@ -191,16 +173,66 @@
             this.comboBoxEnhet.Name = "comboBoxEnhet";
             this.comboBoxEnhet.Size = new System.Drawing.Size(100, 21);
             this.comboBoxEnhet.TabIndex = 18;
-            this.comboBoxEnhet.SelectedIndexChanged += new System.EventHandler(this.ComboBoxEnhet_Change);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(267, 203);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "kCal/100g råvara";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(267, 177);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "g/100g råvara";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(267, 151);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "g/100g råvara";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(267, 125);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 13);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "g/100g råvara";
+            // 
+            // WarningLable
+            // 
+            this.WarningLable.AutoSize = true;
+            this.WarningLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WarningLable.ForeColor = System.Drawing.Color.Black;
+            this.WarningLable.Location = new System.Drawing.Point(125, 90);
+            this.WarningLable.Name = "WarningLable";
+            this.WarningLable.Size = new System.Drawing.Size(121, 18);
+            this.WarningLable.TabIndex = 16;
+            this.WarningLable.Text = "Näringsvärden:";
+            this.WarningLable.Visible = false;
             // 
             // NyIngridiensForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 317);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBoxEnhet);
             this.Controls.Add(this.WarningLable);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ButtonNewingr);
             this.Controls.Add(this.label6);
@@ -239,8 +271,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button ButtonNewingr;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label WarningLable;
         private System.Windows.Forms.ComboBox comboBoxEnhet;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label WarningLable;
     }
 }
