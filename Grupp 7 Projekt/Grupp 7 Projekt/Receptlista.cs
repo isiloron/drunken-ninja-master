@@ -7,11 +7,11 @@ namespace Grupp_7_Projekt
 {
     class Receptlista
     {
-        List<Recept> receptlista;
+        List<Recept> receptlista; // deklarerar en tom lista
         
         public Receptlista()//Konstruktor
         {
-            NyReceptbok();
+            NyReceptbok(); //Konstruerar en tom lista
         }
 
         public void LaddaRecept()//Tim måste använda denna metod i receptsidans konstruktor så att listan fylls i när programmet startar.
@@ -21,7 +21,7 @@ namespace Grupp_7_Projekt
 
         private void SparaRecept()
         {
-            SparaOchLaddaRecept.SparaXML(ref receptlista);
+            SparaOchLaddaRecept.SparaXML(ref receptlista); // sparar recepten
         }
 
         public void NyReceptbok()//Metod som skapar en tom lista
