@@ -24,8 +24,8 @@ namespace Grupp_7_Projekt
             ListBoxRecept.DataSource = receptlista.HämtaTitlar();
 
             listBoxIngr.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
-            comboBoxPort.SelectedIndex = 1;
-            comboBoxPort.SelectedValue = comboBoxPort.SelectedIndex;
+            comboBoxPort.SelectedIndex = 1;                             //Sätter ett defaultvärde på ComboBoxen
+            comboBoxPort.SelectedValue = comboBoxPort.SelectedIndex;    //Sätter värdet på ComboBoxen beroende på Index
 
 
             if (!loggedIn)
