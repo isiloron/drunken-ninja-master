@@ -147,7 +147,7 @@ namespace Grupp_7_Projekt
             return ReturLista;
         }
 
-        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> stringstosearch, List<Recept> receptlisttoseach) //Tar in en lista med stränger(ingridienser) och returerar en lista med alla recept som inehåller samntliga ingridienser
+        public List<Recept> SökReceptSomInehållerSpeseficIngr(List<string> stringstosearch, List<Recept> receptlisttoseach) //Tar in en lista med strängar(ingredienser) och returnerar en lista med alla recept som innehåller samtliga ingredienser
         {
             List<Recept> ReturLista = new List<Recept>();
 
@@ -171,7 +171,7 @@ namespace Grupp_7_Projekt
             }
             return ReturLista;
         }
-        public List<Recept> SökReceptSomHarTag (List<string> StringListToSeach, List<Recept> receptlisttoseach) //Söker och returer alla recept som har angivna taggar
+        public List<Recept> SökReceptSomHarTag (List<string> StringListToSeach, List<Recept> receptlisttoseach) //Söker och returnerar alla recept som har angivna taggar
         { 
             List<Recept> ReturnList = new List<Recept>();
             foreach (Recept recept in receptlisttoseach )
@@ -196,7 +196,7 @@ namespace Grupp_7_Projekt
             }
             return ReturnList;
         }
-        public List<string> GetAllTags() //Returerar alla taggar som andvänds
+        public List<string> GetAllTags() //Returnerar alla taggar som används
         {
             List<string> ReturnList = new List<string>();
             foreach (Recept rep in receptlista)
