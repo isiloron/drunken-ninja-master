@@ -31,7 +31,6 @@
             this.buttonFinish = new System.Windows.Forms.Button();
             this.TextBoxTitel = new System.Windows.Forms.TextBox();
             this.TextBoxDescription = new System.Windows.Forms.TextBox();
-            this.TextboxIngr = new System.Windows.Forms.TextBox();
             this.textBoxTaggs = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +47,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TextBoxPortioner = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxIngr = new System.Windows.Forms.ComboBox();
+            this.buttonNewIngr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonFinish
@@ -74,13 +75,6 @@
             this.TextBoxDescription.Name = "TextBoxDescription";
             this.TextBoxDescription.Size = new System.Drawing.Size(372, 327);
             this.TextBoxDescription.TabIndex = 2;
-            // 
-            // TextboxIngr
-            // 
-            this.TextboxIngr.Location = new System.Drawing.Point(390, 23);
-            this.TextboxIngr.Name = "TextboxIngr";
-            this.TextboxIngr.Size = new System.Drawing.Size(120, 20);
-            this.TextboxIngr.TabIndex = 3;
             // 
             // textBoxTaggs
             // 
@@ -222,11 +216,31 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "portioner\r\n";
             // 
+            // comboBoxIngr
+            // 
+            this.comboBoxIngr.FormattingEnabled = true;
+            this.comboBoxIngr.Location = new System.Drawing.Point(389, 23);
+            this.comboBoxIngr.Name = "comboBoxIngr";
+            this.comboBoxIngr.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxIngr.TabIndex = 20;
+            // 
+            // buttonNewIngr
+            // 
+            this.buttonNewIngr.Location = new System.Drawing.Point(541, 73);
+            this.buttonNewIngr.Name = "buttonNewIngr";
+            this.buttonNewIngr.Size = new System.Drawing.Size(75, 23);
+            this.buttonNewIngr.TabIndex = 21;
+            this.buttonNewIngr.Text = "Ny ingr";
+            this.buttonNewIngr.UseVisualStyleBackColor = true;
+            this.buttonNewIngr.Click += new System.EventHandler(this.buttonNewIngr_Click);
+            // 
             // NyttReceptForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 441);
+            this.Controls.Add(this.buttonNewIngr);
+            this.Controls.Add(this.comboBoxIngr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TextBoxPortioner);
             this.Controls.Add(this.label6);
@@ -243,7 +257,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxTaggs);
-            this.Controls.Add(this.TextboxIngr);
             this.Controls.Add(this.TextBoxDescription);
             this.Controls.Add(this.TextBoxTitel);
             this.Controls.Add(this.buttonFinish);
@@ -260,7 +273,6 @@
         private System.Windows.Forms.Button buttonFinish;
         private System.Windows.Forms.TextBox TextBoxTitel;
         private System.Windows.Forms.TextBox TextBoxDescription;
-        private System.Windows.Forms.TextBox TextboxIngr;
         private System.Windows.Forms.TextBox textBoxTaggs;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -277,5 +289,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TextBoxPortioner;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBoxIngr;
+        private System.Windows.Forms.Button buttonNewIngr;
     }
 }

@@ -11,14 +11,21 @@ namespace Grupp_7_Projekt
 {
     public partial class NyttReceptForm : Form
     {
-        public NyttReceptForm()
+        public NyttReceptForm(ref List<Ingredient> FullIngrList)
         {
             InitializeComponent();
             NewRecept = null;
+            IngrRefList = FullIngrList;
+            foreach (Ingredient ingr in FullIngrList)
+            {
+                comboBoxIngr.Items.Add(ingr.Name);
+            }
         }
-
+        
+        List<Ingredient> IngrRefList;
         List<ReceptSubStruct> IngrList = new List<ReceptSubStruct>();
         Recept NewRecept;
+        
         private void buttonFinish_Click(object sender, EventArgs e)
         {
             int portioner = Int32.Parse(TextBoxPortioner.Text);
@@ -46,14 +53,14 @@ namespace Grupp_7_Projekt
         }
 
         private void Addingr_Click(object sender, EventArgs e)
-        {
+        {            
             
             try
             {
-                IngrList.Add(new ReceptSubStruct(TextboxIngr.Text, Int32.Parse(textBoxMängd.Text)));
-                listBoxIngr.Items.Add(TextboxIngr.Text);
+                IngrList.Add(new ReceptSubStruct(comboBoxIngr.SelectedItem.ToString(), Int32.Parse(textBoxMängd.Text)));
+                listBoxIngr.Items.Add(comboBoxIngr.SelectedItem + "  " + textBoxMängd.Text);
                 textBoxMängd.Text = "";
-                TextboxIngr.Text = "";
+                comboBoxIngr.SelectedItem = "";
             }
             catch
             {
@@ -85,6 +92,21 @@ namespace Grupp_7_Projekt
         private void NyttReceptForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonNewIngr_Click(object sender, EventArgs e)
+        {
+            NyIngridiensForm nig = new NyIngridiensForm();
+            nig.ShowDialog();
+            if (nig.newingr != null)
+            {
+                IngrRefList.Add(nig.newingr);
+                comboBoxIngr.Items.Clear();
+                foreach (Ingredient ingr in IngrRefList)
+                {
+                    comboBoxIngr.Items.Add(ingr.Name);
+                }
+            }
         }
 
         }

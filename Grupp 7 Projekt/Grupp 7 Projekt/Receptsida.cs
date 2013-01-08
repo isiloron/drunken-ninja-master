@@ -84,14 +84,14 @@ namespace Grupp_7_Projekt
 
         private void ButtonNyttRecept_Click(object sender, EventArgs e) //Lägg till recept
         {
-            NyttReceptForm nrf = new NyttReceptForm(); // Initierar ny receptform för att läga till recept
+            NyttReceptForm nrf = new NyttReceptForm(ref ingredienssida.ingredienslista.ingredienslista); // Initierar ny receptform för att läga till recept
             nrf.ShowDialog();
             if (nrf.Recept != null)
             {
                 receptlista.NyttReceptKlass(nrf.Recept);  // Hämtar NyttReceptmetoden
                 ListBoxRecept.DataSource = receptlista.HämtaTitlar(); // Laddar om receptlistan efter man lagt till ett recept
             }
-
+            listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar(); //Updaterar ingr listan ifall en eller flera laddes till
 
         }
 
