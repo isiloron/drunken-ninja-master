@@ -24,6 +24,7 @@ namespace Grupp_7_Projekt
             ListBoxRecept.DataSource = receptlista.HämtaTitlar();
 
             listBoxIngr.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
+            comboBoxPort.SelectedIndex = 1;
 
             if (!loggedIn)
             {
@@ -245,12 +246,18 @@ namespace Grupp_7_Projekt
         }
 
 
-        private void txtBoxPort_TextChanged(object sender, EventArgs e)
+
+
+        public void comboBoxPort_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
             try
             {
-                int antport;
-                antport = int.Parse(txtBoxPort.Text);
+                
+                int antport1;
+                antport1 = int.Parse(comboBoxPort.SelectedItem.ToString());
+             
 
                 Recept temp = receptlista.HämtaReceptAvNamn(ListBoxRecept.SelectedItem.ToString());
                 textBoxIngr.Clear();
@@ -258,12 +265,13 @@ namespace Grupp_7_Projekt
                 {
                     //Uppdaterar ingredienstexboxen
                     textBoxIngr.Text += r.ingrName + " ";
-                    textBoxIngr.Text += r.ingrNumber * antport + " ";
+                    textBoxIngr.Text += r.ingrNumber * antport1 + " ";
                     textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
                     textBoxIngr.Text += Environment.NewLine;
                 }
             }
             catch { }
+
         }
 
        

@@ -81,7 +81,7 @@
             this.textBoxIngr = new System.Windows.Forms.TextBox();
             this.SkrivUt = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtBoxPort = new System.Windows.Forms.TextBox();
+            this.comboBoxPort = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -613,13 +613,35 @@
             this.label11.TabIndex = 15;
             this.label11.Text = "Antal Portioner:";
             // 
-            // txtBoxPort
+            // comboBoxPort
             // 
-            this.txtBoxPort.Location = new System.Drawing.Point(568, 327);
-            this.txtBoxPort.Name = "txtBoxPort";
-            this.txtBoxPort.Size = new System.Drawing.Size(26, 20);
-            this.txtBoxPort.TabIndex = 16;
-            this.txtBoxPort.TextChanged += new System.EventHandler(this.txtBoxPort_TextChanged);
+            this.comboBoxPort.FormattingEnabled = true;
+            this.comboBoxPort.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"});
+            this.comboBoxPort.Location = new System.Drawing.Point(571, 331);
+            this.comboBoxPort.Name = "comboBoxPort";
+            this.comboBoxPort.Size = new System.Drawing.Size(39, 21);
+            this.comboBoxPort.TabIndex = 17;
+            this.comboBoxPort.SelectedIndexChanged += new System.EventHandler(this.comboBoxPort_SelectedIndexChanged);
             // 
             // Receptsida
             // 
@@ -627,7 +649,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(984, 694);
-            this.Controls.Add(this.txtBoxPort);
+            this.Controls.Add(this.comboBoxPort);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.SkrivUt);
             this.Controls.Add(this.textBoxIngr);
@@ -715,6 +737,6 @@
         private System.Windows.Forms.Button buttonSearchIngr;
         private System.Windows.Forms.ListBox listBoxSearchIngrResults;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtBoxPort;
+        private System.Windows.Forms.ComboBox comboBoxPort;
     }
 }
