@@ -535,7 +535,7 @@
             this.lblNär.AutoSize = true;
             this.lblNär.BackColor = System.Drawing.SystemColors.Window;
             this.lblNär.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNär.Location = new System.Drawing.Point(479, 365);
+            this.lblNär.Location = new System.Drawing.Point(479, 494);
             this.lblNär.Name = "lblNär";
             this.lblNär.Size = new System.Drawing.Size(131, 23);
             this.lblNär.TabIndex = 8;
@@ -565,33 +565,39 @@
             // 
             // textBoxNär
             // 
+            this.textBoxNär.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxNär.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNär.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNär.Location = new System.Drawing.Point(483, 392);
+            this.textBoxNär.Location = new System.Drawing.Point(483, 520);
             this.textBoxNär.Multiline = true;
             this.textBoxNär.Name = "textBoxNär";
-            this.textBoxNär.Size = new System.Drawing.Size(186, 243);
+            this.textBoxNär.ReadOnly = true;
+            this.textBoxNär.Size = new System.Drawing.Size(186, 115);
             this.textBoxNär.TabIndex = 11;
             this.textBoxNär.Text = "Näringsvärden";
             // 
             // textBoxTil
             // 
+            this.textBoxTil.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxTil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTil.Location = new System.Drawing.Point(680, 392);
             this.textBoxTil.Multiline = true;
             this.textBoxTil.Name = "textBoxTil";
+            this.textBoxTil.ReadOnly = true;
             this.textBoxTil.Size = new System.Drawing.Size(259, 243);
             this.textBoxTil.TabIndex = 12;
             this.textBoxTil.Text = "Beskrivning";
             // 
             // textBoxIngr
             // 
+            this.textBoxIngr.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxIngr.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxIngr.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIngr.Location = new System.Drawing.Point(483, 165);
             this.textBoxIngr.Multiline = true;
             this.textBoxIngr.Name = "textBoxIngr";
-            this.textBoxIngr.Size = new System.Drawing.Size(186, 183);
+            this.textBoxIngr.ReadOnly = true;
+            this.textBoxIngr.Size = new System.Drawing.Size(186, 276);
             this.textBoxIngr.TabIndex = 13;
             this.textBoxIngr.Text = "Ingredienser";
             // 
@@ -608,7 +614,8 @@
             // lblAntPort
             // 
             this.lblAntPort.AutoSize = true;
-            this.lblAntPort.Location = new System.Drawing.Point(483, 334);
+            this.lblAntPort.BackColor = System.Drawing.SystemColors.Window;
+            this.lblAntPort.Location = new System.Drawing.Point(480, 461);
             this.lblAntPort.Name = "lblAntPort";
             this.lblAntPort.Size = new System.Drawing.Size(79, 13);
             this.lblAntPort.TabIndex = 15;
@@ -638,7 +645,7 @@
             "18",
             "19",
             "20"});
-            this.comboBoxPort.Location = new System.Drawing.Point(571, 331);
+            this.comboBoxPort.Location = new System.Drawing.Point(568, 458);
             this.comboBoxPort.Name = "comboBoxPort";
             this.comboBoxPort.Size = new System.Drawing.Size(39, 21);
             this.comboBoxPort.TabIndex = 17;

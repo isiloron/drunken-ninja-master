@@ -44,7 +44,7 @@ namespace Grupp_7_Projekt
                 }
                 catch
                 {
-                    MessageBox.Show("Misslyckat, kolla så att alla värden är korrekta!");
+                    MessageBox.Show("Misslyckades, kolla så att alla värden är korrekta!");
                 }
                 
 

@@ -83,9 +83,9 @@ namespace Grupp_7_Projekt
 			energy = 0;
 			protein = 0;
             fett = 0;
-			name = "MISSING NAME";
-			unit = "NONE";
-			description = "MISSING DESCRIPTION";
+			name = "SAKNAR NAMN";
+			unit = "SAKNAR ENHET";
+			description = "SAKNAR BESKRIVNING";
 		}
 
         public Ingredient(string NewName, string NewMessureUnit)

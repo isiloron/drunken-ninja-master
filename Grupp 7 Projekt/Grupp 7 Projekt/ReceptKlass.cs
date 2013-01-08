@@ -9,8 +9,8 @@ namespace Grupp_7_Projekt
 {
     public class Recept
     {
-        string titel; //Name of the recepie
-        string instructions; //Instructions on how to make it
+        string titel; //Receptets namn
+        string instructions; //Instruktioner
         string bildsökväg = "";
 
 		[XmlElement]
@@ -35,10 +35,10 @@ namespace Grupp_7_Projekt
         }
 
 		[XmlElement]
-		public List<ReceptSubStruct> IngrList = new List<ReceptSubStruct>(); //List of ingr to use
+		public List<ReceptSubStruct> IngrList = new List<ReceptSubStruct>(); //Lista utav Ingredienser som används
 		
 		[XmlElement]
-		public List<string> TagList = new List<string>(); //Tags related to this recpie
+		public List<string> TagList = new List<string>(); //Taggar relaterade till detta recept
 
 		public Recept()
 		{ }
@@ -60,7 +60,7 @@ namespace Grupp_7_Projekt
 
 
         
-        public bool RemoveIngrByName(string RemoveName) //Removes ingridiense by name, returns true of exisists, false if not
+        public bool RemoveIngrByName(string RemoveName) //Tar bort en ingrediens, returnerar true om den existerar och false om den inte gör det
         {
             for (int z = 0; IngrList.Count > z; )
             {
@@ -79,7 +79,7 @@ namespace Grupp_7_Projekt
         }
 
 
-        public int GetTotalProtein(ref List<Ingredient> ingridienslista) //Returns total calories for whole recepie
+        public int GetTotalProtein(ref List<Ingredient> ingridienslista) //Returnerar totala mängden protein för hela receptet
         {
             int Total = 0;
             foreach (ReceptSubStruct subs in IngrList)
@@ -96,7 +96,7 @@ namespace Grupp_7_Projekt
         }
 
         
-        public int GetTotalFatt(ref List<Ingredient> ingridienslista) //Returns energy value for whole recepie
+        public int GetTotalFatt(ref List<Ingredient> ingridienslista) //Returnerar totala mängden fett för hela receptet
         { 
             int Total =0;
             foreach (ReceptSubStruct subs in IngrList)
@@ -111,7 +111,7 @@ namespace Grupp_7_Projekt
             }
             return Total;
         }
-        public int GetTotalEnergy(ref List<Ingredient> ingridenslista)
+        public int GetTotalEnergy(ref List<Ingredient> ingridenslista) //Returnerar totala mängden energi för hela receptet.
         {
             int Total = 0;
             foreach (ReceptSubStruct subs in IngrList)
@@ -127,7 +127,7 @@ namespace Grupp_7_Projekt
             return Total;
         }
 
-        public int GetTotalKolhyderater(ref List<Ingredient> ingridenslista)
+        public int GetTotalKolhyderater(ref List<Ingredient> ingridenslista) //Returnerar totala mängden kolhydrater för hela receptet.
         {
             int Total = 0;
             foreach (ReceptSubStruct subs in IngrList)
@@ -145,7 +145,7 @@ namespace Grupp_7_Projekt
 
         public void AddTag(string TagName)
         {
-            //Check and see if tag already exist
+            //Kollar om tag redan existerar
             bool exists = false;
             foreach (string tag in TagList)
             {

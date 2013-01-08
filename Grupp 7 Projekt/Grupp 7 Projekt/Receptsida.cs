@@ -25,7 +25,7 @@ namespace Grupp_7_Projekt
 
             listBoxIngr.DataSource = (ingredienssida.ingredienslista.HämtaIngTitlar());
             comboBoxPort.SelectedIndex = 1;                             //Sätter ett defaultvärde på ComboBoxen
-            comboBoxPort.SelectedValue = comboBoxPort.SelectedIndex;    //Sätter värdet på ComboBoxen beroende på Index
+            comboBoxPort.SelectedValue = 1;    //Sätter värdet på ComboBoxen beroende på Index
 
 
             if (!loggedIn)
@@ -77,17 +77,17 @@ namespace Grupp_7_Projekt
 
 				foreach (ReceptSubStruct r in temp.IngrList)
 				{
-					//Uppdaterar ingredienstexboxen
+					//Uppdaterar ingredienstextboxen
 					textBoxIngr.Text += r.ingrName + " ";
 					textBoxIngr.Text += r.ingrNumber.ToString() + " ";
 					textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
 					textBoxIngr.Text += Environment.NewLine;
 
-					//Uppdaterar energivärderna
+					//Uppdaterar näringsvärdena
 					textBoxNär.Text = "";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
-					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Proteiner \r\n";
+					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalProtein(temp) + " Protein \r\n";
 					textBoxNär.Text += ingredienssida.ingredienslista.GetTotalFett(temp) + "% Fett \r\n";
                                         
 				}
@@ -104,7 +104,7 @@ namespace Grupp_7_Projekt
                 receptlista.NyttReceptKlass(nrf.Recept);  // Hämtar NyttReceptmetoden
                 ListBoxRecept.DataSource = receptlista.HämtaTitlar(); // Laddar om receptlistan efter man lagt till ett recept
             }
-            listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar(); //Updaterar ingr listan ifall en eller flera laddes till
+            listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar(); //Updaterar ingrediens listan ifall en eller flera lades till
 
         }
 
@@ -116,7 +116,7 @@ namespace Grupp_7_Projekt
 				lblRubrik.Text = temp.Name;
 				textBoxTil.Text = temp.Description;
 				textBoxNär.Text = "";
-				textBoxNär.Text += temp.Energy + " Energy\r\n" + temp.Fett + "% Fett\r\n" + temp.Kolhydrater + " Kolhydrater\r\n" + temp.Protein + " Protein";
+				textBoxNär.Text += temp.Energy + " Energi\r\n" + temp.Fett + "% Fett\r\n" + temp.Kolhydrater + " Kolhydrater\r\n" + temp.Protein + " Protein";
 			}
 			catch { }
             
@@ -126,7 +126,7 @@ namespace Grupp_7_Projekt
         private void ButtonRemoveRecepie_Click(object sender, EventArgs e) // TaBortReceptmetoden
         {
             DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill ta bort markerat recept?", "Ta bort recept", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes) // Frågar om man vill ta bort recept... captain obvious...
+            if (dialogResult == DialogResult.Yes) // Frågar om man vill ta bort recept
             {
                 receptlista.TaBort(ListBoxRecept.SelectedItem.ToString()); // Tar bort receptet
                 ListBoxRecept.DataSource = receptlista.HämtaTitlar();      // Laddar om receptlistan
@@ -136,7 +136,7 @@ namespace Grupp_7_Projekt
         private void ButtonRemoveIngr_Click(object sender, EventArgs e) // Ta bort ingrediens metod 
         {
             DialogResult dialogResult = MessageBox.Show("Är du säker på att du vill ta bort markerad ingridiens?", "Ta bort ingridiens", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes) //Frågar om man vill ta bort ingrediens... captain obvious...
+            if (dialogResult == DialogResult.Yes) //Frågar om man vill ta bort ingrediens
             {
                 ingredienssida.ingredienslista.TaBortIng(listBoxIngr.SelectedItem.ToString()); // Tar bort ingrediensen
                 listBoxIngr.DataSource = ingredienssida.ingredienslista.HämtaIngTitlar(); // Laddar om recept
@@ -201,7 +201,7 @@ namespace Grupp_7_Projekt
             }
             catch
             {
-                MessageBox.Show("Search failed");
+                MessageBox.Show("Sökningen misslyckades");
             }
         }
 
@@ -230,13 +230,13 @@ namespace Grupp_7_Projekt
             textBoxTil.Text = temp.Instructions;
             foreach (ReceptSubStruct r in temp.IngrList)
             {
-                //This part updates the ingrident box
+                //Den här koden uppdaterar ingrediensboxen
                 textBoxIngr.Text += r.ingrName + " ";
                 textBoxIngr.Text += r.ingrNumber.ToString() + " ";
                 textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
                 textBoxIngr.Text += Environment.NewLine;
 
-                //This part updates the energy values
+                //Uppdaterar näringsvärden
                 textBoxNär.Text = "";
                 textBoxNär.Text += ingredienssida.ingredienslista.GetTotalEnergy(temp) + " Energi \r\n";
                 textBoxNär.Text += ingredienssida.ingredienslista.GetTotalKolhyd(temp) + " Kolhydrater \r\n";
@@ -264,11 +264,12 @@ namespace Grupp_7_Projekt
                 textBoxIngr.Clear();
                 foreach (ReceptSubStruct r in temp.IngrList)
                 {
-                    //Uppdaterar ingredienstexboxen
+                    //Uppdaterar ingredienstextboxen
                     textBoxIngr.Text += r.ingrName + " ";
                     textBoxIngr.Text += r.ingrNumber * antport1 + " ";
                     textBoxIngr.Text += ingredienssida.ingredienslista.HämtaEnhet(r.ingrName);
                     textBoxIngr.Text += Environment.NewLine;
+
                 }
             }
             catch { }

@@ -78,19 +78,19 @@ namespace Grupp_7_Projekt
             }
         }
 
-        private void AddTag_Click(object sender, EventArgs e) //Läggtill tag
+        private void AddTag_Click(object sender, EventArgs e) //Lägg till tag
         {
             listBoxTaggs.Items.Add(textBoxTaggs.Text);
             textBoxTaggs.Text = "";
         }
 
-        private void RemoveTag_Click(object sender, EventArgs e) //tabort tagg
+        private void RemoveTag_Click(object sender, EventArgs e) //ta bort tagg
         {
             if (listBoxTaggs.SelectedIndex != 0)
                 listBoxTaggs.Items.RemoveAt(listBoxTaggs.SelectedIndex);
         }
 
-        private void RemoveIngr_Click(object sender, EventArgs e) //Tabort markerad ingr
+        private void RemoveIngr_Click(object sender, EventArgs e) //Ta bort markerad ingr
         {
             if (listBoxIngr.SelectedIndex >= 0)
             {
@@ -101,7 +101,7 @@ namespace Grupp_7_Projekt
 
         private void buttonNewIngr_Click(object sender, EventArgs e) //Om användaren vill skapa ny ingr att använda
         {
-            NyIngridiensForm nig = new NyIngridiensForm(); //Declarera nytt ingr form
+            NyIngridiensForm nig = new NyIngridiensForm(); //Deklarera ny ingr form
             nig.ShowDialog();
             if (nig.newingr != null) //Kolla ifall ingr skapades, I så fall, lägg till i centrala ingr listan och uppdatera ingrComboboxen
             {
@@ -113,7 +113,7 @@ namespace Grupp_7_Projekt
                 }
             }
         }
-        private void IngrComboBox_Change(object sender, EventArgs e) //Updaterar enhetsvisaren när användaren byter ingridiens
+        private void IngrComboBox_Change(object sender, EventArgs e) //Updaterar enhetsvisaren när användaren byter ingrediens
         {
             foreach (Ingredient ingr in IngrRefList)
             {
@@ -125,7 +125,7 @@ namespace Grupp_7_Projekt
             }
         }
 
-        public void NyBild_Click(object sender, EventArgs e)
+        public void NyBild_Click(object sender, EventArgs e) //Kod för att lägga till bilder till recepten
         {
 
 
