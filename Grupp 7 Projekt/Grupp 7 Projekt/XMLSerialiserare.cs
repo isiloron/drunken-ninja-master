@@ -102,6 +102,7 @@ namespace Grupp_7_Projekt
 
 	}
 	
+	//En klass med metoder som sparar och laddar recept.
 	public static class SparaOchLaddaRecept
 	{
 		public static void LaddaXML(out List<Recept> receptlista)
@@ -115,6 +116,7 @@ namespace Grupp_7_Projekt
 		}
 	}
 
+	//Klass med metoder som sparar och laddar ingredienser.
 	public static class SparaOchLaddaIngredienser
 	{
 		public static void LaddaXML(out List<Ingredient> ingredienslista)
